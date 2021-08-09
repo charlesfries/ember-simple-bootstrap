@@ -15,6 +15,31 @@ Compatibility
 Installation
 ------------------------------------------------------------------------------
 
+First, install peer dependencies:
+
+```
+ember install ember-cli-sass
+npm install --save-dev bootstrap
+```
+
+Then import JavaScript:
+
+```js
+// ember-cli-build.js
+
+app.import('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js');
+```
+
+Then import Sass:
+
+```scss
+// app.scss
+
+@import "node_modules/bootstrap/scss/bootstrap";
+```
+
+Finally, install the addon:
+
 ```
 ember install ember-simple-bootstrap
 ```
