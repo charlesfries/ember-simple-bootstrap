@@ -1,1 +1,6 @@
-{{yield}}
+<div class="toast" role="alert" ...attributes {{did-insert this.didInsert}}>
+	{{yield (hash
+		header=(component "bs/toast/header")
+		body=(component "bs/toast/body")
+	)}}
+</div>

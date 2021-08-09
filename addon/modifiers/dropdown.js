@@ -10,7 +10,7 @@ import { modifier } from 'ember-modifier';
  * popperConfig?: null | object | Function
  */
 
-export default modifier(function dropdown(element, [], { boundary, reference, display, offset, autoClose, popperConfig }) {
+export default modifier(function dropdown(element, _arr, { boundary, reference, display, offset, autoClose, popperConfig }) {
 	element.classList.add('dropdown-toggle');
 	element.setAttribute('data-bs-toggle', 'dropdown');
 
