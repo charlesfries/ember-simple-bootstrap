@@ -50,20 +50,22 @@ Usage
 
 [Longer description of how to use the addon in apps.]
 
-* `<Bs::Accordion />`
-* `<Bs::Alert />`
-* `<Bs::Breadcrumb />`
-* `<Bs::Button />`
-* `<Bs::Card />`
-* `<Ui::Dropdown />`
-* `<Bs::Modal />`
-* `<Bs::Nav />`
-* `<Bs::Offcanvas />`
-* `<Bs::Pagination />`
-* `<Bs::Progress />`
-* `<Bs::Spinner />`
-* `<Bs::Toast />`
-* `<Bs::Toolbar />`
+```hbs
+<Bs::Accordion />
+<Bs::Alert />
+<Bs::Breadcrumb />
+<Bs::Button />
+<Bs::Card />
+<Bs::Dropdown />
+<Bs::Modal />
+<Bs::Nav />
+<Bs::Offcanvas />
+<Bs::Pagination />
+<Bs::Progress />
+<Bs::Spinner />
+<Bs::Toast />
+<Bs::Toolbar />
+```
 
 
 Contributing
