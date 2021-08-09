@@ -1,3 +1,3 @@
-import Component from '@glimmer/component';
+import BsBaseComponent from '../base';
 
-export default class BsToastHeaderComponent extends Component {}
+export default class BsToastHeaderComponent extends BsBaseComponent {}
