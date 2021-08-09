@@ -1,0 +1,16 @@
+<div class="modal fade" tabindex="-1" ...attributes {{did-insert this.didInsert}}>
+	<div class="modal-dialog {{if @size (concat "modal-" @size)}} {{if @scroll "modal-dialog-scrollable"}} {{if @fullscreen "modal-fullscreen"}}">
+		<div class="modal-content">
+			{{#if @title}}
+				<div class="modal-header">
+					<h6 class="modal-title">{{@title}}</h6>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+			{{/if}}
+			{{yield (hash
+				body=(component "bs/modal/body")
+				footer=(component "bs/modal/footer")
+			)}}
+		</div>
+	</div>
+</div>

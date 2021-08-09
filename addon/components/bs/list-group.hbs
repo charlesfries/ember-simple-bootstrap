@@ -1,0 +1,6 @@
+<ul class="list-group {{if @flush "list-group-flush"}}" ...attributes>
+	{{yield (hash
+		item=(component "bs/list-group/item")
+		link-to=(component "link-to" class="list-group-item list-group-item-action")
+	)}}
+</ul>

@@ -17,8 +17,8 @@ export default class BsPaginationComponent extends BsBaseComponent {
 	}
 
 	get range() {
-		let spread = 3
-		let range = new Object;
+		let spread = 3;
+		let range = new Object();
 		range.min = Math.max(this.args.curPage - spread, 0);
 		range.max = Math.min(range.min + spread * 2, this.pages.length);
 		return range;
@@ -29,6 +29,6 @@ export default class BsPaginationComponent extends BsBaseComponent {
 	}
 
 	get canNext() {
-		return this.args.curPage < (this.pages.length - 1);
+		return this.args.curPage < this.pages.length - 1;
 	}
 }
