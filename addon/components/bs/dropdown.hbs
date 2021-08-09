@@ -1,0 +1,6 @@
+<div class="dropdown-menu {{if (eq @align "right") "dropdown-menu-end"}}" ...attributes>
+	{{yield (hash
+		item=(component "bs/dropdown/item")
+		divider=(component "bs/dropdown/divider")
+	)}}
+</div>
