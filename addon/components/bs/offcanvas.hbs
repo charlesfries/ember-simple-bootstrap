@@ -1,0 +1,6 @@
+<div class="offcanvas offcanvas-{{if @placement @placement "start"}}" tabindex="-1" id={{this.id}} ...attributes {{did-insert this.didInsert}}>
+	{{yield (hash
+		header=(component "bs/offcanvas/header" offcanvas=this)
+		body=(component "bs/offcanvas/body")
+	)}}
+</div>
