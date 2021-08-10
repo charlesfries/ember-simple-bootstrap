@@ -1,11 +1,11 @@
 ember-simple-bootstrap
 ==============================================================================
 
-This addon aims to be a close representation of the latest Bootstrap features and components.
+This addon aims to be a carbon copy representation of the absolute latest Bootstrap features and components.
 
 This addon is only compatible with Boostrap 5+.
 
-⚠️ This addon is a work-in-progress. Pull requests are absolutely welcome.
+⚠️ This addon is a work in progress. Pull requests are absolutely welcome.
 
 
 Compatibility
@@ -23,20 +23,35 @@ First, install peer dependencies:
 
 ```
 ember install ember-cli-sass
+
 npm install --save-dev bootstrap
 ```
 
-Include the JavaScript:
+Import Bootstrap JavaScript:
 
 ```js
 // ember-cli-build.js
-app.import('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js');
+
+'use strict';
+
+const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+
+module.exports = function (defaults) {
+  ...
+
+  app.import('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js');
+
+  return app.toTree();
+};
 ```
 
-Include the styles:
+Import Bootstrap Sass:
 
 ```scss
 // app.scss
+
+...
+
 @import "node_modules/bootstrap/scss/bootstrap";
 ```
 
@@ -60,12 +75,19 @@ Usage
 <Bs::ListGroup />
 <Bs::Modal />
 <Bs::Nav />
+<Bs::Navbar />
 <Bs::Offcanvas />
 <Bs::Pagination />
+<Bs::Placeholder />
 <Bs::Progress />
 <Bs::Spinner />
 <Bs::Toast />
 <Bs::Toolbar />
+```
+
+```hbs
+{{dropdown}}
+{{tooltip}}
 ```
 
 
@@ -77,8 +99,12 @@ Accordion
 ```hbs
 <Bs::Accordion as |accordion|>
   <accordion.item as |item|>
-    <item.button>My Title</item.button>
-    <item.body>My Body</item.body>
+    <item.button>My Title 1</item.button>
+    <item.body>My Body 1</item.body>
+  </accordion.item>
+  <accordion.item as |item|>
+    <item.button>My Title 2</item.button>
+    <item.body>My Body 2</item.body>
   </accordion.item>
 </Bs::Accordion>
 ```
@@ -86,13 +112,36 @@ Accordion
 Alerts
 
 ```hbs
-<Bs::Alert @color="primary">A simple primary alert—check it out!</Bs::Alert>
+<Bs::Alert @color="primary">
+  A simple primary alert—check it out!
+</Bs::Alert>
+<Bs::Alert @color="primary">
+  A simple primary alert with <LinkTo @route="example" class="alert-link">an example link</LinkTo>. Give it a click if you like.
+</Bs::Alert>
+<Bs::Alert @color="success">
+  <h4 class="alert-heading">Well done!</h4>
+  <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+  <hr>
+  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+</Bs::Alert>
+```
+
+Breadcrumb
+
+```hbs
+<Bs::Breadcrumb as |breadcrumb|>
+  <breadcrumb.item @label="home">Home</breadcrumb.item>
+  <breadcrumb.item @label="home.library">Library</breadcrumb.item>
+  <breadcrumb.item @label="home.library.data">Data</breadcrumb.item>
+</Bs::Breadcrumb>
 ```
 
 Buttons
 
 ```hbs
 <Bs::Button @onClick={{this.go}}>My Button</Bs::Button>
+<Bs::Button @color="success" @onClick={{this.go}}>My Button</Bs::Button>
+<Bs::Button @size="lg" @onClick={{this.go}}>My Button</Bs::Button>
 <Bs::Button @size="sm" @disabled={{true}} @loading={{false}} @onClick={{this.go}}>My Button</Bs::Button>
 ```
 
@@ -120,8 +169,23 @@ Dropdowns
 List group
 
 ```hbs
+<Bs::ListGroup as |listGroup|>
+  <listGroup.item>An item</listGroup.item>
+  <listGroup.item>A second item</listGroup.item>
+  <listGroup.item>A third item</listGroup.item>
+  <listGroup.item>A fourth item</listGroup.item>
+  <listGroup.item>And a fifth one</listGroup.item>
+</Bs::ListGroup>
+<Bs::ListGroup as |listGroup|>
+  <listGroup.item class="active">An active item</listGroup.item>
+  <listGroup.item>A second item</listGroup.item>
+</Bs::ListGroup>
+<Bs::ListGroup as |listGroup|>
+  <listGroup.item class="disabled">A disabled item</listGroup.item>
+  <listGroup.item>A second item</listGroup.item>
+</Bs::ListGroup>
 <Bs::ListGroup @flush={{true}} as |listGroup|>
-  <listGroup.item>My Item</listGroup.item>
+  <listGroup.item>An item</listGroup.item>
 </Bs::ListGroup>
 ```
 
@@ -133,7 +197,7 @@ Modal
     <modal.body>
       <p>Modal body text goes here.</p>
     </modal.body>
-  	<modal.footer>
+    <modal.footer>
       <Bs::Button @color="secondary" @onClick={{fn (mut this.showModal) false}}>Cancel</Bs::Button>
       <Bs::Button @color="primary" @onClick={{this.save}}>Save changes</Bs::Button>
     </modal.footer>
@@ -151,6 +215,27 @@ Navs
 </Bs::Nav>
 ```
 
+Navbar
+
+```hbs
+<Bs::Navbar class="navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a></li>
+      </ul>
+    </div>
+  </div>
+</Bs::Navbar>
+```
+
 Offcanvas
 
 ```hbs
@@ -166,6 +251,14 @@ Pagination
 
 ```hbs
 <Bs::Pagination @curPage={{this.currentPage}} @perPage={{10}} @totalItems={{100}} @onNext={{fn (mut this.currentPage) (inc this.currentPage)}} @onPrevious={{fn (mut this.currentPage) (dec this.currentPage)}} @onSelect={{fn (mut this.currentPage)}} />
+```
+
+Placeholders
+
+```hbs
+<Bs::Placeholder class="col-6" />
+<Bs::Placeholder class="w-75" />
+<Bs::Placeholder style="width: 25%;" />
 ```
 
 Progress
@@ -220,6 +313,9 @@ Toolbars
 Tooltips
 
 ```hbs
+<a href="#" {{tooltip "Tooltip on top"}}>
+  Tooltip on top
+</a>
 <Bs::Button {{tooltip "Tooltip on top"}} @onClick={{this.go}}>
   Tooltip on top
 </Bs::Button>
