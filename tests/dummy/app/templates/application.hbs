@@ -33,11 +33,11 @@
 
 	<h1>Breadcrumb</h1>
 
-	{{! <Bs::Breadcrumb as |breadcrumb|>
+	<Bs::Breadcrumb as |breadcrumb|>
 		<breadcrumb.item @label="home">Home</breadcrumb.item>
 		<breadcrumb.item @label="home.library">Library</breadcrumb.item>
 		<breadcrumb.item @label="home.library.data">Data</breadcrumb.item>
-	</Bs::Breadcrumb> }}
+	</Bs::Breadcrumb>
 
 	<h1>Buttons</h1>
 
@@ -177,8 +177,13 @@
 	<h1>Toasts</h1>
 
 	<Bs::Toast as |toast|>
-		<toast.header />
-		<toast.body />
+		<toast.header>
+			<svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
+			<strong class="me-auto">My Title</strong>
+			<small class="ms-2">Just Now</small>
+			<button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+		</toast.header>
+		<toast.body>My Body</toast.body>
 	</Bs::Toast>
 
 </div>
