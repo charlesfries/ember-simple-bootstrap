@@ -1,7 +1,7 @@
 ember-simple-bootstrap
 ==============================================================================
 
-This addon aims to be a carbon copy representation of the absolute latest Bootstrap features and components.
+This addon aims to be a near carbon copy representation of the latest Bootstrap features and components, using Ember components and modifiers.
 
 This addon is only compatible with Boostrap 5+.
 
@@ -258,7 +258,7 @@ Placeholders
 ```hbs
 <Bs::Placeholder class="col-6" />
 <Bs::Placeholder class="w-75" />
-<Bs::Placeholder style="width: 25%;" />
+<Bs::Placeholder style={{html-safe "width: 25%;"}} />
 ```
 
 Progress

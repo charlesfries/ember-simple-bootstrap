@@ -1,3 +1,33 @@
 import BsBaseComponent from './base';
+import { action } from '@ember/object';
+import { guidFor } from '@ember/object/internals';
+/* global bootstrap */
 
-export default class BsOffcanvasComponent extends BsBaseComponent {}
+/**
+ * ARGS
+ * placement?: 'start'|'end'|'bottom'
+ * onClose?: Function
+ */
+
+export default class BsOffcanvasComponent extends BsBaseComponent {
+	offcanvas;
+
+	@action didInsert(element) {
+		this.offcanvas = new bootstrap.Offcanvas(element, {});
+		this.offcanvas.show();
+
+		if (this.args.onClose) {
+			element.addEventListener('hidden.bs.offcanvas', () => {
+				this.args.onClose();
+			});
+		}
+	}
+
+	willDestroy() {
+		this.offcanvas.hide();
+	}
+
+	get id() {
+		return guidFor(this);
+	}
+}
