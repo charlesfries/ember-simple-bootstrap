@@ -70,6 +70,7 @@ Usage
 <Bs::Alert />
 <Bs::Breadcrumb />
 <Bs::Button />
+<Bs::ButtonGroup />
 <Bs::Card />
 <Bs::Dropdown />
 <Bs::ListGroup />
@@ -143,6 +144,15 @@ Buttons
 <Bs::Button @color="success" @onClick={{this.go}}>My Button</Bs::Button>
 <Bs::Button @size="lg" @onClick={{this.go}}>My Button</Bs::Button>
 <Bs::Button @size="sm" @disabled={{true}} @loading={{false}} @onClick={{this.go}}>My Button</Bs::Button>
+```
+
+Button group
+
+```hbs
+<Bs::ButtonGroup as |group|>
+  <group.button @onClick={{this.go}}>Click Me 1</group.button>
+  <group.button @onClick={{this.go}}>Click Me 2</group.button>
+</Bs::ButtonGroup>
 ```
 
 Card
