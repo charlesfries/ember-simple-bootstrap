@@ -1,3 +1,6 @@
 <div class="alert alert-{{if @color @color "primary"}}" role="alert" ...attributes>
+	{{#if @icon}}
+		<FaIcon @icon={{@icon}} />&nbsp;
+	{{/if}}
 	{{yield}}
 </div>

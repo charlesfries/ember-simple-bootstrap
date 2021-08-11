@@ -8,6 +8,9 @@
 	{{#if (has-block)}}
 		{{yield}}
 	{{else}}
+		{{#if @icon}}
+			<FaIcon @icon={{@icon}} @fixedWidth={{true}} />&nbsp; 
+		{{/if}}
 		{{@label}}
 	{{/if}}
 </button>
