@@ -2,7 +2,7 @@ import BsBaseComponent from '../base';
 
 /**
  * ARGS
- * title: string
+ * title: string;
  */
 
 export default class BsOffcanvasHeaderComponent extends BsBaseComponent {}

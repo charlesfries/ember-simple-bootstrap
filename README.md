@@ -169,10 +169,12 @@ Card
 Dropdowns
 
 ```hbs
-<Bs::Button {{dropdown}}>Open</Bs::Button>
+<Bs::Button {{dropdown}}>Open dropdown</Bs::Button>
 <Bs::Dropdown @align="right" @linger={{true}} as |dropdown|>
-  <dropdown.item @label="My Item" @onClick={{this.go}} />
+  <dropdown.header>Dropdown header</dropdown.header>
+  <dropdown.item @label="Action" />
   <dropdown.divider />
+  <dropdown.item @label="Another action" @onClick={{fn (mut this.xyz)}} />
 </Bs::Dropdown>
 ```
 
