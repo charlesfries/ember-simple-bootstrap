@@ -19,12 +19,10 @@ Compatibility
 Installation
 ------------------------------------------------------------------------------
 
-First, install peer dependencies:
+First, install the addon:
 
 ```
-ember install ember-cli-sass
-
-npm install --save-dev bootstrap
+ember install ember-simple-bootstrap
 ```
 
 Import Bootstrap JavaScript:
@@ -53,12 +51,6 @@ Import Bootstrap Sass:
 ...
 
 @import "node_modules/bootstrap/scss/bootstrap";
-```
-
-Finally, install the addon:
-
-```
-ember install ember-simple-bootstrap
 ```
 
 
