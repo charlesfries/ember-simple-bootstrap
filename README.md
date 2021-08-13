@@ -191,6 +191,7 @@ List group
 <Bs::ListGroup as |listGroup|>
   <listGroup.item class="active">An active item</listGroup.item>
   <listGroup.item>A second item</listGroup.item>
+  <listGroup.link-to @route="index">A link-to item</listGroup.link-to>
 </Bs::ListGroup>
 <Bs::ListGroup as |listGroup|>
   <listGroup.item class="disabled">A disabled item</listGroup.item>
