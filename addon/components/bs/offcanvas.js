@@ -1,6 +1,5 @@
 import BsBaseComponent from './base';
 import { action } from '@ember/object';
-import { guidFor } from '@ember/object/internals';
 /* global bootstrap */
 
 /**
@@ -25,9 +24,5 @@ export default class BsOffcanvasComponent extends BsBaseComponent {
 
 	willDestroy() {
 		this.offcanvas.hide();
-	}
-
-	get id() {
-		return guidFor(this);
 	}
 }
