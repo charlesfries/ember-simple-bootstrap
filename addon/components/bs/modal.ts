@@ -1,26 +1,26 @@
 import BsBaseComponent from './base';
 import { action } from '@ember/object';
-/* global bootstrap */
+/global bootstrap */;
 
-/**
- * ARGS
- * title?: string?
- * size?: 'sm'|'lg'|'xl'
- * static?: boolean
- * scroll?: boolean
- * fullscreen?: boolean
- * onClose: Function
- */
+export interface BsModalComponentArgs {
+	title?: string;
+	size?: 'sm' | 'lg' | 'xl';
+	static?: boolean;
+	scroll?: boolean;
+	fullscreen?: boolean;
+	onClose: () => void;
+}
 
-export default class BsModalComponent extends BsBaseComponent {
-	modal;
+export default class BsModalComponent extends BsBaseComponent<BsModalComponentArgs> {
+	modal?: any;
 
-	@action didInsert(element) {
+	@action didInsert(element: Element) {
+		// @ts-ignore
 		this.modal = new bootstrap.Modal(element, { backdrop: this.args.static ? 'static' : true });
 		this.modal.show();
 
 		element.addEventListener('shown.bs.modal', () => {
-			let autofocus = element.querySelector('[autofocus]');
+			let autofocus = element.querySelector('[autofocus]') as HTMLInputElement;
 			if (autofocus) {
 				autofocus.focus();
 			}

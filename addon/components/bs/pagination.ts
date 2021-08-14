@@ -1,16 +1,15 @@
 import BsBaseComponent from './base';
 
-/**
- * ARGS
- * curPage: number
- * perPage: number
- * totalItems: number
- * onNext: Function
- * onPrevious: Function
- * onSelect: Function
- */
+export interface BsPaginationComponentArgs {
+	curPage: number
+	perPage: number
+	totalItems: number
+	onNext: Function
+	onPrevious: Function
+	onSelect: Function
+}
 
-export default class BsPaginationComponent extends BsBaseComponent {
+export default class BsPaginationComponent extends BsBaseComponent<BsPaginationComponentArgs> {
 	get pages() {
 		let num = Math.ceil(this.args.totalItems / this.args.perPage);
 		return new Array(num);
@@ -18,7 +17,7 @@ export default class BsPaginationComponent extends BsBaseComponent {
 
 	get range() {
 		let spread = 3;
-		let range = new Object();
+		let range = {} as any;
 		range.min = Math.max(this.args.curPage - spread, 0);
 		range.max = Math.min(range.min + spread * 2, this.pages.length);
 		return range;

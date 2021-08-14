@@ -2,15 +2,15 @@ import BsBaseComponent from './base';
 import { action } from '@ember/object';
 /* global bootstrap */
 
-/**
- * ARGS
- * onClose?: Function
- */
+export interface BsToastComponentArgs {
+	onClose?: () => void;
+}
 
-export default class BsToastComponent extends BsBaseComponent {
-	toast;
+export default class BsToastComponent extends BsBaseComponent<BsToastComponentArgs> {
+	toast?: any;
 
-	@action didInsert(element) {
+	@action didInsert(element: Element) {
+		// @ts-ignore
 		this.toast = new bootstrap.Toast(element, {
 			autohide: false,
 		});
@@ -18,7 +18,7 @@ export default class BsToastComponent extends BsBaseComponent {
 
 		if (this.args.onClose) {
 			element.addEventListener('hidden.bs.toast', () => {
-				this.args.onClose();
+				this.args.onClose!();
 			});
 		}
 	}
