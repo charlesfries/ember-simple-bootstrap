@@ -3,9 +3,10 @@ import { modifier } from 'ember-modifier';
 
 export default modifier(function tooltip(element, [title, placement = 'top']) {
 	element.setAttribute('data-bs-toggle', 'tooltip');
-	element.setAttribute('data-bs-placement', placement);
-	element.setAttribute('title', title);
+	element.setAttribute('data-bs-placement', placement as string);
+	element.setAttribute('title', title as string);
 
+	// @ts-ignore
 	const tooltip = new bootstrap.Tooltip(element, {
 		animation: false,
 	});

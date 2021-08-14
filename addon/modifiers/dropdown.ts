@@ -15,22 +15,22 @@ export default modifier(function dropdown(element, _arr, { boundary, reference, 
 	element.setAttribute('data-bs-toggle', 'dropdown');
 
 	if (boundary) {
-		element.setAttribute('data-bs-boundary', boundary);
+		element.setAttribute('data-bs-boundary', boundary as string);
 	}
 	if (reference) {
-		element.setAttribute('data-bs-reference', reference);
+		element.setAttribute('data-bs-reference', reference as string);
 	}
 	if (display) {
-		element.setAttribute('data-bs-display', display);
+		element.setAttribute('data-bs-display', display as string);
 	}
 	if (offset) {
-		element.setAttribute('data-bs-offset', offset);
+		element.setAttribute('data-bs-offset', offset as string);
 	}
 	if (autoClose) {
-		element.setAttribute('data-bs-auto-close', autoClose);
+		element.setAttribute('data-bs-auto-close', autoClose as string);
 	}
 	if (popperConfig) {
-		element.setAttribute('data-bs-popper-config', popperConfig);
+		element.setAttribute('data-bs-popper-config', popperConfig as string);
 	}
 
 	return () => {
