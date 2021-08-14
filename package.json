@@ -5,7 +5,8 @@
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "homepage": "https://ember-simple-bootstrap.netlify.app/",
+  "repository": "https://github.com/charlesfries/ember-simple-bootstrap",
   "license": "MIT",
   "author": "",
   "directories": {
