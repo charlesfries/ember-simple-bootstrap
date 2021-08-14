@@ -1,6 +1,6 @@
 import BsBaseComponent from './base';
 import { action } from '@ember/object';
-/global bootstrap */;
+/global bootstrap */
 
 export interface BsModalComponentArgs {
 	title?: string;
