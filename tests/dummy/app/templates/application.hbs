@@ -1,8 +1,12 @@
-{{page-title "ember-simple-bootstrap"}}
+{{page-title "Ember Simple Bootstrap"}}
 
 <div class="container">
 
-	<h1>Accordion</h1>
+	<h2>Ember Simple Bootstrap</h2>
+
+	<hr />
+
+	<h2>Accordion</h2>
 
 	<Bs::Accordion as |accordion|>
 		<accordion.item as |item|>
@@ -15,7 +19,7 @@
 		</accordion.item>
 	</Bs::Accordion>
 
-	<h1>Alerts</h1>
+	<h2>Alerts</h2>
 
 	<Bs::Alert @color="primary">
 		A simple primary alert—check it out!
@@ -31,7 +35,7 @@
 		<p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
 	</Bs::Alert>
 
-	<h1>Breadcrumb</h1>
+	<h2>Breadcrumb</h2>
 
 	<Bs::Breadcrumb as |breadcrumb|>
 		<breadcrumb.item @label="home">Home</breadcrumb.item>
@@ -39,14 +43,14 @@
 		<breadcrumb.item @label="home.library.data">Data</breadcrumb.item>
 	</Bs::Breadcrumb>
 
-	<h1>Buttons</h1>
+	<h2>Buttons</h2>
 
 	<Bs::Button @onClick={{fn (mut this.xyz)}}>My Button</Bs::Button>
 	<Bs::Button @color="success" @onClick={{fn (mut this.xyz)}}>My Button</Bs::Button>
 	<Bs::Button @size="lg" @onClick={{fn (mut this.xyz)}}>My Button</Bs::Button>
 	<Bs::Button @size="sm" @disabled={{true}} @loading={{false}} @onClick={{fn (mut this.xyz)}}>My Button</Bs::Button>
 
-	<h1>Card</h1>
+	<h2>Card</h2>
 
 	<Bs::Card as |card|>
 		<card.header @title="Card title" />
@@ -55,7 +59,7 @@
 		</card.body>
 	</Bs::Card>
 
-	<h1>Dropdowns</h1>
+	<h2>Dropdowns</h2>
 
 	<Bs::Button {{dropdown}}>Open dropdown</Bs::Button>
 	<Bs::Dropdown @align="right" @linger={{true}} as |dropdown|>
@@ -65,7 +69,7 @@
 		<dropdown.item @label="Another action" @onClick={{fn (mut this.xyz)}} />
 	</Bs::Dropdown>
 
-	<h1>List group</h1>
+	<h2>List group</h2>
 
 	<Bs::ListGroup as |listGroup|>
 		<listGroup.item>An item</listGroup.item>
@@ -86,7 +90,7 @@
 		<listGroup.item>An item</listGroup.item>
 	</Bs::ListGroup>
 
-	<h1>Modal</h1>
+	<h2>Modal</h2>
 
 	<Bs::Button @onClick={{fn (mut this.showModal) true}}>Launch demo modal</Bs::Button>
 
@@ -102,7 +106,7 @@
 		</Bs::Modal>
 	{{/if}}
 
-	<h1>Navs</h1>
+	<h2>Navs</h2>
 
 	{{!-- <Bs::Nav as |nav|>
 		<nav.link-to @route="index">Link 1</nav.link-to>
@@ -110,7 +114,7 @@
 		<nav.link-to @route="index">Link 3</nav.link-to>
 	</Bs::Nav> --}}
 
-	<h1>Navbar</h1>
+	<h2>Navbar</h2>
 
 	<Bs::Navbar class="navbar-expand-lg navbar-light bg-light">
 		<div class="container-fluid">
@@ -129,7 +133,7 @@
 		</div>
 	</Bs::Navbar>
 
-	<h1>Offcanvas</h1>
+	<h2>Offcanvas</h2>
 
 	<Bs::Button @onClick={{fn (mut this.showOffcanvas) true}}>Launch demo offcanvas</Bs::Button>
 
@@ -140,17 +144,17 @@
 		</Bs::Offcanvas>
 	{{/if}}
 
-	<h1>Pagination</h1>
+	<h2>Pagination</h2>
 
 	<Bs::Pagination @curPage={{this.currentPage}} @perPage={{10}} @totalItems={{100}} @onNext={{fn (mut this.currentPage) (inc this.currentPage)}} @onPrevious={{fn (mut this.currentPage) (dec this.currentPage)}} @onSelect={{fn (mut this.currentPage)}} />
 
-	<h1>Placeholders</h1>
+	<h2>Placeholders</h2>
 
 	<Bs::Placeholder class="col-6" />
 	<Bs::Placeholder class="w-75" />
 	<Bs::Placeholder style={{html-safe "width: 25%;"}} />
 
-	<h1>Progress</h1>
+	<h2>Progress</h2>
 
 	<Bs::Progress as |progress|>
 		<progress.bar @value={{0}} />
@@ -170,13 +174,13 @@
 		<progress.bar @value={{50}} @striped={{true}} @animated={{true}} />
 	</Bs::Progress>
 
-	<h1>Spinners</h1>
+	<h2>Spinners</h2>
 
 	<Bs::Spinner />
 	<Bs::Spinner @centered={{true}} />
 	<Bs::Spinner @color="success" />
 
-	<h1>Toasts</h1>
+	<h2>Toasts</h2>
 
 	<Bs::Toast as |toast|>
 		<toast.header>
