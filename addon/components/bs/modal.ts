@@ -1,6 +1,6 @@
 import BsBaseComponent from './base';
 import { action } from '@ember/object';
-/global bootstrap */
+/* global bootstrap */
 
 export interface BsModalComponentArgs {
 	title?: string;
@@ -8,19 +8,26 @@ export interface BsModalComponentArgs {
 	static?: boolean;
 	scroll?: boolean;
 	fullscreen?: boolean;
+	hideClose?: boolean;
 	onClose: () => void;
 }
 
-export default class BsModalComponent extends BsBaseComponent<BsModalComponentArgs> {
-	modal?: any;
+interface Modal {
+	show: () => void;
+	hide: () => void;
+	dispose: () => void;
+}
 
-	@action didInsert(element: Element) {
+export default class BsModalComponent extends BsBaseComponent<BsModalComponentArgs> {
+	modal?: Modal;
+
+	@action didInsert(element: Element): void {
 		// @ts-ignore
 		this.modal = new bootstrap.Modal(element, { backdrop: this.args.static ? 'static' : true });
-		this.modal.show();
+		this.modal!.show();
 
 		element.addEventListener('shown.bs.modal', () => {
-			let autofocus = element.querySelector('[autofocus]') as HTMLInputElement;
+			const autofocus = element.querySelector('[autofocus]') as HTMLInputElement;
 			if (autofocus) {
 				autofocus.focus();
 			}
@@ -31,8 +38,8 @@ export default class BsModalComponent extends BsBaseComponent<BsModalComponentAr
 		});
 	}
 
-	willDestroy() {
-		this.modal.hide();
+	willDestroy(): void {
+		this.modal!.hide();
 		// this.modal.dispose();
 	}
 }

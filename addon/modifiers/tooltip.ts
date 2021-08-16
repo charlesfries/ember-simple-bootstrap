@@ -1,7 +1,7 @@
 import { modifier } from 'ember-modifier';
 /* global bootstrap */
 
-export default modifier(function tooltip(element, [title, placement = 'top']) {
+export default modifier(function tooltip(element: Element, [title, placement = 'top']) {
 	element.setAttribute('data-bs-toggle', 'tooltip');
 	element.setAttribute('data-bs-placement', placement as string);
 	element.setAttribute('title', title as string);

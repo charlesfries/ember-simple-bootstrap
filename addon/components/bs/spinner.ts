@@ -1,10 +1,9 @@
 import BsBaseComponent from './base';
 
-/**
- * ARGS
- * centered?: boolean
- * large?: boolean
- * color?: 'primary'|'secondary'|... = 'secondary'
- */
+export interface BsSpinnerComponentArgs {
+	centered?: boolean;
+	large?: boolean;
+	color?: 'primary' | 'secondary'; // = 'secondary'
+}
 
-export default class BsSpinnerComponent extends BsBaseComponent {}
+export default class BsSpinnerComponent<Args extends BsSpinnerComponentArgs = BsSpinnerComponentArgs> extends BsBaseComponent<Args> {}

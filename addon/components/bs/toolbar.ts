@@ -1,8 +1,7 @@
 import BsBaseComponent from './base';
 
-/**
- * ARGS
- * size?: 'sm'|'lg'
- */
+export interface BsToolbarComponentArgs {
+	size?: 'sm' | 'lg';
+}
 
-export default class BsToolbarComponent extends BsBaseComponent {}
+export default class BsToolbarComponent<Args extends BsToolbarComponentArgs = BsToolbarComponentArgs> extends BsBaseComponent<Args> {}

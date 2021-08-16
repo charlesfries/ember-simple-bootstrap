@@ -7,22 +7,28 @@ export interface BsOffcanvasComponentArgs {
 	onClose?: () => void;
 }
 
-export default class BsOffcanvasComponent extends BsBaseComponent<BsOffcanvasComponentArgs> {
-	offcanvas?: any;
+interface Offcanvas {
+	show: () => void;
+	hide: () => void;
+}
 
-	@action didInsert(element: Element) {
+export default class BsOffcanvasComponent extends BsBaseComponent<BsOffcanvasComponentArgs> {
+	offcanvas?: Offcanvas;
+
+	@action didInsert(element: Element): void {
 		// @ts-ignore
 		this.offcanvas = new bootstrap.Offcanvas(element, {});
-		this.offcanvas.show();
+		this.offcanvas!.show();
 
-		if (this.args.onClose) {
+		const { onClose } = this.args;
+		if (onClose) {
 			element.addEventListener('hidden.bs.offcanvas', () => {
-				this.args.onClose!();
+				onClose();
 			});
 		}
 	}
 
-	willDestroy() {
-		this.offcanvas.hide();
+	willDestroy(): void {
+		this.offcanvas!.hide();
 	}
 }

@@ -1,16 +1,15 @@
 import { modifier } from 'ember-modifier';
 
-/**
- * ARGS
- * boundary?: string | element
- * reference?: string | element | object
- * display?: string
- * offset?: array | string | Function
- * autoClose?: boolean | string
- * popperConfig?: null | object | Function
- */
+interface Args {
+	boundary?: string | Element;
+	reference?: string | Element | Record<string, unknown>;
+	display?: string;
+	offset?: Array<any> | string | (() => void);
+	autoClose?: boolean | string;
+	popperConfig?: null | Record<string, unknown> | (() => void);
+}
 
-export default modifier(function dropdown(element, _arr, { boundary, reference, display, offset, autoClose, popperConfig }) {
+export default modifier(function dropdown(element: Element, _arr: any, { boundary, reference, display, offset, autoClose, popperConfig }: Args) {
 	element.classList.add('dropdown-toggle');
 	element.setAttribute('data-bs-toggle', 'dropdown');
 
@@ -30,7 +29,7 @@ export default modifier(function dropdown(element, _arr, { boundary, reference, 
 		element.setAttribute('data-bs-auto-close', autoClose as string);
 	}
 	if (popperConfig) {
-		element.setAttribute('data-bs-popper-config', popperConfig as string);
+		element.setAttribute('data-bs-popper-config', popperConfig as any);
 	}
 
 	return () => {

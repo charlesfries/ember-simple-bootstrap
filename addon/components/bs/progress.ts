@@ -1,7 +1,5 @@
 import BsBaseComponent from './base';
 
-/**
- * ARGS
- */
+export interface BsProgressComponentArgs {}
 
-export default class BsProgressComponent extends BsBaseComponent {}
+export default class BsProgressComponent<Args extends BsProgressComponentArgs = BsProgressComponentArgs> extends BsBaseComponent<Args> {}

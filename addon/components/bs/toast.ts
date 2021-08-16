@@ -6,24 +6,30 @@ export interface BsToastComponentArgs {
 	onClose?: () => void;
 }
 
+interface Toast {
+	show: () => void;
+	hide: () => void;
+}
+
 export default class BsToastComponent extends BsBaseComponent<BsToastComponentArgs> {
-	toast?: any;
+	toast?: Toast;
 
 	@action didInsert(element: Element) {
 		// @ts-ignore
 		this.toast = new bootstrap.Toast(element, {
 			autohide: false,
 		});
-		this.toast.show();
+		this.toast!.show();
 
-		if (this.args.onClose) {
+		const { onClose } = this.args;
+		if (onClose) {
 			element.addEventListener('hidden.bs.toast', () => {
-				this.args.onClose!();
+				onClose();
 			});
 		}
 	}
 
 	willDestroy() {
-		this.toast.hide();
+		this.toast!.hide();
 	}
 }

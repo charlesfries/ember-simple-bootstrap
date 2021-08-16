@@ -1,7 +1,5 @@
 import BsBaseComponent from './base';
 
-/**
- * ARGS
- */
+export interface BsCardComponentArgs {}
 
-export default class BsCardComponent extends BsBaseComponent {}
+export default class BsCardComponent<Args extends BsCardComponentArgs = BsCardComponentArgs> extends BsBaseComponent<Args> {}
