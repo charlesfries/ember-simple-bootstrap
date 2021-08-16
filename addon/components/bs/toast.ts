@@ -9,6 +9,7 @@ export interface BsToastComponentArgs {
 interface Toast {
 	show: () => void;
 	hide: () => void;
+	dispose: () => void;
 }
 
 export default class BsToastComponent extends BsBaseComponent<BsToastComponentArgs> {

@@ -8,6 +8,7 @@ export interface BsOffcanvasComponentArgs {
 }
 
 interface Offcanvas {
+	toggle: () => void;
 	show: () => void;
 	hide: () => void;
 }
