@@ -146,7 +146,7 @@
 
 	<h2>Pagination</h2>
 
-	<Bs::Pagination @curPage={{this.currentPage}} @perPage={{10}} @totalItems={{100}} @onNext={{fn (mut this.currentPage) (inc this.currentPage)}} @onPrevious={{fn (mut this.currentPage) (dec this.currentPage)}} @onSelect={{fn (mut this.currentPage)}} />
+	<Bs::Pagination @curPage={{0}} @perPage={{10}} @totalItems={{100}} @onNext={{fn (mut this.currentPage) (inc this.currentPage)}} @onPrevious={{fn (mut this.currentPage) (dec this.currentPage)}} @onSelect={{fn (mut this.currentPage)}} />
 
 	<h2>Placeholders</h2>
 
