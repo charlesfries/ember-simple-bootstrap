@@ -192,4 +192,16 @@
 		<toast.body>My Body</toast.body>
 	</Bs::Toast>
 
+	<h2>Tooltips</h2>
+
+	<a href="#" {{tooltip "Tooltip on top"}}>
+		Tooltip on top
+	</a>
+	<Bs::Button {{tooltip "Tooltip on top"}} @onClick={{this.go}}>
+		Tooltip on top
+	</Bs::Button>
+	<Bs::Button {{tooltip "Tooltip on right" placement="right"}} @onClick={{this.go}}>
+		Tooltip on right
+	</Bs::Button>
+
 </div>
