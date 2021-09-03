@@ -1,20 +1,20 @@
 'use strict';
 
 module.exports = {
-	description: '',
+  description: '',
 
-	// locals(options) {
-	//   // Return custom template variables here.
-	//   return {
-	//     foo: options.entity.options.foo
-	//   };
-	// }
+  // locals(options) {
+  //   // Return custom template variables here.
+  //   return {
+  //     foo: options.entity.options.foo
+  //   };
+  // }
 
-	normalizeEntityName() {},
+  normalizeEntityName() {},
 
-	afterInstall(/*options*/) {
-		// Perform extra work here.
+  afterInstall(/*options*/) {
+    // Perform extra work here.
 
-		return this.addPackageToProject('bootstrap');
-	},
+    return this.addPackageToProject('bootstrap');
+  },
 };

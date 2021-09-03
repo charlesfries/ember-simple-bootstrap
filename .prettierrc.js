@@ -1,8 +1,6 @@
 'use strict';
 
 module.exports = {
-	singleQuote: true,
-	useTabs: true,
-	printWidth: 300,
-	endOfLine: 'auto',
+  singleQuote: true,
+  printWidth: 300,
 };
