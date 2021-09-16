@@ -1,8 +1,8 @@
 import BsBaseComponent from './base';
 
 export interface BsAlertComponentArgs {
-	color?: string;
-	icon?: string;
+  color?: string;
+  icon?: string;
 }
 
 export default class BsAlertComponent<Args extends BsAlertComponentArgs = BsAlertComponentArgs> extends BsBaseComponent<Args> {}

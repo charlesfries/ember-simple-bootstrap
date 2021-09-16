@@ -3,34 +3,34 @@ import { action } from '@ember/object';
 /* global bootstrap */
 
 export interface BsToastComponentArgs {
-	onClose?: () => void;
+  onClose?: () => void;
 }
 
 interface Toast {
-	show: () => void;
-	hide: () => void;
-	dispose: () => void;
+  show: () => void;
+  hide: () => void;
+  dispose: () => void;
 }
 
 export default class BsToastComponent extends BsBaseComponent<BsToastComponentArgs> {
-	toast?: Toast;
+  toast?: Toast;
 
-	@action didInsert(element: Element) {
-		// @ts-ignore
-		this.toast = new bootstrap.Toast(element, {
-			autohide: false,
-		});
-		this.toast!.show();
+  @action didInsert(element: Element) {
+    // @ts-ignore
+    this.toast = new bootstrap.Toast(element, {
+      autohide: false,
+    });
+    this.toast!.show();
 
-		const { onClose } = this.args;
-		if (onClose) {
-			element.addEventListener('hidden.bs.toast', () => {
-				onClose();
-			});
-		}
-	}
+    const { onClose } = this.args;
+    if (onClose) {
+      element.addEventListener('hidden.bs.toast', () => {
+        onClose();
+      });
+    }
+  }
 
-	willDestroy() {
-		this.toast!.hide();
-	}
+  willDestroy() {
+    this.toast!.hide();
+  }
 }
