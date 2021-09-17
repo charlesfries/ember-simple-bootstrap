@@ -173,24 +173,24 @@ Dropdowns
 List group
 
 ```hbs
-<Bs::ListGroup as |listGroup|>
-  <listGroup.item>An item</listGroup.item>
-  <listGroup.item>A second item</listGroup.item>
-  <listGroup.item>A third item</listGroup.item>
-  <listGroup.item>A fourth item</listGroup.item>
-  <listGroup.item>And a fifth one</listGroup.item>
+<Bs::ListGroup as |list|>
+  <list.item>An item</list.item>
+  <list.item>A second item</list.item>
+  <list.item>A third item</list.item>
+  <list.item>A fourth item</list.item>
+  <list.item>And a fifth one</list.item>
 </Bs::ListGroup>
-<Bs::ListGroup as |listGroup|>
-  <listGroup.item class="active">An active item</listGroup.item>
-  <listGroup.item>A second item</listGroup.item>
-  <listGroup.link-to @route="index">A link-to item</listGroup.link-to>
+<Bs::ListGroup as |list|>
+  <list.item class="active">An active item</list.item>
+  <list.item>A second item</list.item>
+  <list.link-to @route="index">A link-to item</list.link-to>
 </Bs::ListGroup>
-<Bs::ListGroup as |listGroup|>
-  <listGroup.item class="disabled">A disabled item</listGroup.item>
-  <listGroup.item>A second item</listGroup.item>
+<Bs::ListGroup as |list|>
+  <list.item class="disabled">A disabled item</list.item>
+  <list.item>A second item</list.item>
 </Bs::ListGroup>
-<Bs::ListGroup @flush={{true}} as |listGroup|>
-  <listGroup.item>An item</listGroup.item>
+<Bs::ListGroup @flush={{true}} as |list|>
+  <list.item>An item</list.item>
 </Bs::ListGroup>
 ```
 
