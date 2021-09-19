@@ -46,7 +46,7 @@ module.exports = function (defaults) {
 Import Bootstrap Sass:
 
 ```scss
-// app.scss
+// app/styles/app.scss
 
 ...
 
