@@ -6,21 +6,46 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Component | bs/button', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+  test('button has correct classes', async function (assert) {
+    await render(hbs`<Bs::Button>Test</Bs::Button>`);
 
-    await render(hbs`<Bs::Button />`);
+    assert.dom('button').hasClass('btn');
+    assert.dom('button').hasClass('btn-secondary');
+  });
 
-    assert.dom(this.element).hasText('');
+  test('button has correct size', async function (assert) {
+    await render(hbs`<Bs::Button @size="lg">Test</Bs::Button>`);
 
-    // Template block usage:
-    await render(hbs`
-      <Bs::Button>
-        template block text
-      </Bs::Button>
-    `);
+    assert.dom('button').hasClass('btn-lg');
+  });
 
-    assert.dom(this.element).hasText('template block text');
+  test('button has correct color', async function (assert) {
+    await render(hbs`<Bs::Button @color="success">Test</Bs::Button>`);
+
+    assert.dom('button').hasClass('btn-success');
+  });
+
+  test('button has outline', async function (assert) {
+    await render(hbs`<Bs::Button @outline={{true}}>Test</Bs::Button>`);
+
+    assert.dom('button').hasClass('btn-outline-secondary');
+  });
+
+  test('button disables', async function (assert) {
+    await render(hbs`<Bs::Button @disabled={{true}}>Test</Bs::Button>`);
+
+    assert.dom('button').isDisabled();
+  });
+
+  test('button loads', async function (assert) {
+    await render(hbs`<Bs::Button @loading={{true}}>Test</Bs::Button>`);
+
+    assert.dom('button').isDisabled();
+  });
+
+  test('button can submit', async function (assert) {
+    await render(hbs`<Bs::Button @isSubmit={{true}}>Test</Bs::Button>`);
+
+    assert.dom('button').hasAttribute('type', 'submit');
   });
 });

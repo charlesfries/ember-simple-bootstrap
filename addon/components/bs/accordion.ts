@@ -5,4 +5,6 @@ export interface BsAccordionComponentArgs {
   alwaysOpen?: boolean;
 }
 
-export default class BsAccordionComponent<Args extends BsAccordionComponentArgs = BsAccordionComponentArgs> extends BsBaseComponent<Args> {}
+export default class BsAccordionComponent<
+  Args extends BsAccordionComponentArgs = BsAccordionComponentArgs
+> extends BsBaseComponent<Args> {}

@@ -10,7 +10,7 @@ module.exports = {
   //   };
   // }
 
-  normalizeEntityName() {},
+  normalizeEntityName() {}, // eslint-disable-line
 
   afterInstall(/*options*/) {
     // Perform extra work here.

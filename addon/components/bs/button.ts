@@ -10,4 +10,6 @@ export interface BsButtonComponentArgs {
   onClick?: () => void;
 }
 
-export default class BsButtonComponent<Args extends BsButtonComponentArgs = BsButtonComponentArgs> extends BsBaseComponent<Args> {}
+export default class BsButtonComponent<
+  Args extends BsButtonComponentArgs = BsButtonComponentArgs
+> extends BsBaseComponent<Args> {}

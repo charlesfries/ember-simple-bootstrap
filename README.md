@@ -90,7 +90,7 @@ Examples
 Accordion
 
 ```hbs
-<Bs::Accordion as |accordion|>
+<Bs::Accordion @flush={{true}} @alwaysOpen={{true}} as |accordion|>
   <accordion.item as |item|>
     <item.button>My Title 1</item.button>
     <item.body>My Body 1</item.body>
@@ -110,6 +110,9 @@ Alerts
 </Bs::Alert>
 <Bs::Alert @color="primary">
   A simple primary alert with <LinkTo @route="example" class="alert-link">an example link</LinkTo>. Give it a click if you like.
+</Bs::Alert>
+<Bs::Alert @color="danger" @icon="exclamation-triangle">
+  This alert includes an icon.
 </Bs::Alert>
 <Bs::Alert @color="success">
   <h4 class="alert-heading">Well done!</h4>
@@ -161,7 +164,7 @@ Card
 Dropdowns
 
 ```hbs
-<Bs::Button {{dropdown}}>Open dropdown</Bs::Button>
+<Bs::Button {{dropdown autoClose="outside"}}>Open dropdown</Bs::Button>
 <Bs::Dropdown @align="right" @linger={{true}} as |dropdown|>
   <dropdown.header>Dropdown header</dropdown.header>
   <dropdown.item @label="Action" />
@@ -326,6 +329,9 @@ Tooltips
 </Bs::Button>
 <Bs::Button {{tooltip "Tooltip on right" placement="right"}} @onClick={{this.go}}>
   Tooltip on right
+</Bs::Button>
+<Bs::Button {{tooltip "Tooltip with onHidden action" onHidden=this.doSomething}} @onClick={{this.go}}>
+  Tooltip with onHidden action
 </Bs::Button>
 ```
 

@@ -15,12 +15,14 @@ interface Toast {
 export default class BsToastComponent extends BsBaseComponent<BsToastComponentArgs> {
   toast?: Toast;
 
-  @action didInsert(element: Element) {
+  @action didInsert(element: Element): void {
     // @ts-ignore
-    this.toast = new bootstrap.Toast(element, {
+    const toast = new bootstrap.Toast(element, {
       autohide: false,
     });
-    this.toast!.show();
+    this.toast = toast;
+
+    toast.show();
 
     const { onClose } = this.args;
     if (onClose) {
@@ -30,7 +32,7 @@ export default class BsToastComponent extends BsBaseComponent<BsToastComponentAr
     }
   }
 
-  willDestroy() {
+  willDestroy(): void {
     this.toast!.hide();
   }
 }

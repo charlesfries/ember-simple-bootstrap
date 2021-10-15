@@ -5,4 +5,6 @@ export interface BsAlertComponentArgs {
   icon?: string;
 }
 
-export default class BsAlertComponent<Args extends BsAlertComponentArgs = BsAlertComponentArgs> extends BsBaseComponent<Args> {}
+export default class BsAlertComponent<
+  Args extends BsAlertComponentArgs = BsAlertComponentArgs
+> extends BsBaseComponent<Args> {}

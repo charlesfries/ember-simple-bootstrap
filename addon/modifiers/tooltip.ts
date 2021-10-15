@@ -1,7 +1,7 @@
 import { modifier } from 'ember-modifier';
-/* global bootstrap */
 
 interface Args {
+  // config
   animation?: boolean;
   delay?: number | Record<string, unknown>;
   html?: boolean;
@@ -11,19 +11,42 @@ interface Args {
   trigger?: string;
   fallbackPlacements?: string[];
   boundary?: string | Element;
-  offset?: number[] | string | Function;
+  customClass?: string | (() => void);
+  sanitize?: boolean;
+  allowList?: Record<string, unknown>;
+  sanitizeFn?: null | (() => void);
+  offset?: number[] | string | (() => void);
+  popperConfig?: null | Record<string, unknown> | (() => void);
+
+  // events
+  onShow?: () => void;
+  onShown?: () => void;
+  onHide?: () => void;
+  onHidden?: () => void;
 }
 
-export default modifier(function tooltip(element: Element, [title], args: Args) {
-  const { animation, delay, placement } = args;
-
-  // @ts-ignore
-  const tooltip = new bootstrap.Tooltip(element, {
+export default modifier(function tooltip(
+  element: Element,
+  [title]: unknown[],
+  args: Args
+): () => void {
+  const tooltip = new (window as any).bootstrap.Tooltip(element, {
     title,
-    animation: animation ?? true,
-    delay: delay ?? 0,
-    placement: placement ?? 'top',
+    ...args,
   });
+
+  if (args.onShow) {
+    element.addEventListener('show.bs.tooltip', args.onShow);
+  }
+  if (args.onShown) {
+    element.addEventListener('shown.bs.tooltip', args.onShown);
+  }
+  if (args.onHide) {
+    element.addEventListener('hide.bs.tooltip', args.onHide);
+  }
+  if (args.onHidden) {
+    element.addEventListener('hidden.bs.tooltip', args.onHidden);
+  }
 
   return () => {
     tooltip.dispose();

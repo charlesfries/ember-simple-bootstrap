@@ -10,9 +10,14 @@ export interface BsProgressBarComponentArgs {
   animated?: boolean;
 }
 
-export default class BsProgressBarComponent<Args extends BsProgressBarComponentArgs = BsProgressBarComponentArgs> extends BsBaseComponent<Args> {
+export default class BsProgressBarComponent<
+  Args extends BsProgressBarComponentArgs = BsProgressBarComponentArgs
+> extends BsBaseComponent<Args> {
   constructor(owner: unknown, args: Args) {
     super(owner, args);
-    assert('<Bs::Progress::Bar />: Must pass a value number', typeOf(this.args.value) === 'number');
+    assert(
+      '<Bs::Progress::Bar />: Must pass a value number',
+      typeOf(this.args.value) === 'number'
+    );
   }
 }

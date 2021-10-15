@@ -6,4 +6,6 @@ export interface BsSpinnerComponentArgs {
   color?: 'primary' | 'secondary'; // = 'secondary'
 }
 
-export default class BsSpinnerComponent<Args extends BsSpinnerComponentArgs = BsSpinnerComponentArgs> extends BsBaseComponent<Args> {}
+export default class BsSpinnerComponent<
+  Args extends BsSpinnerComponentArgs = BsSpinnerComponentArgs
+> extends BsBaseComponent<Args> {}

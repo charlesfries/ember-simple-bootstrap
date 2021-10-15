@@ -1,9 +1,12 @@
 import BsBaseComponent from '../base';
 
-/**
- * ARGS
- * accordion: UiAccordionComponent
- * show?: boolean
- */
+import type BsAccordionComponent from '../accordion';
 
-export default class BsAccordionItemComponent extends BsBaseComponent {}
+export interface BsAccordionItemComponentArgs {
+  accordion: BsAccordionComponent;
+  show?: boolean;
+}
+
+export default class BsAccordionItemComponent<
+  Args extends BsAccordionItemComponentArgs = BsAccordionItemComponentArgs
+> extends BsBaseComponent<Args> {}
