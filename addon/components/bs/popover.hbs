@@ -1,0 +1,17 @@
+<button
+  type="button"
+  class="btn btn-lg btn-danger"
+  data-bs-toggle="popover"
+  title="Popover title"
+  data-bs-content="And here's some amazing content. It's very engaging. Right?"
+  {{did-insert this.didInsert}}
+>
+  Click to toggle popover
+</button>
+
+{{! template-lint-disable no-inline-styles }}
+<div style="display: none;">
+  <div id={{this.id}}>
+    {{yield}}
+  </div>
+</div>

@@ -18,5 +18,11 @@ module.exports = function (defaults) {
   app.import('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js');
 
   const { maybeEmbroider } = require('@embroider/test-setup');
-  return maybeEmbroider(app);
+  return maybeEmbroider(app, {
+    skipBabel: [
+      {
+        package: 'qunit',
+      },
+    ],
+  });
 };

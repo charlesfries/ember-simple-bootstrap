@@ -25,6 +25,17 @@ interface Args {
   onHidden?: () => void;
 }
 
+interface Tooltip {
+  show: () => void;
+  hide: () => void;
+  toggle: () => void;
+  dispose: () => void;
+  enable: () => void;
+  disable: () => void;
+  toggleEnabled: () => void;
+  update: () => void;
+}
+
 export default modifier(function tooltip(
   element: Element,
   [title]: unknown[],
@@ -33,7 +44,7 @@ export default modifier(function tooltip(
   const tooltip = new (window as any).bootstrap.Tooltip(element, {
     title,
     ...args,
-  });
+  }) as Tooltip;
 
   if (args.onShow) {
     element.addEventListener('show.bs.tooltip', args.onShow);
