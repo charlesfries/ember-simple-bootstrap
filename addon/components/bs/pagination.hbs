@@ -1,15 +1,15 @@
 <nav ...attributes>
 	<ul class="pagination mb-0">
 		<li class="page-item {{unless this.canPrev "disabled"}}">
-			<a class="page-link" href="#" {{on "click" @onPrevious}}>Previous</a>
+			<a class="page-link" href="#" {{on "click" @onPrevious}} data-test-previous>Previous</a>
 		</li>
 		{{#each this.pages as |page index|}}
-			{{#if (and (gte index this.range.min) (lte index this.range.max))}}
-				<li class="page-item {{if (eq @curPage index) "active" }}"><a class="page-link" href="#" {{on "click" (fn @onSelect index)}}>{{inc index}}</a></li>
-			{{/if}}
+			<li class="page-item {{if (eq @curPage index) "active" }}">
+				<a class="page-link" href="#" {{on "click" (fn @onSelect index)}}>{{inc index}}</a>
+			</li>
 		{{/each}}
 		<li class="page-item {{unless this.canNext "disabled"}}">
-			<a class="page-link" href="#" {{on "click" @onNext}}>Next</a>
+			<a class="page-link" href="#" {{on "click" @onNext}} data-test-next>Next</a>
 		</li>
 	</ul>
 </nav>

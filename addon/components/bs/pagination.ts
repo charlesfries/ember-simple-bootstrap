@@ -41,14 +41,6 @@ export default class BsPaginationComponent extends BsBaseComponent<BsPaginationC
     return new Array(num);
   }
 
-  get range(): { min: number; max: number } {
-    const spread = 3;
-    const range = {} as Record<string, number>;
-    range.min = Math.max(this.args.curPage - spread, 0);
-    range.max = Math.min(range.min + spread * 2, this.pages.length);
-    return range as { min: number; max: number };
-  }
-
   get canPrev(): boolean {
     return this.args.curPage > 0;
   }
