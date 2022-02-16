@@ -1,17 +1,6 @@
 import BsBaseComponent from './base';
+import { Popover } from 'bootstrap';
 import { action } from '@ember/object';
-/* global bootstrap */
-
-interface Popover {
-  show: () => void;
-  hide: () => void;
-  toggle: () => void;
-  dispose: () => void;
-  enable: () => void;
-  disable: () => void;
-  toggleEnabled: () => void;
-  update: () => void;
-}
 
 export default class BsPopoverComponent extends BsBaseComponent {
   popover?: Popover;
@@ -26,8 +15,7 @@ export default class BsPopoverComponent extends BsBaseComponent {
       trigger: 'hover',
     };
 
-    // @ts-ignore
-    this.modal = new bootstrap.Popover(element, options);
+    this.popover = new Popover(element, options as any);
   }
 
   willDestroy(): void {

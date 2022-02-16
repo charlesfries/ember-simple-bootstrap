@@ -1,30 +1,35 @@
-import { modifier } from 'ember-modifier';
+import Modifier from 'ember-modifier';
+import { Dropdown } from 'bootstrap';
 
-interface Args {
-  boundary?: string | Element;
-  reference?: string | Element | Record<string, unknown>;
-  display?: string;
-  offset?: number[] | string | (() => void);
-  autoClose?: boolean | string;
-  popperConfig?: null | Record<string, unknown> | (() => void);
+import type { ModifierArgs } from 'ember-modifier/-private/interfaces';
+
+interface Named extends Dropdown.Options {
+  [x: string]: any
 }
 
-export default modifier(function dropdown(
-  element: Element,
-  _arr: unknown[],
-  args: Args
-): () => void {
-  element.classList.add('dropdown-toggle');
-  element.setAttribute('data-bs-toggle', 'dropdown');
+export interface DropdownModifierArgs extends ModifierArgs {
+  positional: unknown[];
+  named: Named
+}
 
-  const dropdown = new (window as any).bootstrap.Dropdown(element, {
-    ...args,
-  });
+export default class DropdownModifier extends Modifier<DropdownModifierArgs> {
+  dropdown?: Dropdown;
 
-  return () => {
-    element.classList.remove('dropdown-toggle');
-    element.removeAttribute('data-bs-toggle');
+  override didReceiveArguments() {
+    this.element.classList.add('dropdown-toggle');
+    this.element.setAttribute('data-bs-toggle', 'dropdown');
 
-    dropdown.dispose();
-  };
-});
+    this.dropdown = new Dropdown(this.element, {
+      ...this.args.named,
+    });
+  }
+
+  override willDestroy() {
+    this.element.classList.remove('dropdown-toggle');
+    this.element.removeAttribute('data-bs-toggle');
+
+    if (this.dropdown) {
+      this.dropdown.dispose();
+    }
+  }
+}

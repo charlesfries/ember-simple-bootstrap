@@ -1,65 +1,50 @@
-import { modifier } from 'ember-modifier';
+import Modifier from 'ember-modifier';
+import { Tooltip } from 'bootstrap';
 
-interface Args {
-  // config
-  animation?: boolean;
-  delay?: number | Record<string, unknown>;
-  html?: boolean;
-  placement?: 'auto' | 'top' | 'bottom' | 'left' | 'right';
-  selector?: string | boolean;
-  template?: string;
-  trigger?: string;
-  fallbackPlacements?: string[];
-  boundary?: string | Element;
-  customClass?: string | (() => void);
-  sanitize?: boolean;
-  allowList?: Record<string, unknown>;
-  sanitizeFn?: null | (() => void);
-  offset?: number[] | string | (() => void);
-  popperConfig?: null | Record<string, unknown> | (() => void);
+import type { ModifierArgs } from 'ember-modifier/-private/interfaces';
 
-  // events
+interface Named extends Tooltip.Options {
   onShow?: () => void;
   onShown?: () => void;
   onHide?: () => void;
   onHidden?: () => void;
+  [x: string]: any
 }
 
-interface Tooltip {
-  show: () => void;
-  hide: () => void;
-  toggle: () => void;
-  dispose: () => void;
-  enable: () => void;
-  disable: () => void;
-  toggleEnabled: () => void;
-  update: () => void;
+export interface TooltipModifierArgs extends ModifierArgs {
+  positional: [string];
+  named: Named
 }
 
-export default modifier(function tooltip(
-  element: Element,
-  [title]: unknown[],
-  args: Args
-): () => void {
-  const tooltip = new (window as any).bootstrap.Tooltip(element, {
-    title,
-    ...args,
-  }) as Tooltip;
+export default class TooltipModifier extends Modifier<TooltipModifierArgs> {
+  tooltip?: Tooltip;
 
-  if (args.onShow) {
-    element.addEventListener('show.bs.tooltip', args.onShow);
-  }
-  if (args.onShown) {
-    element.addEventListener('shown.bs.tooltip', args.onShown);
-  }
-  if (args.onHide) {
-    element.addEventListener('hide.bs.tooltip', args.onHide);
-  }
-  if (args.onHidden) {
-    element.addEventListener('hidden.bs.tooltip', args.onHidden);
+  override didReceiveArguments() {
+    const [title] = this.args.positional;
+    const { onShow, onShown, onHide, onHidden } = this.args.named;
+
+    this.tooltip = new Tooltip(this.element, {
+      ...this.args.named,
+      title,
+    });
+
+    if (onShow) {
+      this.element.addEventListener('show.bs.tooltip', onShow);
+    }
+    if (onShown) {
+      this.element.addEventListener('shown.bs.tooltip', onShown);
+    }
+    if (onHide) {
+      this.element.addEventListener('hide.bs.tooltip', onHide);
+    }
+    if (onHidden) {
+      this.element.addEventListener('hidden.bs.tooltip', onHidden);
+    }
   }
 
-  return () => {
-    tooltip.dispose();
-  };
-});
+  override willDestroy() {
+    if (this.tooltip) {
+      this.tooltip.dispose();
+    }
+  }
+}

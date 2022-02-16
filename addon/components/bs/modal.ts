@@ -1,32 +1,27 @@
 import BsBaseComponent from './base';
+import { Modal } from 'bootstrap';
 import { action } from '@ember/object';
-/* global bootstrap */
 
 export interface BsModalComponentArgs {
   title?: string;
   size?: 'sm' | 'lg' | 'xl';
   static?: boolean;
+  keyboard?: boolean;
+  focus?: boolean;
   scroll?: boolean;
   fullscreen?: boolean;
   hideClose?: boolean;
   onClose: () => void;
 }
 
-interface Modal {
-  toggle: () => void;
-  show: () => void;
-  hide: () => void;
-  handleUpdate: () => void;
-  dispose: () => void;
-}
-
 export default class BsModalComponent extends BsBaseComponent<BsModalComponentArgs> {
   modal?: Modal;
 
   @action didInsert(element: Element): void {
-    // @ts-ignore
-    this.modal = new bootstrap.Modal(element, {
+    this.modal = new Modal(element, {
       backdrop: this.args.static ? 'static' : true,
+      keyboard: this.args.keyboard ?? true,
+      focus: this.args.focus ?? true,
     });
     this.modal.show();
 
