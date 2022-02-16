@@ -26,9 +26,7 @@ export default class BsModalComponent extends BsBaseComponent<BsModalComponentAr
     this.modal.show();
 
     element.addEventListener('shown.bs.modal', () => {
-      const autofocus = element.querySelector(
-        '[autofocus]'
-      ) as HTMLInputElement;
+      const autofocus = element.querySelector<HTMLInputElement>('[autofocus]');
       if (autofocus) {
         autofocus.focus();
       }
