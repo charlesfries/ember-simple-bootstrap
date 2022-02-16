@@ -28,7 +28,7 @@ export default class BsModalComponent extends BsBaseComponent<BsModalComponentAr
     this.modal = new bootstrap.Modal(element, {
       backdrop: this.args.static ? 'static' : true,
     });
-    this.modal!.show();
+    this.modal.show();
 
     element.addEventListener('shown.bs.modal', () => {
       const autofocus = element.querySelector(
@@ -45,7 +45,9 @@ export default class BsModalComponent extends BsBaseComponent<BsModalComponentAr
   }
 
   willDestroy(): void {
-    this.modal!.hide();
-    // this.modal.dispose();
+    if (this.modal) {
+      this.modal.hide();
+      // this.modal.dispose();
+    }
   }
 }

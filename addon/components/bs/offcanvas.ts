@@ -19,7 +19,7 @@ export default class BsOffcanvasComponent extends BsBaseComponent<BsOffcanvasCom
   @action didInsert(element: Element): void {
     // @ts-ignore
     this.offcanvas = new bootstrap.Offcanvas(element, {});
-    this.offcanvas!.show();
+    this.offcanvas.show();
 
     const { onClose } = this.args;
     if (onClose) {
@@ -30,6 +30,8 @@ export default class BsOffcanvasComponent extends BsBaseComponent<BsOffcanvasCom
   }
 
   willDestroy(): void {
-    this.offcanvas!.hide();
+    if (this.offcanvas) {
+      this.offcanvas.hide();
+    }
   }
 }

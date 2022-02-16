@@ -33,6 +33,8 @@ export default class BsToastComponent extends BsBaseComponent<BsToastComponentAr
   }
 
   willDestroy(): void {
-    this.toast!.hide();
+    if (this.toast) {
+      this.toast.hide();
+    }
   }
 }
