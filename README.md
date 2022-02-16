@@ -28,19 +28,16 @@ ember install ember-simple-bootstrap
 Import Bootstrap JavaScript:
 
 ```js
-// ember-cli-build.js
+// app/app.js
 
-'use strict';
+import Application from '@ember/application';
+import Resolver from 'ember-resolver';
+import loadInitializers from 'ember-load-initializers';
+import config from 'my-app/config/environment';
+import 'bootstrap';
 
-const EmberApp = require('ember-cli/lib/broccoli/ember-app');
-
-module.exports = function (defaults) {
+export default class App extends Application {
   ...
-
-  app.import('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js');
-
-  return app.toTree();
-};
 ```
 
 Import Bootstrap Sass:
