@@ -4,12 +4,12 @@ import { Dropdown } from 'bootstrap';
 import type { ModifierArgs } from 'ember-modifier/-private/interfaces';
 
 interface Named extends Dropdown.Options {
-  [x: string]: any
+  [x: string]: any;
 }
 
 export interface DropdownModifierArgs extends ModifierArgs {
   positional: unknown[];
-  named: Named
+  named: Named;
 }
 
 export default class DropdownModifier extends Modifier<DropdownModifierArgs> {

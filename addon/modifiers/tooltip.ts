@@ -8,12 +8,12 @@ interface Named extends Tooltip.Options {
   onShown?: () => void;
   onHide?: () => void;
   onHidden?: () => void;
-  [x: string]: any
+  [x: string]: any;
 }
 
 export interface TooltipModifierArgs extends ModifierArgs {
   positional: [string];
-  named: Named
+  named: Named;
 }
 
 export default class TooltipModifier extends Modifier<TooltipModifierArgs> {
