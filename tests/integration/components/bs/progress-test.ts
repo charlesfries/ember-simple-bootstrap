@@ -7,20 +7,16 @@ module('Integration | Component | bs/progress', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+    this.set('value', 25);
 
-    await render(hbs`<Bs::Progress />`);
-
-    assert.dom(this.element).hasText('');
-
-    // Template block usage:
     await render(hbs`
-      <Bs::Progress>
-        template block text
+      <Bs::Progress as |progress|>
+        <progress.bar @value={{this.value}} />
       </Bs::Progress>
     `);
 
-    assert.dom(this.element).hasText('template block text');
+    assert.dom('.progress').exists();
+    assert.dom('.progress-bar').exists({ count: 1 });
+    assert.dom('.progress-bar').hasAttribute('style', 'width:25%');
   });
 });
