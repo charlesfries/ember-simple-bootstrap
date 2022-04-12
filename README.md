@@ -162,7 +162,7 @@ Dropdowns
 
 ```hbs
 <Bs::Button {{dropdown autoClose="outside"}}>Open dropdown</Bs::Button>
-<Bs::Dropdown @align="right" @linger={{true}} as |dropdown|>
+<Bs::Dropdown @align="right" as |dropdown|>
   <dropdown.header>Dropdown header</dropdown.header>
   <dropdown.item @label="Action" />
   <dropdown.divider />
