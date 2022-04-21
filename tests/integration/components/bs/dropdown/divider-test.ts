@@ -13,14 +13,5 @@ module('Integration | Component | bs/dropdown/divider', function (hooks) {
     await render(hbs`<Bs::Dropdown::Divider />`);
 
     assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <Bs::Dropdown::Divider>
-        template block text
-      </Bs::Dropdown::Divider>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
   });
 });

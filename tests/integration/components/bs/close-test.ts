@@ -13,14 +13,5 @@ module('Integration | Component | bs/close', function (hooks) {
     await render(hbs`<Bs::Close />`);
 
     assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <Bs::Close>
-        template block text
-      </Bs::Close>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
   });
 });

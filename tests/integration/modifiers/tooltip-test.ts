@@ -8,7 +8,7 @@ module('Integration | Modifier | tooltip', function (hooks) {
 
   // Replace this with your real tests.
   test('it renders', async function (assert) {
-    await render(hbs`<div {{tooltip}}></div>`);
+    await render(hbs`<div {{tooltip "Title"}}></div>`);
 
     assert.ok(true);
   });

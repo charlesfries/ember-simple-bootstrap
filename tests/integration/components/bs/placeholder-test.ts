@@ -13,14 +13,5 @@ module('Integration | Component | bs/placeholder', function (hooks) {
     await render(hbs`<Bs::Placeholder />`);
 
     assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <Bs::Placeholder>
-        template block text
-      </Bs::Placeholder>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
   });
 });

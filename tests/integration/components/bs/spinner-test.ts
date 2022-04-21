@@ -13,14 +13,5 @@ module('Integration | Component | bs/spinner', function (hooks) {
     await render(hbs`<Bs::Spinner />`);
 
     assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <Bs::Spinner>
-        template block text
-      </Bs::Spinner>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
   });
 });
