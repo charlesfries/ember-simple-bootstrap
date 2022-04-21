@@ -23,9 +23,12 @@ export default class BsModalComponent extends BsBaseComponent<BsModalComponentAr
       keyboard: this.args.keyboard ?? true,
       focus: this.args.focus ?? true,
     });
-    this.modal.show();
 
     element.addEventListener('shown.bs.modal', () => {
+      if (this.isDestroyed) {
+        this.modal?.hide();
+      }
+
       const autofocus = element.querySelector<HTMLInputElement>('[autofocus]');
       if (autofocus) {
         autofocus.focus();
@@ -35,6 +38,8 @@ export default class BsModalComponent extends BsBaseComponent<BsModalComponentAr
     element.addEventListener('hidden.bs.modal', () => {
       this.args.onClose();
     });
+
+    this.modal.show();
   }
 
   willDestroy(): void {
