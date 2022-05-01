@@ -1,35 +1,21 @@
-import Modifier from 'ember-modifier';
+import { modifier } from 'ember-modifier';
 import { Dropdown } from 'bootstrap';
 
-import type { ModifierArgs } from 'ember-modifier/-private/interfaces';
+export default modifier(
+  (element: Element, _positional: unknown[], named: Dropdown.Options) => {
+    element.classList.add('dropdown-toggle');
+    element.setAttribute('data-bs-toggle', 'dropdown');
 
-interface Named extends Dropdown.Options {
-  [x: string]: any;
-}
-
-export interface DropdownModifierArgs extends ModifierArgs {
-  positional: unknown[];
-  named: Named;
-}
-
-export default class DropdownModifier extends Modifier<DropdownModifierArgs> {
-  dropdown?: Dropdown;
-
-  override didReceiveArguments() {
-    this.element.classList.add('dropdown-toggle');
-    this.element.setAttribute('data-bs-toggle', 'dropdown');
-
-    this.dropdown = new Dropdown(this.element, {
-      ...this.args.named,
+    const dropdown = new Dropdown(element, {
+      ...named,
     });
-  }
 
-  override willDestroy() {
-    this.element.classList.remove('dropdown-toggle');
-    this.element.removeAttribute('data-bs-toggle');
+    return () => {
+      element.classList.remove('dropdown-toggle');
+      element.removeAttribute('data-bs-toggle');
 
-    if (this.dropdown) {
-      this.dropdown.dispose();
-    }
-  }
-}
+      dropdown.dispose();
+    };
+  },
+  { eager: false }
+);

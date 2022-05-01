@@ -1,50 +1,52 @@
-import Modifier from 'ember-modifier';
+import { modifier } from 'ember-modifier';
 import { Tooltip } from 'bootstrap';
 
-import type { ModifierArgs } from 'ember-modifier/-private/interfaces';
-
-interface Named extends Tooltip.Options {
+interface Options extends Tooltip.Options {
   onShow?: () => void;
   onShown?: () => void;
   onHide?: () => void;
   onHidden?: () => void;
-  [x: string]: any;
 }
 
-export interface TooltipModifierArgs extends ModifierArgs {
-  positional: [string];
-  named: Named;
-}
+export default modifier(
+  (element: Element, positional: unknown[], named: Options) => {
+    const [title] = positional as [string];
+    const { onShow, onShown, onHide, onHidden } = named;
 
-export default class TooltipModifier extends Modifier<TooltipModifierArgs> {
-  tooltip?: Tooltip;
-
-  override didReceiveArguments() {
-    const [title] = this.args.positional;
-    const { onShow, onShown, onHide, onHidden } = this.args.named;
-
-    this.tooltip = new Tooltip(this.element, {
-      ...this.args.named,
+    const tooltip = new Tooltip(element, {
+      ...named,
       title,
     });
 
     if (onShow) {
-      this.element.addEventListener('show.bs.tooltip', onShow);
+      element.addEventListener('show.bs.tooltip', onShow);
     }
     if (onShown) {
-      this.element.addEventListener('shown.bs.tooltip', onShown);
+      element.addEventListener('shown.bs.tooltip', onShown);
     }
     if (onHide) {
-      this.element.addEventListener('hide.bs.tooltip', onHide);
+      element.addEventListener('hide.bs.tooltip', onHide);
     }
     if (onHidden) {
-      this.element.addEventListener('hidden.bs.tooltip', onHidden);
+      element.addEventListener('hidden.bs.tooltip', onHidden);
     }
-  }
 
-  override willDestroy() {
-    if (this.tooltip) {
-      this.tooltip.dispose();
-    }
-  }
-}
+    return () => {
+      if (onShow) {
+        element.removeEventListener('show.bs.tooltip', onShow);
+      }
+      if (onShown) {
+        element.removeEventListener('shown.bs.tooltip', onShown);
+      }
+      if (onHide) {
+        element.removeEventListener('hide.bs.tooltip', onHide);
+      }
+      if (onHidden) {
+        element.removeEventListener('hidden.bs.tooltip', onHidden);
+      }
+
+      tooltip.dispose();
+    };
+  },
+  { eager: false }
+);
