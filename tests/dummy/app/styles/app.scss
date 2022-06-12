@@ -1,3 +1,14 @@
 $font-size-root: 0.875rem;
 
 @import 'bootstrap';
+
+h1 {
+  margin-bottom: $spacer;
+  padding-bottom: map-get($spacers, 2);
+  border-bottom: $border-width solid $border-color;
+}
+
+.card,
+.navbar {
+  margin-bottom: $spacer;
+}

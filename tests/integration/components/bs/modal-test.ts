@@ -7,11 +7,7 @@ module('Integration | Component | bs/modal', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    assert.expect(1);
-
-    this.set('close', () => {
-      assert.true(true);
-    });
+    this.set('close', () => {}); // eslint-disable-line @typescript-eslint/no-empty-function
 
     await render(hbs`
       <Bs::Modal @title="Title" @size="lg" @onClose={{this.close}} as |modal|>

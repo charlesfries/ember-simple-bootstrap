@@ -1,13 +1,5 @@
 {{page-title "Components"}}
 
-<Bs::Alert @color="warning">
-  <a
-    href="https://github.com/charlesfries/ember-simple-bootstrap/blob/master/tests/dummy/app/templates/components.hbs"
-    class="alert-link"
-  >View the source</a>
-  of this page to see code examples.
-</Bs::Alert>
-
 <div class="row">
   <div class="col-2">
     <Bs::Nav @pills={{true}} class="flex-column" as |nav|>
@@ -83,6 +75,14 @@
     </Bs::Nav>
   </div>
   <div class="col-10">
+    <Bs::Alert @color="warning">
+      <a
+        href="https://github.com/charlesfries/ember-simple-bootstrap/blob/master/tests/dummy/app/templates/components.hbs"
+        class="alert-link"
+      >View the source</a>
+      of this page to see code examples.
+    </Bs::Alert>
+
     {{outlet}}
   </div>
 </div>
