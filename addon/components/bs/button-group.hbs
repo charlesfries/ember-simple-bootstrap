@@ -1,5 +1,7 @@
-<div class="btn-group {{if @size (concat "btn-group-" @size)}}" role="group" ...attributes>
-	{{yield (hash
-		button=(component "bs/button")
-	)}}
+<div
+  class="btn-group {{if @size (concat 'btn-group-' @size)}}"
+  role="group"
+  ...attributes
+>
+  {{yield (hash button=(component "bs/button"))}}
 </div>

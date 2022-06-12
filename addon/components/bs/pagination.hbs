@@ -1,15 +1,29 @@
 <nav ...attributes>
-	<ul class="pagination mb-0">
-		<li class="page-item {{unless this.canPrev "disabled"}}">
-			<a class="page-link" href="#" {{on "click" (prevent-default @onPrevious)}} data-test-previous>Previous</a>
-		</li>
-		{{#each this.pages as |page index|}}
-			<li class="page-item {{if (eq @curPage index) "active" }}">
-				<a class="page-link" href="#" {{on "click" (prevent-default (fn @onSelect index))}}>{{inc index}}</a>
-			</li>
-		{{/each}}
-		<li class="page-item {{unless this.canNext "disabled"}}">
-			<a class="page-link" href="#" {{on "click" (prevent-default @onNext)}} data-test-next>Next</a>
-		</li>
-	</ul>
+  <ul class="pagination mb-0">
+    <li class="page-item {{unless this.canPrev 'disabled'}}">
+      <a
+        class="page-link"
+        href="#"
+        {{on "click" (prevent-default @onPrevious)}}
+        data-test-previous
+      >Previous</a>
+    </li>
+    {{#each this.pages as |page index|}}
+      <li class="page-item {{if (eq @curPage index) 'active'}}">
+        <a
+          class="page-link"
+          href="#"
+          {{on "click" (prevent-default (fn @onSelect index))}}
+        >{{inc index}}</a>
+      </li>
+    {{/each}}
+    <li class="page-item {{unless this.canNext 'disabled'}}">
+      <a
+        class="page-link"
+        href="#"
+        {{on "click" (prevent-default @onNext)}}
+        data-test-next
+      >Next</a>
+    </li>
+  </ul>
 </nav>

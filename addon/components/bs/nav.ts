@@ -1,3 +1,8 @@
 import BsBaseComponent from './base';
 
-export default class BsNavComponent extends BsBaseComponent {}
+export interface BsNavComponentArgs {
+  tabs?: boolean;
+  pills?: boolean;
+}
+
+export default class BsNavComponent extends BsBaseComponent<BsNavComponentArgs> {}

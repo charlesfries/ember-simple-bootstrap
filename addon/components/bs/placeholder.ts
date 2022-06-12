@@ -1,3 +1,5 @@
 import BsBaseComponent from './base';
 
-export default class BsPlaceholderComponent extends BsBaseComponent {}
+export interface BsPlaceholderComponentArgs {}
+
+export default class BsPlaceholderComponent extends BsBaseComponent<BsPlaceholderComponentArgs> {}

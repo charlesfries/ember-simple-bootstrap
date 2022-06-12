@@ -1,0 +1,13 @@
+{{page-title "Buttons"}}
+
+<h2>Buttons</h2>
+
+<Bs::Button @onClick={{fn (mut this.xyz)}}>My Button</Bs::Button>
+<Bs::Button @color="success" @onClick={{fn (mut this.xyz)}}>My Button</Bs::Button>
+<Bs::Button @size="lg" @onClick={{fn (mut this.xyz)}}>My Button</Bs::Button>
+<Bs::Button
+  @size="sm"
+  @disabled={{true}}
+  @loading={{false}}
+  @onClick={{fn (mut this.xyz)}}
+>My Button</Bs::Button>

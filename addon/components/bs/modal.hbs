@@ -1,18 +1,29 @@
-<div class="modal fade" tabindex="-1" ...attributes {{did-insert this.didInsert}}>
-	<div class="modal-dialog {{if @size (concat "modal-" @size)}} {{if @scroll "modal-dialog-scrollable"}} {{if @fullscreen "modal-fullscreen"}}">
-		<div class="modal-content">
-			{{#if @title}}
-				<div class="modal-header">
-					<h5 class="modal-title">{{@title}}</h5>
-					{{#unless @hideClose}}
-						<Bs::Close data-bs-dismiss="modal" />
-					{{/unless}}
-				</div>
-			{{/if}}
-			{{yield (hash
-				body=(component "bs/modal/body")
-				footer=(component "bs/modal/footer")
-			)}}
-		</div>
-	</div>
+<div
+  class="modal fade"
+  tabindex="-1"
+  ...attributes
+  {{did-insert this.didInsert}}
+>
+  <div
+    class="modal-dialog
+      {{if @size (concat 'modal-' @size)}}
+      {{if @scroll 'modal-dialog-scrollable'}}
+      {{if @fullscreen 'modal-fullscreen'}}"
+  >
+    <div class="modal-content">
+      {{#if @title}}
+        <div class="modal-header">
+          <h5 class="modal-title">{{@title}}</h5>
+          {{#unless @hideClose}}
+            <Bs::CloseButton data-bs-dismiss="modal" />
+          {{/unless}}
+        </div>
+      {{/if}}
+      {{yield
+        (hash
+          body=(component "bs/modal/body") footer=(component "bs/modal/footer")
+        )
+      }}
+    </div>
+  </div>
 </div>

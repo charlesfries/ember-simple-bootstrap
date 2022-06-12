@@ -7,6 +7,4 @@ export interface BsListGroupComponentArgs {
   color?: string;
 }
 
-export default class BsListGroupComponent<
-  Args extends BsListGroupComponentArgs = BsListGroupComponentArgs
-> extends BsBaseComponent<Args> {}
+export default class BsListGroupComponent extends BsBaseComponent<BsListGroupComponentArgs> {}

@@ -1,3 +1,6 @@
-<nav class="nav nav-tabs" ...attributes>
-	{{yield (hash link-to=(component "link-to" class="nav-link"))}}
+<nav
+  class="nav {{if @tabs 'nav-tabs'}} {{if @pills 'nav-pills'}}"
+  ...attributes
+>
+  {{yield (hash link-to=(component "link-to" class="nav-link"))}}
 </nav>

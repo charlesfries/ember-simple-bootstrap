@@ -1,12 +1,14 @@
 <div class="accordion-item" ...attributes>
-	<h2 class="accordion-header">
-		{{yield (hash
-			button=(component "bs/accordion/button" item=this show=@show)
-		)}}
-	</h2>
-	<div class="accordion-collapse collapse {{if @show "show"}}" id={{this.id}} data-bs-parent={{unless @accordion.alwaysOpen (concat "#" @accordion.id)}}>
-		{{yield (hash
-			body=(component "bs/accordion/body")
-		)}}
-	</div>
+  <h2 class="accordion-header">
+    {{yield
+      (hash button=(component "bs/accordion/button" item=this show=@show))
+    }}
+  </h2>
+  <div
+    class="accordion-collapse collapse {{if @show 'show'}}"
+    id={{this.id}}
+    data-bs-parent={{unless @accordion.alwaysOpen (concat "#" @accordion.id)}}
+  >
+    {{yield (hash body=(component "bs/accordion/body"))}}
+  </div>
 </div>

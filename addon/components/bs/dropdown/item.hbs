@@ -1,16 +1,16 @@
 <button
-	type="button"
-	class="dropdown-item {{if @color (concat "text-" @color)}}"
-	disabled={{@disabled}}
-	{{on "click" (optional @onClick)}}
-	...attributes
+  type="button"
+  class="dropdown-item {{if @color (concat 'text-' @color)}}"
+  disabled={{@disabled}}
+  {{on "click" (optional @onClick)}}
+  ...attributes
 >
-	{{#if (has-block)}}
-		{{yield}}
-	{{else}}
-		{{#if @icon}}
-			<FaIcon @icon={{@icon}} @fixedWidth={{true}} />&nbsp; 
-		{{/if}}
-		{{@label}}
-	{{/if}}
+  {{#if (has-block)}}
+    {{yield}}
+  {{else}}
+    {{#if @icon}}
+      <FaIcon @icon={{@icon}} @fixedWidth={{true}} />&nbsp;
+    {{/if}}
+    {{@label}}
+  {{/if}}
 </button>

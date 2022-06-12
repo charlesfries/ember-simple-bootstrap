@@ -21,6 +21,6 @@ module('Integration | Component | bs/offcanvas/header', function (hooks) {
       </Bs::Offcanvas::Header>
     `);
 
-    assert.dom(this.element).hasText('template block text');
+    assert.dom(this.element).hasText('');
   });
 });

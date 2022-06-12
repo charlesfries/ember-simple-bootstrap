@@ -1,0 +1,16 @@
+{{page-title "Offcanvas"}}
+
+<h2>Offcanvas</h2>
+
+<Bs::Button @onClick={{fn (mut this.showOffcanvas) true}}>Launch demo offcanvas</Bs::Button>
+
+{{#if this.showOffcanvas}}
+  <Bs::Offcanvas
+    @placement="end"
+    @onClose={{fn (mut this.showOffcanvas) false}}
+    as |offcanvas|
+  >
+    <offcanvas.header @title="My Title" />
+    <offcanvas.body>My Body</offcanvas.body>
+  </Bs::Offcanvas>
+{{/if}}

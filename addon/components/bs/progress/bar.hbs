@@ -1,9 +1,13 @@
 <div
-	class="progress-bar {{if @color (concat "bg-" @color)}} {{if @striped "progress-bar-striped"}} {{if @animated "progress-bar-animated"}}"
-	role="progressbar"
-	style={{html-safe (concat "width:" @value "%")}}
-	...attributes>
-	{{#if @labeled}}
-		{{@value}}%
-	{{/if}}
+  class="progress-bar
+    {{if @color (concat 'bg-' @color)}}
+    {{if @striped 'progress-bar-striped'}}
+    {{if @animated 'progress-bar-animated'}}"
+  role="progressbar"
+  style={{html-safe (concat "width:" @value "%")}}
+  ...attributes
+>
+  {{#if @labeled}}
+    {{@value}}%
+  {{/if}}
 </div>

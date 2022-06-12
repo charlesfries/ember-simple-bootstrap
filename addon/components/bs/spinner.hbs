@@ -1,3 +1,11 @@
-<div class={{if @centered "d-flex align-items-center justify-content-center"}} ...attributes>
-	<div class="spinner-border {{unless @large "spinner-border-sm"}} text-{{if @color @color "primary"}}" role="status"></div>
+<div
+  class={{if @centered "d-flex align-items-center justify-content-center"}}
+  ...attributes
+>
+  <div
+    class="spinner-border
+      {{unless @large 'spinner-border-sm'}}
+      text-{{if @color @color 'primary'}}"
+    role="status"
+  ></div>
 </div>

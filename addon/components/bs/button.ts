@@ -4,12 +4,10 @@ export interface BsButtonComponentArgs {
   isSubmit?: boolean;
   size?: 'sm' | 'lg';
   outline?: boolean;
-  color?: string; // = 'secondary';
+  color?: string;
   disabled?: boolean;
   loading?: boolean;
   onClick?: () => void;
 }
 
-export default class BsButtonComponent<
-  Args extends BsButtonComponentArgs = BsButtonComponentArgs
-> extends BsBaseComponent<Args> {}
+export default class BsButtonComponent extends BsBaseComponent<BsButtonComponentArgs> {}

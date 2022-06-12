@@ -2,7 +2,9 @@ import BsBaseComponent from './base';
 import { Popover } from 'bootstrap';
 import { action } from '@ember/object';
 
-export default class BsPopoverComponent extends BsBaseComponent {
+export interface BsPopoverComponentArgs {}
+
+export default class BsPopoverComponent extends BsBaseComponent<BsPopoverComponentArgs> {
   popover?: Popover;
 
   @action didInsert(element: Element): void {

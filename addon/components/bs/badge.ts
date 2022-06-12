@@ -1,3 +1,7 @@
 import BsBaseComponent from './base';
 
-export default class BsBadgeComponent extends BsBaseComponent {}
+export interface BsBadgeComponentArgs {
+  color?: string;
+}
+
+export default class BsBadgeComponent extends BsBaseComponent<BsBadgeComponentArgs> {}

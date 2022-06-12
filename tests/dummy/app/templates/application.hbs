@@ -1,15 +1,29 @@
 {{page-title "Ember Simple Bootstrap"}}
 
-<Bs::Navbar @expand="lg" @shade="light" class="bg-light mb-4">
+<Bs::Navbar @expand="lg" @shade="dark" class="bg-dark shadow mb-3">
   <div class="container">
     <LinkTo @route="index" class="navbar-brand">Ember Simple Bootstrap</LinkTo>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav1"
+      aria-controls="navbarNav1"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav1">
       <div class="navbar-nav">
-        <LinkTo @route="index" class="nav-link">Home</LinkTo>
+        <LinkTo @route="getting-started" class="nav-link">Getting started</LinkTo>
         <LinkTo @route="components" class="nav-link">Components</LinkTo>
+      </div>
+      <div class="navbar-nav ms-auto">
+        <a
+          href="https://github.com/charlesfries/ember-simple-bootstrap"
+          class="nav-link"
+        >GitHub</a>
       </div>
     </div>
   </div>

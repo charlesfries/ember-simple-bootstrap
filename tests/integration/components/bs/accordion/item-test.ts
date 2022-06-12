@@ -21,6 +21,6 @@ module('Integration | Component | bs/accordion/item', function (hooks) {
       </Bs::Accordion::Item>
     `);
 
-    assert.dom(this.element).hasText('template block text');
+    assert.dom(this.element).hasText('template block text template block text');
   });
 });

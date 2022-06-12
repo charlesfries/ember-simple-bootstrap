@@ -1,7 +1,12 @@
-<div class="dropdown-menu {{if (eq @align "right") "dropdown-menu-end"}}" ...attributes>
-	{{yield (hash
-		item=(component "bs/dropdown/item")
-		header=(component "bs/dropdown/header")
-		divider=(component "bs/dropdown/divider")
-	)}}
+<div
+  class="dropdown-menu {{if (eq @align 'right') 'dropdown-menu-end'}}"
+  ...attributes
+>
+  {{yield
+    (hash
+      item=(component "bs/dropdown/item")
+      header=(component "bs/dropdown/header")
+      divider=(component "bs/dropdown/divider")
+    )
+  }}
 </div>

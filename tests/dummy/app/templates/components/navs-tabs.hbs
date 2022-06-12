@@ -1,0 +1,31 @@
+{{page-title "Navs & tabs"}}
+
+<h2>Navs & tabs</h2>
+
+<Bs::Nav @tabs={{true}} as |nav|>
+  <nav.link-to @route="components.navs-tabs" class="nav-link">Link 1</nav.link-to>
+  <nav.link-to
+    @route="components.navs-tabs"
+    @query={{hash filter=2}}
+    class="nav-link"
+  >Link 2</nav.link-to>
+  <nav.link-to
+    @route="components.navs-tabs"
+    @query={{hash filter=3}}
+    class="nav-link"
+  >Link 3</nav.link-to>
+</Bs::Nav>
+
+<Bs::Nav @pills={{true}} as |nav|>
+  <nav.link-to @route="components.navs-tabs" class="nav-link">Link 1</nav.link-to>
+  <nav.link-to
+    @route="components.navs-tabs"
+    @query={{hash filter=2}}
+    class="nav-link"
+  >Link 2</nav.link-to>
+  <nav.link-to
+    @route="components.navs-tabs"
+    @query={{hash filter=3}}
+    class="nav-link"
+  >Link 3</nav.link-to>
+</Bs::Nav>

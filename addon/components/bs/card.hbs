@@ -1,7 +1,9 @@
 <div class="card" ...attributes>
-	{{yield (hash
-		header=(component "bs/card/header")
-		body=(component "bs/card/body")
-		footer=(component "bs/card/footer")
-	)}}
+  {{yield
+    (hash
+      header=(component "bs/card/header")
+      body=(component "bs/card/body")
+      footer=(component "bs/card/footer")
+    )
+  }}
 </div>

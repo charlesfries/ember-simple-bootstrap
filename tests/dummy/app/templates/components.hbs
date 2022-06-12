@@ -1,223 +1,88 @@
 {{page-title "Components"}}
 
-<h2>Components</h2>
-<p>
-  <a href="https://github.com/charlesfries/ember-simple-bootstrap/blob/master/tests/dummy/app/templates/components.hbs">View the source of this page</a>
-  to see API options.</p>
-
-<hr />
-
-<h2>Accordion</h2>
-
-<Bs::Accordion as |accordion|>
-  <accordion.item as |item|>
-    <item.button>My Title 1</item.button>
-    <item.body>My Body 1</item.body>
-  </accordion.item>
-  <accordion.item as |item|>
-    <item.button>My Title 2</item.button>
-    <item.body>My Body 2</item.body>
-  </accordion.item>
-</Bs::Accordion>
-
-<h2>Alerts</h2>
-
-<Bs::Alert @color="primary">
-  A simple primary alert—check it out!
-</Bs::Alert>
-<Bs::Alert @color="primary">
-  A simple primary alert with
-  <LinkTo @route="application" class="alert-link">an example link</LinkTo>. Give it a click if you like.
-</Bs::Alert>
-<Bs::Alert @color="success">
-  <h4 class="alert-heading">Well done!</h4>
-  <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-  <hr />
-  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+<Bs::Alert @color="warning">
+  <a
+    href="https://github.com/charlesfries/ember-simple-bootstrap/blob/master/tests/dummy/app/templates/components.hbs"
+    class="alert-link"
+  >View the source</a>
+  of this page to see code examples.
 </Bs::Alert>
 
-<h2>Breadcrumb</h2>
-
-<Bs::Breadcrumb as |breadcrumb|>
-  <breadcrumb.item @label="home">Home</breadcrumb.item>
-  <breadcrumb.item @label="home.library">Library</breadcrumb.item>
-  <breadcrumb.item @label="home.library.data">Data</breadcrumb.item>
-</Bs::Breadcrumb>
-
-<h2>Buttons</h2>
-
-<Bs::Button @onClick={{fn (mut this.xyz)}}>My Button</Bs::Button>
-<Bs::Button @color="success" @onClick={{fn (mut this.xyz)}}>My Button</Bs::Button>
-<Bs::Button @size="lg" @onClick={{fn (mut this.xyz)}}>My Button</Bs::Button>
-<Bs::Button @size="sm" @disabled={{true}} @loading={{false}} @onClick={{fn (mut this.xyz)}}>My Button</Bs::Button>
-
-<h2>Card</h2>
-
-<Bs::Card as |card|>
-  <card.header @title="Card title" />
-  <card.body>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card"s content.</p>
-  </card.body>
-</Bs::Card>
-
-<h2>Dropdowns</h2>
-
-<Bs::Button {{dropdown}}>Open dropdown</Bs::Button>
-<Bs::Dropdown @align="right" as |dropdown|>
-  <dropdown.header>Dropdown header</dropdown.header>
-  <dropdown.item @label="Action" />
-  <dropdown.divider />
-  <dropdown.item @label="Another action" @onClick={{fn (mut this.xyz)}} />
-</Bs::Dropdown>
-
-<Bs::Button {{dropdown autoClose=false}}>This one stays open</Bs::Button>
-<Bs::Dropdown as |dropdown|>
-  <dropdown.header>Dropdown header</dropdown.header>
-  <dropdown.item @label="Action" />
-  <dropdown.divider />
-  <dropdown.item @label="Another action" @onClick={{fn (mut this.xyz)}} />
-</Bs::Dropdown>
-
-<h2>List group</h2>
-
-<Bs::ListGroup as |listGroup|>
-  <listGroup.item>An item</listGroup.item>
-  <listGroup.item>A second item</listGroup.item>
-  <listGroup.item>A third item</listGroup.item>
-  <listGroup.item>A fourth item</listGroup.item>
-  <listGroup.item>And a fifth one</listGroup.item>
-</Bs::ListGroup>
-<Bs::ListGroup as |listGroup|>
-  <listGroup.item class="active">An active item</listGroup.item>
-  <listGroup.item>A second item</listGroup.item>
-</Bs::ListGroup>
-<Bs::ListGroup as |listGroup|>
-  <listGroup.item class="disabled">A disabled item</listGroup.item>
-  <listGroup.item>A second item</listGroup.item>
-</Bs::ListGroup>
-<Bs::ListGroup @flush={{true}} as |listGroup|>
-  <listGroup.item>An item</listGroup.item>
-</Bs::ListGroup>
-
-<h2>Modal</h2>
-
-<Bs::Button @onClick={{fn (mut this.showModal) true}}>Launch demo modal</Bs::Button>
-
-{{#if this.showModal}}
-  <Bs::Modal @title="Modal title" @onClose={{fn (mut this.showModal) false}} as |modal|>
-    <modal.body>
-      <p>Modal body text goes here.</p>
-    </modal.body>
-    <modal.footer>
-      <Bs::Button @color="secondary" @onClick={{fn (mut this.showModal) false}}>Cancel</Bs::Button>
-      <Bs::Button @color="primary" @onClick={{fn (mut this.xyz)}}>Save changes</Bs::Button>
-    </modal.footer>
-  </Bs::Modal>
-{{/if}}
-
-<h2>Navs</h2>
-
-{{! <Bs::Nav as |nav|>
-		<nav.link-to @route="index">Link 1</nav.link-to>
-		<nav.link-to @route="index">Link 2</nav.link-to>
-		<nav.link-to @route="index">Link 3</nav.link-to>
-	</Bs::Nav> }}
-
-<h2>Navbar</h2>
-
-<Bs::Navbar @expand="lg" @shade="light" class="bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-        <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a></li>
-      </ul>
-    </div>
+<div class="row">
+  <div class="col-2">
+    <Bs::Nav @pills={{true}} class="flex-column" as |nav|>
+      <nav.link-to @route="components.accordion" class="nav-link">
+        Accordion
+      </nav.link-to>
+      <nav.link-to @route="components.alerts" class="nav-link">
+        Alerts
+      </nav.link-to>
+      <nav.link-to @route="components.badge" class="nav-link">
+        Badge
+      </nav.link-to>
+      <nav.link-to @route="components.breadcrumb" class="nav-link">
+        Breadcrumb
+      </nav.link-to>
+      <nav.link-to @route="components.buttons" class="nav-link">
+        Buttons
+      </nav.link-to>
+      <nav.link-to @route="components.button-group" class="nav-link">
+        Button group
+      </nav.link-to>
+      <nav.link-to @route="components.card" class="nav-link">
+        Card
+      </nav.link-to>
+      <nav.link-to @route="components.carousel" class="nav-link">
+        Carousel
+      </nav.link-to>
+      <nav.link-to @route="components.close-button" class="nav-link">
+        Close button
+      </nav.link-to>
+      <nav.link-to @route="components.collapse" class="nav-link">
+        Collapse
+      </nav.link-to>
+      <nav.link-to @route="components.dropdowns" class="nav-link">
+        Dropdowns
+      </nav.link-to>
+      <nav.link-to @route="components.list-group" class="nav-link">
+        List group
+      </nav.link-to>
+      <nav.link-to @route="components.modal" class="nav-link">
+        Modal
+      </nav.link-to>
+      <nav.link-to @route="components.navbar" class="nav-link">
+        Navbar
+      </nav.link-to>
+      <nav.link-to @route="components.navs-tabs" class="nav-link">
+        Navs & tabs
+      </nav.link-to>
+      <nav.link-to @route="components.offcanvas" class="nav-link">
+        Offcanvas
+      </nav.link-to>
+      <nav.link-to @route="components.pagination" class="nav-link">
+        Pagination
+      </nav.link-to>
+      <nav.link-to @route="components.placeholders" class="nav-link">
+        Placeholders
+      </nav.link-to>
+      <nav.link-to @route="components.popovers" class="nav-link">
+        Popovers
+      </nav.link-to>
+      <nav.link-to @route="components.progress" class="nav-link">
+        Progress
+      </nav.link-to>
+      <nav.link-to @route="components.spinners" class="nav-link">
+        Spinners
+      </nav.link-to>
+      <nav.link-to @route="components.toasts" class="nav-link">
+        Toasts
+      </nav.link-to>
+      <nav.link-to @route="components.tooltips" class="nav-link">
+        Tooltips
+      </nav.link-to>
+    </Bs::Nav>
   </div>
-</Bs::Navbar>
-
-<h2>Offcanvas</h2>
-
-<Bs::Button @onClick={{fn (mut this.showOffcanvas) true}}>Launch demo offcanvas</Bs::Button>
-
-{{#if this.showOffcanvas}}
-  <Bs::Offcanvas @placement="end" @onClose={{fn (mut this.showOffcanvas) false}} as |offcanvas|>
-    <offcanvas.header @title="My Title" />
-    <offcanvas.body>My Body</offcanvas.body>
-  </Bs::Offcanvas>
-{{/if}}
-
-<h2>Pagination</h2>
-
-<Bs::Pagination @curPage={{0}} @perPage={{10}} @totalItems={{100}} @onNext={{fn (mut this.currentPage) (inc this.currentPage)}} @onPrevious={{fn (mut this.currentPage) (dec this.currentPage)}} @onSelect={{fn (mut this.currentPage)}} />
-
-<h2>Placeholders</h2>
-
-<Bs::Placeholder class="col-6" />
-<Bs::Placeholder class="w-75" />
-<Bs::Placeholder style={{html-safe "width: 25%;"}} />
-
-<h2>Popovers</h2>
-
-<Bs::Popover>
-  <h5 style={{html-safe "color: red;"}}>Here is the HTML popover content.</h5>
-</Bs::Popover>
-
-<h2>Progress</h2>
-
-<Bs::Progress as |progress|>
-  <progress.bar @value={{0}} />
-</Bs::Progress>
-<Bs::Progress as |progress|>
-  <progress.bar @value={{25}} />
-</Bs::Progress>
-<Bs::Progress as |progress|>
-  <progress.bar @value={{50}} @color="success" />
-</Bs::Progress>
-<Bs::Progress as |progress|>
-  <progress.bar @value={{25}} />
-  <progress.bar @value={{25}} @color="success" />
-  <progress.bar @value={{25}} @color="info" />
-</Bs::Progress>
-<Bs::Progress as |progress|>
-  <progress.bar @value={{50}} @striped={{true}} @animated={{true}} />
-</Bs::Progress>
-
-<h2>Spinners</h2>
-
-<Bs::Spinner />
-<Bs::Spinner @centered={{true}} />
-<Bs::Spinner @color="success" />
-
-<h2>Toasts</h2>
-
-<Bs::Toast as |toast|>
-  <toast.header>
-    <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
-    <strong class="me-auto">My Title</strong>
-    <small class="ms-2">Just Now</small>
-    <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
-  </toast.header>
-  <toast.body>My Body</toast.body>
-</Bs::Toast>
-
-<h2>Tooltips</h2>
-
-<a href="#" {{tooltip "Tooltip on top"}}>
-  Tooltip on top
-</a>
-<Bs::Button {{tooltip "Tooltip on top"}} @onClick={{this.go}}>
-  Tooltip on top
-</Bs::Button>
-<Bs::Button {{tooltip "Tooltip on right" placement="right"}} @onClick={{this.go}}>
-  Tooltip on right
-</Bs::Button>
-<Bs::Button {{tooltip "<em>Tooltip</em> <u>with</u> <b>HTML</b>" html=true}} @onClick={{this.go}}>
-  Tooltip with HTML
-</Bs::Button>
+  <div class="col-10">
+    {{outlet}}
+  </div>
+</div>
