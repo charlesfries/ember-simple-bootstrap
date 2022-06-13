@@ -1,10 +1,8 @@
 import Component from '@glimmer/component';
 import { guidFor } from '@ember/object/internals';
 
-export interface BsBaseComponentArgs {}
-
 export default class BsBaseComponent<
-  Args extends BsBaseComponentArgs = BsBaseComponentArgs
+  Args = Record<string, unknown>
 > extends Component<Args> {
   get id(): string {
     return guidFor(this);

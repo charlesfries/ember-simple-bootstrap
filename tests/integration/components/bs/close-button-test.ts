@@ -12,6 +12,6 @@ module('Integration | Component | bs/close-button', function (hooks) {
 
     await render(hbs`<Bs::CloseButton />`);
 
-    assert.dom(this.element).hasText('');
+    assert.dom(this.element as Element).hasText('');
   });
 });

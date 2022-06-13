@@ -17,6 +17,6 @@ module('Integration | Component | bs/modal', function (hooks) {
       </Bs::Modal>
     `);
 
-    assert.dom(this.element).hasText('Title Body');
+    assert.dom(this.element as Element).hasText('Title Body');
   });
 });

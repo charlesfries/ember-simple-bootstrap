@@ -12,7 +12,7 @@ module('Integration | Component | bs/offcanvas/header', function (hooks) {
 
     await render(hbs`<Bs::Offcanvas::Header />`);
 
-    assert.dom(this.element).hasText('');
+    assert.dom(this.element as Element).hasText('');
 
     // Template block usage:
     await render(hbs`
@@ -21,6 +21,6 @@ module('Integration | Component | bs/offcanvas/header', function (hooks) {
       </Bs::Offcanvas::Header>
     `);
 
-    assert.dom(this.element).hasText('');
+    assert.dom(this.element as Element).hasText('');
   });
 });

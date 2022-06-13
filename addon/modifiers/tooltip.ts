@@ -8,13 +8,13 @@ interface Options extends Tooltip.Options {
   onHidden?: () => void;
 }
 
-export default modifier(
-  (element: Element, positional: unknown[], named: Options) => {
+export default modifier<Element, unknown[], Options>(
+  (element, positional, named) => {
     const [title] = positional as [string];
-    const { onShow, onShown, onHide, onHidden } = named;
+    const { onShow, onShown, onHide, onHidden, ...remaining } = named;
 
     const tooltip = new Tooltip(element, {
-      ...named,
+      ...remaining,
       title,
     });
 

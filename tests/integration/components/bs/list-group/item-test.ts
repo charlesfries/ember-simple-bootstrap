@@ -12,7 +12,7 @@ module('Integration | Component | bs/list-group/item', function (hooks) {
 
     await render(hbs`<Bs::ListGroup::Item />`);
 
-    assert.dom(this.element).hasText('');
+    assert.dom(this.element as Element).hasText('');
 
     // Template block usage:
     await render(hbs`
@@ -21,6 +21,6 @@ module('Integration | Component | bs/list-group/item', function (hooks) {
       </Bs::ListGroup::Item>
     `);
 
-    assert.dom(this.element).hasText('template block text');
+    assert.dom(this.element as Element).hasText('template block text');
   });
 });

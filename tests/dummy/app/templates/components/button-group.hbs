@@ -1,2 +1,9 @@
 {{page-title "Button group"}}
-{{outlet}}
+
+<h1>Button group</h1>
+
+<Bs::ButtonGroup @size="lg" as |group|>
+  <group.button @onClick={{fn (mut this.xyz)}}>Left</group.button>
+  <group.button @onClick={{fn (mut this.xyz)}}>Middle</group.button>
+  <group.button @onClick={{fn (mut this.xyz)}}>Right</group.button>
+</Bs::ButtonGroup>

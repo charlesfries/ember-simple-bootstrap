@@ -12,7 +12,7 @@ module('Integration | Component | bs/accordion/item', function (hooks) {
 
     await render(hbs`<Bs::Accordion::Item />`);
 
-    assert.dom(this.element).hasText('');
+    assert.dom(this.element as Element).hasText('');
 
     // Template block usage:
     await render(hbs`
@@ -21,6 +21,8 @@ module('Integration | Component | bs/accordion/item', function (hooks) {
       </Bs::Accordion::Item>
     `);
 
-    assert.dom(this.element).hasText('template block text template block text');
+    assert
+      .dom(this.element as Element)
+      .hasText('template block text template block text');
   });
 });
