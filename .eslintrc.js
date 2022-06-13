@@ -20,13 +20,7 @@ module.exports = {
   env: {
     browser: true,
   },
-  rules: {
-    '@typescript-eslint/ban-ts-comment': 0,
-    '@typescript-eslint/no-empty-interface': 0,
-    '@typescript-eslint/no-explicit-any': 0,
-    '@typescript-eslint/no-non-null-assertion': 0,
-    '@typescript-eslint/no-var-requires': 0,
-  },
+  rules: {},
   overrides: [
     // node files
     {
@@ -50,6 +44,9 @@ module.exports = {
       },
       plugins: ['node'],
       extends: ['plugin:node/recommended'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+      },
     },
     {
       // test files

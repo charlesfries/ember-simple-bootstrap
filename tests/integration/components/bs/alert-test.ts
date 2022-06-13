@@ -12,7 +12,7 @@ module('Integration | Component | bs/alert', function (hooks) {
 
     await render(hbs`<Bs::Alert />`);
 
-    assert.dom(this.element).hasText('');
+    assert.dom(this.element as Element).hasText('');
 
     // Template block usage:
     await render(hbs`
@@ -21,6 +21,6 @@ module('Integration | Component | bs/alert', function (hooks) {
       </Bs::Alert>
     `);
 
-    assert.dom(this.element).hasText('template block text');
+    assert.dom(this.element as Element).hasText('template block text');
   });
 });

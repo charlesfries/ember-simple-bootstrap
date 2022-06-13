@@ -1,5 +1,4 @@
-ember-simple-bootstrap
-==============================================================================
+# ember-simple-bootstrap
 
 This addon aims to be a near carbon copy representation of the latest Bootstrap features and components, using Ember components and modifiers.
 
@@ -8,16 +7,14 @@ This addon is only compatible with Boostrap 5+.
 ⚠️ This addon is a work in progress. Pull requests are absolutely welcome.
 
 
-Compatibility
-------------------------------------------------------------------------------
+## Compatibility
 
 * Ember.js v3.24 or above
 * Ember CLI v3.24 or above
 * Node.js v12 or above
 
 
-Installation
-------------------------------------------------------------------------------
+## Installation
 
 First, install the addon:
 
@@ -30,14 +27,7 @@ Import Bootstrap JavaScript:
 ```js
 // app/app.js
 
-import Application from '@ember/application';
-import Resolver from 'ember-resolver';
-import loadInitializers from 'ember-load-initializers';
-import config from 'my-app/config/environment';
 import 'bootstrap';
-
-export default class App extends Application {
-  ...
 ```
 
 Import Bootstrap Sass:
@@ -45,14 +35,11 @@ Import Bootstrap Sass:
 ```scss
 // app/styles/app.scss
 
-...
-
 @import 'node_modules/bootstrap/scss/bootstrap';
 ```
 
 
-Usage
-------------------------------------------------------------------------------
+## Usage
 
 ```hbs
 <Bs::Accordion />
@@ -333,13 +320,11 @@ Tooltips
 ```
 
 
-Contributing
-------------------------------------------------------------------------------
+## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
 
 
-License
-------------------------------------------------------------------------------
+## License
 
 This project is licensed under the [MIT License](LICENSE.md).

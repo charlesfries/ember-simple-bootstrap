@@ -1,9 +1,10 @@
 import BsBaseComponent from '../base';
 
-/**
- * ARGS
- * item: BsAccordionItemComponent
- * show?: boolean
- */
+import type BsAccordionItemComponent from './item';
 
-export default class BsAccordionButtonComponent extends BsBaseComponent {}
+export interface BsAccordionButtonComponentArgs {
+  item: BsAccordionItemComponent;
+  show?: boolean;
+}
+
+export default class BsAccordionButtonComponent extends BsBaseComponent<BsAccordionButtonComponentArgs> {}

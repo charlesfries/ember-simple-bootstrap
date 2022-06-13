@@ -12,6 +12,6 @@ module('Integration | Component | bs/spinner', function (hooks) {
 
     await render(hbs`<Bs::Spinner />`);
 
-    assert.dom(this.element).hasText('');
+    assert.dom(this.element as Element).hasText('');
   });
 });
