@@ -7,20 +7,27 @@ module('Integration | Component | bs/accordion', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
-    await render(hbs`<Bs::Accordion />`);
-
-    assert.dom(this.element as Element).hasText('');
-
-    // Template block usage:
     await render(hbs`
-      <Bs::Accordion>
-        template block text
+      <Bs::Accordion as |accordion|>
+        <accordion.item as |item|>
+          <item.button>Accordion Item #1</item.button>
+          <item.body>First</item.body>
+        </accordion.item>
+        <accordion.item as |item|>
+          <item.button>Accordion Item #2</item.button>
+          <item.body>Second</item.body>
+        </accordion.item>
+        <accordion.item as |item|>
+          <item.button>Accordion Item #3</item.button>
+          <item.body>Third</item.body>
+        </accordion.item>
       </Bs::Accordion>
     `);
 
-    assert.dom(this.element as Element).hasText('template block text');
+    assert
+      .dom(this.element as Element)
+      .hasText(
+        'Accordion Item #1 First Accordion Item #2 Second Accordion Item #3 Third'
+      );
   });
 });

@@ -2,10 +2,16 @@
 
 <h1>Pagination</h1>
 
+<ul class="list-unstyled">
+  <li>Current page: {{this.currentPage}}</li>
+  <li>Per page: {{this.perPage}}</li>
+  <li>Total items: {{this.totalItems}}</li>
+</ul>
+
 <Bs::Pagination
-  @curPage={{0}}
-  @perPage={{10}}
-  @totalItems={{100}}
+  @curPage={{this.currentPage}}
+  @perPage={{this.perPage}}
+  @totalItems={{this.totalItems}}
   @onNext={{fn (mut this.currentPage) (inc this.currentPage)}}
   @onPrevious={{fn (mut this.currentPage) (dec this.currentPage)}}
   @onSelect={{fn (mut this.currentPage)}}

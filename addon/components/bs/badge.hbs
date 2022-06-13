@@ -1,1 +1,4 @@
-<span class="badge bg-{{@color}}" ...attributes>{{yield}}</span>
+<span
+  class="badge {{if @pill 'rounded-pill'}} bg-{{@color}}"
+  ...attributes
+>{{yield}}</span>

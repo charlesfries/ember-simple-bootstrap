@@ -7,20 +7,23 @@ module('Integration | Component | bs/button-group', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
-    await render(hbs`<Bs::ButtonGroup />`);
-
-    assert.dom(this.element as Element).hasText('');
-
-    // Template block usage:
     await render(hbs`
-      <Bs::ButtonGroup>
-        template block text
+      <Bs::ButtonGroup as |group|>
+        <group.button
+          @color="primary"
+          @onClick={{fn (mut this.xyz)}}
+        >Left</group.button>
+        <group.button
+          @color="primary"
+          @onClick={{fn (mut this.xyz)}}
+        >Middle</group.button>
+        <group.button
+          @color="primary"
+          @onClick={{fn (mut this.xyz)}}
+        >Right</group.button>
       </Bs::ButtonGroup>
     `);
 
-    assert.dom(this.element as Element).hasText('template block text');
+    assert.dom(this.element as Element).hasText('Left Middle Right');
   });
 });
