@@ -1,6 +1,7 @@
 import BsBaseComponent from './base';
 
 export interface BsBadgeComponentArgs {
+  pill?: boolean;
   color?: string;
 }
 

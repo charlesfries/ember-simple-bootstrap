@@ -7,20 +7,19 @@ module('Integration | Component | bs/card', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
-    await render(hbs`<Bs::Card />`);
-
-    assert.dom(this.element as Element).hasText('');
-
-    // Template block usage:
     await render(hbs`
-      <Bs::Card>
-        template block text
+      <Bs::Card as |card|>
+        <card.header>
+          Header
+        </card.header>
+        <card.body>
+          Body
+        </card.body>
       </Bs::Card>
     `);
 
-    assert.dom(this.element as Element).hasText('template block text');
+    assert.dom(this.element as Element).hasText('Header Body');
+    assert.dom('.card .card-header').exists();
+    assert.dom('.card .card-body').exists();
   });
 });

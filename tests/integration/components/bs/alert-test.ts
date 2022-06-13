@@ -7,20 +7,13 @@ module('Integration | Component | bs/alert', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
-    await render(hbs`<Bs::Alert />`);
-
-    assert.dom(this.element as Element).hasText('');
-
-    // Template block usage:
     await render(hbs`
-      <Bs::Alert>
-        template block text
+      <Bs::Alert @color="success">
+        Test
       </Bs::Alert>
     `);
 
-    assert.dom(this.element as Element).hasText('template block text');
+    assert.dom(this.element as Element).hasText('Test');
+    assert.dom('.alert').hasClass('alert-success');
   });
 });

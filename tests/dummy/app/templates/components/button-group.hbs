@@ -2,8 +2,120 @@
 
 <h1>Button group</h1>
 
+<h2>Basic example</h2>
+
+<Bs::ButtonGroup as |group|>
+  <group.button
+    @color="primary"
+    @onClick={{fn (mut this.xyz)}}
+  >Left</group.button>
+  <group.button
+    @color="primary"
+    @onClick={{fn (mut this.xyz)}}
+  >Middle</group.button>
+  <group.button
+    @color="primary"
+    @onClick={{fn (mut this.xyz)}}
+  >Right</group.button>
+</Bs::ButtonGroup>
+
+<h2>Mixed styles</h2>
+
+<Bs::ButtonGroup as |group|>
+  <group.button
+    @color="danger"
+    @onClick={{fn (mut this.xyz)}}
+  >Left</group.button>
+  <group.button
+    @color="warning"
+    @onClick={{fn (mut this.xyz)}}
+  >Middle</group.button>
+  <group.button
+    @color="success"
+    @onClick={{fn (mut this.xyz)}}
+  >Right</group.button>
+</Bs::ButtonGroup>
+
+<h2>Outlined styles</h2>
+
+<Bs::ButtonGroup as |group|>
+  <group.button
+    @outline={{true}}
+    @color="primary"
+    @onClick={{fn (mut this.xyz)}}
+  >Left</group.button>
+  <group.button
+    @outline={{true}}
+    @color="primary"
+    @onClick={{fn (mut this.xyz)}}
+  >Middle</group.button>
+  <group.button
+    @outline={{true}}
+    @color="primary"
+    @onClick={{fn (mut this.xyz)}}
+  >Right</group.button>
+</Bs::ButtonGroup>
+
+<h2>Sizing</h2>
+
 <Bs::ButtonGroup @size="lg" as |group|>
-  <group.button @onClick={{fn (mut this.xyz)}}>Left</group.button>
-  <group.button @onClick={{fn (mut this.xyz)}}>Middle</group.button>
-  <group.button @onClick={{fn (mut this.xyz)}}>Right</group.button>
+  <group.button
+    @color="secondary"
+    @onClick={{fn (mut this.xyz)}}
+  >Left</group.button>
+  <group.button
+    @color="secondary"
+    @onClick={{fn (mut this.xyz)}}
+  >Middle</group.button>
+  <group.button
+    @color="secondary"
+    @onClick={{fn (mut this.xyz)}}
+  >Right</group.button>
+</Bs::ButtonGroup>
+
+<Bs::ButtonGroup as |group|>
+  <group.button
+    @color="secondary"
+    @onClick={{fn (mut this.xyz)}}
+  >Left</group.button>
+  <group.button
+    @color="secondary"
+    @onClick={{fn (mut this.xyz)}}
+  >Middle</group.button>
+  <group.button
+    @color="secondary"
+    @onClick={{fn (mut this.xyz)}}
+  >Right</group.button>
+</Bs::ButtonGroup>
+
+<Bs::ButtonGroup @size="sm" as |group|>
+  <group.button
+    @color="secondary"
+    @onClick={{fn (mut this.xyz)}}
+  >Left</group.button>
+  <group.button
+    @color="secondary"
+    @onClick={{fn (mut this.xyz)}}
+  >Middle</group.button>
+  <group.button
+    @color="secondary"
+    @onClick={{fn (mut this.xyz)}}
+  >Right</group.button>
+</Bs::ButtonGroup>
+
+<h2>Vertical variation</h2>
+
+<Bs::ButtonGroup @vertical={{true}} as |group|>
+  <group.button
+    @color="secondary"
+    @onClick={{fn (mut this.xyz)}}
+  >Button</group.button>
+  <group.button
+    @color="secondary"
+    @onClick={{fn (mut this.xyz)}}
+  >Button</group.button>
+  <group.button
+    @color="secondary"
+    @onClick={{fn (mut this.xyz)}}
+  >Button</group.button>
 </Bs::ButtonGroup>
