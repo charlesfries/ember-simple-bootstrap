@@ -3,7 +3,17 @@
 <h1>Breadcrumb</h1>
 
 <Bs::Breadcrumb as |breadcrumb|>
-  <breadcrumb.item @label="home">Home</breadcrumb.item>
-  <breadcrumb.item @label="home.library">Library</breadcrumb.item>
-  <breadcrumb.item @label="home.library.data">Data</breadcrumb.item>
+  <breadcrumb.item>
+    <LinkTo @route="index">
+      First
+    </LinkTo>
+  </breadcrumb.item>
+  <breadcrumb.item>
+    <LinkTo @route="index">
+      Second
+    </LinkTo>
+  </breadcrumb.item>
+  <breadcrumb.item @current={{true}}>
+    Third
+  </breadcrumb.item>
 </Bs::Breadcrumb>

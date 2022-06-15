@@ -1,3 +1,7 @@
-<li class="breadcrumb-item" ...attributes>
+<li
+  class="breadcrumb-item {{if @current 'active'}}"
+  aria-current={{if @current "page"}}
+  ...attributes
+>
   {{yield}}
 </li>
