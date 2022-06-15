@@ -2,13 +2,13 @@
 
 @import 'bootstrap';
 
-h1 {
+.title {
   margin-bottom: $spacer;
   padding-bottom: map-get($spacers, 2);
   border-bottom: $border-width solid $border-color;
 }
 
-h2 {
+.subtitle {
   margin-top: $spacer;
   margin-bottom: $spacer;
 }

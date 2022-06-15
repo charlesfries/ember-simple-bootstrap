@@ -1,8 +1,8 @@
 {{page-title "Buttons"}}
 
-<h1>Buttons</h1>
+<h1 class="title">Buttons</h1>
 
-<h2>Examples</h2>
+<h2 class="subtitle">Examples</h2>
 
 <Bs::Button @color="primary" @onClick={{fn (mut this.xyz)}}>Primary</Bs::Button>
 <Bs::Button
@@ -16,7 +16,7 @@
 <Bs::Button @color="light" @onClick={{fn (mut this.xyz)}}>Light</Bs::Button>
 <Bs::Button @color="dark" @onClick={{fn (mut this.xyz)}}>Dark</Bs::Button>
 
-<h2>Outline buttons</h2>
+<h2 class="subtitle">Outline buttons</h2>
 
 <Bs::Button
   @outline={{true}}
@@ -59,7 +59,7 @@
   @onClick={{fn (mut this.xyz)}}
 >Dark</Bs::Button>
 
-<h2>Sizes</h2>
+<h2 class="subtitle">Sizes</h2>
 
 <Bs::Button @size="lg" @color="primary" @onClick={{fn (mut this.xyz)}}>
   Large button
@@ -74,7 +74,7 @@
   Small button
 </Bs::Button>
 
-<h2>Disabled state</h2>
+<h2 class="subtitle">Disabled state</h2>
 
 <Bs::Button @color="primary" @disabled={{true}} @onClick={{fn (mut this.xyz)}}>
   Primary button

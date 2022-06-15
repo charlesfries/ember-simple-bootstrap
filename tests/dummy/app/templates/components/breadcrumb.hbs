@@ -1,9 +1,54 @@
 {{page-title "Breadcrumb"}}
 
-<h1>Breadcrumb</h1>
+<h1 class="title">Breadcrumb</h1>
+
+<h2 class="subtitle">Example</h2>
 
 <Bs::Breadcrumb as |breadcrumb|>
-  <breadcrumb.item @label="home">Home</breadcrumb.item>
-  <breadcrumb.item @label="home.library">Library</breadcrumb.item>
-  <breadcrumb.item @label="home.library.data">Data</breadcrumb.item>
+  <breadcrumb.item @current={{true}}>
+    Home
+  </breadcrumb.item>
+</Bs::Breadcrumb>
+
+<Bs::Breadcrumb as |breadcrumb|>
+  <breadcrumb.item>
+    <LinkTo @route="index">
+      Home
+    </LinkTo>
+  </breadcrumb.item>
+  <breadcrumb.item @current={{true}}>
+    Library
+  </breadcrumb.item>
+</Bs::Breadcrumb>
+
+<Bs::Breadcrumb as |breadcrumb|>
+  <breadcrumb.item>
+    <LinkTo @route="index">
+      Home
+    </LinkTo>
+  </breadcrumb.item>
+  <breadcrumb.item>
+    <LinkTo @route="index">
+      Library
+    </LinkTo>
+  </breadcrumb.item>
+  <breadcrumb.item @current={{true}}>
+    Data
+  </breadcrumb.item>
+</Bs::Breadcrumb>
+
+<h2 class="subtitle">Dividers</h2>
+
+<Bs::Breadcrumb
+  style={{html-safe "--bs-breadcrumb-divider: '>';"}}
+  as |breadcrumb|
+>
+  <breadcrumb.item>
+    <LinkTo @route="index">
+      Home
+    </LinkTo>
+  </breadcrumb.item>
+  <breadcrumb.item @current={{true}}>
+    Library
+  </breadcrumb.item>
 </Bs::Breadcrumb>
