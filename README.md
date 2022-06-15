@@ -32,14 +32,26 @@ import 'bootstrap';
 
 Import Bootstrap Sass:
 
+```js
+// ember-cli-build.js
+
+let app = new EmberAddon(defaults, {
+  sassOptions: {
+    includePaths: ['node_modules/bootstrap/scss'],
+  },
+});
+```
+
 ```scss
 // app/styles/app.scss
 
-@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'bootstrap';
 ```
 
 
 ## Usage
+
+[Visit the documentation website](https://ember-simple-bootstrap.netlify.app/components/accordion) to see examples.
 
 ```hbs
 <Bs::Accordion />
