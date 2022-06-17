@@ -10,6 +10,10 @@ module.exports = function (defaults) {
       includePaths: ['node_modules/bootstrap/scss'],
       onlyIncluded: true,
     },
+    snippetSearchPaths: ['tests/dummy/app'],
+    'ember-prism': {
+      components: ['markup-templating', 'handlebars'],
+    },
   });
 
   /*

@@ -4,97 +4,75 @@
 
 <h2 class="subtitle">Example</h2>
 
+{{! BEGIN-SNIPPET example }}
+
 <Bs::Accordion as |accordion|>
   <accordion.item as |item|>
     <item.button>Accordion Item #1</item.button>
-    <item.body>
-      <strong>This is the first item's accordion body.</strong>
-      It is shown by default, until the collapse plugin adds the appropriate
-      classes that we use to style each element. These classes control the
-      overall appearance, as well as the showing and hiding via CSS transitions.
-      You can modify any of this with custom CSS or overriding our default
-      variables. It's also worth noting that just about any HTML can go within
-      the
-      <code>.accordion-body</code>, though the transition does limit overflow.
-    </item.body>
+    <item.body>Accordion Body</item.body>
   </accordion.item>
   <accordion.item as |item|>
     <item.button>Accordion Item #2</item.button>
-    <item.body>
-      <strong>This is the second item's accordion body.</strong>
-      It is hidden by default, until the collapse plugin adds the appropriate
-      classes that we use to style each element. These classes control the
-      overall appearance, as well as the showing and hiding via CSS transitions.
-      You can modify any of this with custom CSS or overriding our default
-      variables. It's also worth noting that just about any HTML can go within
-      the
-      <code>.accordion-body</code>, though the transition does limit overflow.
-    </item.body>
+    <item.body>Accordion Body</item.body>
   </accordion.item>
   <accordion.item as |item|>
     <item.button>Accordion Item #3</item.button>
-    <item.body>
-      <strong>This is the third item's accordion body.</strong>
-      It is hidden by default, until the collapse plugin adds the appropriate
-      classes that we use to style each element. These classes control the
-      overall appearance, as well as the showing and hiding via CSS transitions.
-      You can modify any of this with custom CSS or overriding our default
-      variables. It's also worth noting that just about any HTML can go within
-      the
-      <code>.accordion-body</code>, though the transition does limit overflow.
-    </item.body>
+    <item.body>Accordion Body</item.body>
   </accordion.item>
 </Bs::Accordion>
 
+{{! END-SNIPPET }}
+
+{{#let (get-code-snippet "example.hbs") as |snippet|}}
+  <CodeBlock @code={{snippet.source}} @language={{snippet.language}} />
+{{/let}}
+
 <h2 class="subtitle">Flush</h2>
+
+{{! BEGIN-SNIPPET flush }}
 
 <Bs::Accordion @flush={{true}} as |accordion|>
   <accordion.item as |item|>
     <item.button>Accordion Item #1</item.button>
-    <item.body>
-      Placeholder content for this accordion, which is intended to demonstrate
-      the
-      <code>.accordion-flush</code>
-      class. This is the first item's accordion body.
-    </item.body>
+    <item.body>Accordion Body</item.body>
   </accordion.item>
   <accordion.item as |item|>
     <item.button>Accordion Item #2</item.button>
-    <item.body>
-      Placeholder content for this accordion, which is intended to demonstrate
-      the
-      <code>.accordion-flush</code>
-      class. This is the second item's accordion body. Let's imagine this being
-      filled with some actual content.
-    </item.body>
+    <item.body>Accordion Body</item.body>
   </accordion.item>
   <accordion.item as |item|>
     <item.button>Accordion Item #3</item.button>
-    <item.body>
-      Placeholder content for this accordion, which is intended to demonstrate
-      the
-      <code>.accordion-flush</code>
-      class. This is the third item's accordion body. Nothing more exciting
-      happening here in terms of content, but just filling up the space to make
-      it look, at least at first glance, a bit more representative of how this
-      would look in a real-world application.
-    </item.body>
+    <item.body>Accordion Body</item.body>
   </accordion.item>
 </Bs::Accordion>
 
+{{! END-SNIPPET }}
+
+{{#let (get-code-snippet "flush.hbs") as |snippet|}}
+  <CodeBlock @code={{snippet.source}} @language={{snippet.language}} />
+{{/let}}
+
 <h2 class="subtitle">Always open</h2>
+
+{{! BEGIN-SNIPPET always-open }}
 
 <Bs::Accordion @alwaysOpen={{true}} as |accordion|>
   <accordion.item as |item|>
     <item.button>Accordion Item #1</item.button>
-    <item.body />
+    <item.body>Accordion Body</item.body>
   </accordion.item>
   <accordion.item as |item|>
     <item.button>Accordion Item #2</item.button>
-    <item.body />
+    <item.body>Accordion Body</item.body>
   </accordion.item>
   <accordion.item as |item|>
     <item.button>Accordion Item #3</item.button>
-    <item.body />
+    <item.body>Accordion Body</item.body>
   </accordion.item>
 </Bs::Accordion>
+
+{{! END-SNIPPET }}
+
+{{#let (get-code-snippet "always-open.hbs") as |snippet|}}
+  <CodeBlock @code={{snippet.source}} @language={{snippet.language}} />
+{{/let}}

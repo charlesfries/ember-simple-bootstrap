@@ -4,32 +4,26 @@
 
 <h2 class="subtitle">Examples</h2>
 
-<Bs::Alert @color="primary">
-  A simple primary alert—check it out!
-</Bs::Alert>
-<Bs::Alert @color="secondary">
-  A simple secondary alert—check it out!
-</Bs::Alert>
-<Bs::Alert @color="success">
-  A simple success alert—check it out!
-</Bs::Alert>
-<Bs::Alert @color="danger">
-  A simple danger alert—check it out!
-</Bs::Alert>
-<Bs::Alert @color="warning">
-  A simple warning alert—check it out!
-</Bs::Alert>
-<Bs::Alert @color="info">
-  A simple info alert—check it out!
-</Bs::Alert>
-<Bs::Alert @color="light">
-  A simple light alert—check it out!
-</Bs::Alert>
-<Bs::Alert @color="dark">
-  A simple dark alert—check it out!
-</Bs::Alert>
+{{! BEGIN-SNIPPET examples }}
+
+<Bs::Alert @color="primary">A simple primary alert—check it out!</Bs::Alert>
+<Bs::Alert @color="secondary">A simple secondary alert—check it out!</Bs::Alert>
+<Bs::Alert @color="success">A simple success alert—check it out!</Bs::Alert>
+<Bs::Alert @color="danger">A simple danger alert—check it out!</Bs::Alert>
+<Bs::Alert @color="warning">A simple warning alert—check it out!</Bs::Alert>
+<Bs::Alert @color="info">A simple info alert—check it out!</Bs::Alert>
+<Bs::Alert @color="light">A simple light alert—check it out!</Bs::Alert>
+<Bs::Alert @color="dark">A simple dark alert—check it out!</Bs::Alert>
+
+{{! END-SNIPPET }}
+
+{{#let (get-code-snippet "examples.hbs") as |snippet|}}
+  <CodeBlock @code={{snippet.source}} @language={{snippet.language}} />
+{{/let}}
 
 <h2 class="subtitle">Link color</h2>
+
+{{! BEGIN-SNIPPET link-color }}
 
 <Bs::Alert @color="primary">
   A simple primary alert with
@@ -72,7 +66,15 @@
   it a click if you like.
 </Bs::Alert>
 
+{{! END-SNIPPET }}
+
+{{#let (get-code-snippet "link-color.hbs") as |snippet|}}
+  <CodeBlock @code={{snippet.source}} @language={{snippet.language}} />
+{{/let}}
+
 <h2 class="subtitle">Additional content</h2>
+
+{{! BEGIN-SNIPPET additional-content }}
 
 <Bs::Alert @color="success">
   <h4 class="alert-heading">Well done!</h4>
@@ -83,3 +85,9 @@
   <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep
     things nice and tidy.</p>
 </Bs::Alert>
+
+{{! END-SNIPPET }}
+
+{{#let (get-code-snippet "additional-content.hbs") as |snippet|}}
+  <CodeBlock @code={{snippet.source}} @language={{snippet.language}} />
+{{/let}}
