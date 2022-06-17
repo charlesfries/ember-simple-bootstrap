@@ -1,5 +1,9 @@
 # ember-simple-bootstrap
 
+[![npm version](https://badge.fury.io/js/ember-simple-bootstrap.svg)](https://badge.fury.io/js/ember-simple-bootstrap)
+[![Ember Observer Score](https://emberobserver.com/badges/ember-simple-bootstrap.svg)](https://emberobserver.com/addons/ember-simple-bootstrap)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b111d5e4-749c-44db-b7d1-77313aa9a653/deploy-status)](https://app.netlify.com/sites/ember-simple-bootstrap/deploys)
+
 This addon aims to be a near carbon copy representation of the latest Bootstrap features and components, using Ember components and modifiers.
 
 This addon is only compatible with Boostrap 5+.
