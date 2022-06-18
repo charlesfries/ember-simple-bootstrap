@@ -4,118 +4,159 @@
 
 <h2 class="subtitle">Basic example</h2>
 
-<Bs::ButtonGroup as |group|>
-  <group.button
-    @color="primary"
-    @onClick={{fn (mut this.xyz)}}
-  >Left</group.button>
-  <group.button
-    @color="primary"
-    @onClick={{fn (mut this.xyz)}}
-  >Middle</group.button>
-  <group.button
-    @color="primary"
-    @onClick={{fn (mut this.xyz)}}
-  >Right</group.button>
-</Bs::ButtonGroup>
+<div class="example">
+  {{! BEGIN-SNIPPET button-group-example }}
+
+  <Bs::ButtonGroup as |group|>
+    <group.button
+      @color="primary"
+      @onClick={{fn (mut this.xyz)}}
+    >Left</group.button>
+    <group.button
+      @color="primary"
+      @onClick={{fn (mut this.xyz)}}
+    >Middle</group.button>
+    <group.button
+      @color="primary"
+      @onClick={{fn (mut this.xyz)}}
+    >Right</group.button>
+  </Bs::ButtonGroup>
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="button-group-example" />
 
 <h2 class="subtitle">Mixed styles</h2>
 
-<Bs::ButtonGroup as |group|>
-  <group.button
-    @color="danger"
-    @onClick={{fn (mut this.xyz)}}
-  >Left</group.button>
-  <group.button
-    @color="warning"
-    @onClick={{fn (mut this.xyz)}}
-  >Middle</group.button>
-  <group.button
-    @color="success"
-    @onClick={{fn (mut this.xyz)}}
-  >Right</group.button>
-</Bs::ButtonGroup>
+<div class="example">
+  {{! BEGIN-SNIPPET button-group-example-2 }}
+
+  <Bs::ButtonGroup as |group|>
+    <group.button
+      @color="danger"
+      @onClick={{fn (mut this.xyz)}}
+    >Left</group.button>
+    <group.button
+      @color="warning"
+      @onClick={{fn (mut this.xyz)}}
+    >Middle</group.button>
+    <group.button
+      @color="success"
+      @onClick={{fn (mut this.xyz)}}
+    >Right</group.button>
+  </Bs::ButtonGroup>
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="button-group-example-2" />
 
 <h2 class="subtitle">Outlined styles</h2>
 
-<Bs::ButtonGroup as |group|>
-  <group.button
-    @outline={{true}}
-    @color="primary"
-    @onClick={{fn (mut this.xyz)}}
-  >Left</group.button>
-  <group.button
-    @outline={{true}}
-    @color="primary"
-    @onClick={{fn (mut this.xyz)}}
-  >Middle</group.button>
-  <group.button
-    @outline={{true}}
-    @color="primary"
-    @onClick={{fn (mut this.xyz)}}
-  >Right</group.button>
-</Bs::ButtonGroup>
+<div class="example">
+  {{! BEGIN-SNIPPET button-group-example-3 }}
+
+  <Bs::ButtonGroup as |group|>
+    <group.button
+      @outline={{true}}
+      @color="primary"
+      @onClick={{fn (mut this.xyz)}}
+    >Left</group.button>
+    <group.button
+      @outline={{true}}
+      @color="primary"
+      @onClick={{fn (mut this.xyz)}}
+    >Middle</group.button>
+    <group.button
+      @outline={{true}}
+      @color="primary"
+      @onClick={{fn (mut this.xyz)}}
+    >Right</group.button>
+  </Bs::ButtonGroup>
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="button-group-example-3" />
 
 <h2 class="subtitle">Sizing</h2>
 
-<Bs::ButtonGroup @size="lg" as |group|>
-  <group.button
-    @color="secondary"
-    @onClick={{fn (mut this.xyz)}}
-  >Left</group.button>
-  <group.button
-    @color="secondary"
-    @onClick={{fn (mut this.xyz)}}
-  >Middle</group.button>
-  <group.button
-    @color="secondary"
-    @onClick={{fn (mut this.xyz)}}
-  >Right</group.button>
-</Bs::ButtonGroup>
+<div class="example">
+  {{! BEGIN-SNIPPET button-group-example-4 }}
 
-<Bs::ButtonGroup as |group|>
-  <group.button
-    @color="secondary"
-    @onClick={{fn (mut this.xyz)}}
-  >Left</group.button>
-  <group.button
-    @color="secondary"
-    @onClick={{fn (mut this.xyz)}}
-  >Middle</group.button>
-  <group.button
-    @color="secondary"
-    @onClick={{fn (mut this.xyz)}}
-  >Right</group.button>
-</Bs::ButtonGroup>
+  <Bs::ButtonGroup @size="lg" as |group|>
+    <group.button
+      @color="secondary"
+      @onClick={{fn (mut this.xyz)}}
+    >Left</group.button>
+    <group.button
+      @color="secondary"
+      @onClick={{fn (mut this.xyz)}}
+    >Middle</group.button>
+    <group.button
+      @color="secondary"
+      @onClick={{fn (mut this.xyz)}}
+    >Right</group.button>
+  </Bs::ButtonGroup>
 
-<Bs::ButtonGroup @size="sm" as |group|>
-  <group.button
-    @color="secondary"
-    @onClick={{fn (mut this.xyz)}}
-  >Left</group.button>
-  <group.button
-    @color="secondary"
-    @onClick={{fn (mut this.xyz)}}
-  >Middle</group.button>
-  <group.button
-    @color="secondary"
-    @onClick={{fn (mut this.xyz)}}
-  >Right</group.button>
-</Bs::ButtonGroup>
+  <Bs::ButtonGroup as |group|>
+    <group.button
+      @color="secondary"
+      @onClick={{fn (mut this.xyz)}}
+    >Left</group.button>
+    <group.button
+      @color="secondary"
+      @onClick={{fn (mut this.xyz)}}
+    >Middle</group.button>
+    <group.button
+      @color="secondary"
+      @onClick={{fn (mut this.xyz)}}
+    >Right</group.button>
+  </Bs::ButtonGroup>
+
+  <Bs::ButtonGroup @size="sm" as |group|>
+    <group.button
+      @color="secondary"
+      @onClick={{fn (mut this.xyz)}}
+    >Left</group.button>
+    <group.button
+      @color="secondary"
+      @onClick={{fn (mut this.xyz)}}
+    >Middle</group.button>
+    <group.button
+      @color="secondary"
+      @onClick={{fn (mut this.xyz)}}
+    >Right</group.button>
+  </Bs::ButtonGroup>
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="button-group-example-4" />
 
 <h2 class="subtitle">Vertical variation</h2>
 
-<Bs::ButtonGroup @vertical={{true}} as |group|>
-  <group.button
-    @color="secondary"
-    @onClick={{fn (mut this.xyz)}}
-  >Button</group.button>
-  <group.button
-    @color="secondary"
-    @onClick={{fn (mut this.xyz)}}
-  >Button</group.button>
-  <group.button
-    @color="secondary"
-    @onClick={{fn (mut this.xyz)}}
-  >Button</group.button>
-</Bs::ButtonGroup>
+<div class="example">
+  {{! BEGIN-SNIPPET button-group-example-5 }}
+
+  {{! TODO: }}
+  <Bs::ButtonGroup @vertical={{true}} as |group|>
+    <group.button
+      @color="secondary"
+      @onClick={{fn (mut this.xyz)}}
+    >Button</group.button>
+    <group.button
+      @color="secondary"
+      @onClick={{fn (mut this.xyz)}}
+    >Button</group.button>
+    <group.button
+      @color="secondary"
+      @onClick={{fn (mut this.xyz)}}
+    >Button</group.button>
+  </Bs::ButtonGroup>
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="button-group-example-5" />

@@ -1,11 +1,7 @@
-// $font-size-root: 0.875rem;
-
 @import 'bootstrap';
 
 .title {
   margin-bottom: $spacer;
-  padding-bottom: map-get($spacers, 2);
-  border-bottom: $border-width solid $border-color;
 }
 
 .subtitle {
@@ -13,12 +9,17 @@
   margin-bottom: $spacer;
 }
 
-.card,
-.navbar {
-  margin-bottom: $spacer;
+.example {
+  padding: $spacer;
+  border: $border-width solid $border-color;
+  border-bottom: none;
+  border-radius: $border-radius;
 }
 
 pre {
-  margin-top: $spacer !important;
+  margin-top: 0 !important;
   margin-bottom: $spacer !important;
+  background-color: $light !important;
+  border: $border-width solid $border-color;
+  border-radius: $border-radius;
 }

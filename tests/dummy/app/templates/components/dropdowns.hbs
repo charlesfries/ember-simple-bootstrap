@@ -2,18 +2,26 @@
 
 <h1 class="title">Dropdowns</h1>
 
-<Bs::Button {{dropdown}}>Open dropdown</Bs::Button>
-<Bs::Dropdown @align="right" as |dropdown|>
-  <dropdown.header>Dropdown header</dropdown.header>
-  <dropdown.item @label="Action" />
-  <dropdown.divider />
-  <dropdown.item @label="Another action" @onClick={{this.close}} />
-</Bs::Dropdown>
+<div class="example">
+  {{! BEGIN-SNIPPET dropdown-example }}
 
-<Bs::Button {{dropdown autoClose=false}}>This one stays open</Bs::Button>
-<Bs::Dropdown as |dropdown|>
-  <dropdown.header>Dropdown header</dropdown.header>
-  <dropdown.item @label="Action" />
-  <dropdown.divider />
-  <dropdown.item @label="Another action" @onClick={{this.close}} />
-</Bs::Dropdown>
+  <Bs::Button {{dropdown}}>Open dropdown</Bs::Button>
+  <Bs::Dropdown @align="right" as |dropdown|>
+    <dropdown.header>Dropdown header</dropdown.header>
+    <dropdown.item @label="Action" />
+    <dropdown.divider />
+    <dropdown.item @label="Another action" @onClick={{this.close}} />
+  </Bs::Dropdown>
+
+  <Bs::Button {{dropdown autoClose=false}}>This one stays open</Bs::Button>
+  <Bs::Dropdown as |dropdown|>
+    <dropdown.header>Dropdown header</dropdown.header>
+    <dropdown.item @label="Action" />
+    <dropdown.divider />
+    <dropdown.item @label="Another action" @onClick={{this.close}} />
+  </Bs::Dropdown>
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="dropdown-example" />

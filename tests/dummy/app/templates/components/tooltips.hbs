@@ -2,21 +2,29 @@
 
 <h1 class="title">Tooltips</h1>
 
-<a href="#" {{tooltip "Tooltip on top"}}>
-  Tooltip on top
-</a>
-<Bs::Button {{tooltip "Tooltip on top"}} @onClick={{this.go}}>
-  Tooltip on top
-</Bs::Button>
-<Bs::Button
-  {{tooltip "Tooltip on right" placement="right"}}
-  @onClick={{this.go}}
->
-  Tooltip on right
-</Bs::Button>
-<Bs::Button
-  {{tooltip "<em>Tooltip</em> <u>with</u> <b>HTML</b>" html=true}}
-  @onClick={{this.go}}
->
-  Tooltip with HTML
-</Bs::Button>
+<div class="example">
+  {{! BEGIN-SNIPPET tooltip-example }}
+
+  <a href="#" {{tooltip "Tooltip on top"}}>
+    Tooltip on top
+  </a>
+  <Bs::Button {{tooltip "Tooltip on top"}} @onClick={{this.go}}>
+    Tooltip on top
+  </Bs::Button>
+  <Bs::Button
+    {{tooltip "Tooltip on right" placement="right"}}
+    @onClick={{this.go}}
+  >
+    Tooltip on right
+  </Bs::Button>
+  <Bs::Button
+    {{tooltip "<em>Tooltip</em> <u>with</u> <b>HTML</b>" html=true}}
+    @onClick={{this.go}}
+  >
+    Tooltip with HTML
+  </Bs::Button>
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="tooltip-example" />

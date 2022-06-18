@@ -4,31 +4,59 @@
 
 <h2 class="subtitle">Examples</h2>
 
-<h1>Example heading <Bs::Badge @color="secondary">New</Bs::Badge></h1>
-<h2>Example heading <Bs::Badge @color="secondary">New</Bs::Badge></h2>
-<h3>Example heading <Bs::Badge @color="secondary">New</Bs::Badge></h3>
-<h4>Example heading <Bs::Badge @color="secondary">New</Bs::Badge></h4>
-<h5>Example heading <Bs::Badge @color="secondary">New</Bs::Badge></h5>
-<h6>Example heading <Bs::Badge @color="secondary">New</Bs::Badge></h6>
+<div class="example">
+  {{! BEGIN-SNIPPET badge-example }}
+
+  <h1>Example heading <Bs::Badge @color="secondary">New</Bs::Badge></h1>
+  <h2>Example heading <Bs::Badge @color="secondary">New</Bs::Badge></h2>
+  <h3>Example heading <Bs::Badge @color="secondary">New</Bs::Badge></h3>
+  <h4>Example heading <Bs::Badge @color="secondary">New</Bs::Badge></h4>
+  <h5>Example heading <Bs::Badge @color="secondary">New</Bs::Badge></h5>
+  <h6>Example heading <Bs::Badge @color="secondary">New</Bs::Badge></h6>
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="badge-example" />
 
 <h2 class="subtitle">Background colors</h2>
 
-<Bs::Badge @color="primary">Primary</Bs::Badge>
-<Bs::Badge @color="secondary">Secondary</Bs::Badge>
-<Bs::Badge @color="success">Success</Bs::Badge>
-<Bs::Badge @color="danger">Danger</Bs::Badge>
-<Bs::Badge @color="warning" class="text-dark">Warning</Bs::Badge>
-<Bs::Badge @color="info" class="text-dark">Info</Bs::Badge>
-<Bs::Badge @color="light" class="text-dark">Light</Bs::Badge>
-<Bs::Badge @color="dark">Dark</Bs::Badge>
+<div class="example">
+  {{! BEGIN-SNIPPET badge-example-2 }}
+
+  <Bs::Badge @color="primary">Primary</Bs::Badge>
+  <Bs::Badge @color="secondary">Secondary</Bs::Badge>
+  <Bs::Badge @color="success">Success</Bs::Badge>
+  <Bs::Badge @color="danger">Danger</Bs::Badge>
+  <Bs::Badge @color="warning" class="text-dark">Warning</Bs::Badge>
+  <Bs::Badge @color="info" class="text-dark">Info</Bs::Badge>
+  <Bs::Badge @color="light" class="text-dark">Light</Bs::Badge>
+  <Bs::Badge @color="dark">Dark</Bs::Badge>
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="badge-example-2" />
 
 <h2 class="subtitle">Pill badges</h2>
 
-<Bs::Badge @pill={{true}} @color="primary">Primary</Bs::Badge>
-<Bs::Badge @pill={{true}} @color="secondary">Secondary</Bs::Badge>
-<Bs::Badge @pill={{true}} @color="success">Success</Bs::Badge>
-<Bs::Badge @pill={{true}} @color="danger">Danger</Bs::Badge>
-<Bs::Badge @pill={{true}} @color="warning" class="text-dark">Warning</Bs::Badge>
-<Bs::Badge @pill={{true}} @color="info" class="text-dark">Info</Bs::Badge>
-<Bs::Badge @pill={{true}} @color="light" class="text-dark">Light</Bs::Badge>
-<Bs::Badge @pill={{true}} @color="dark">Dark</Bs::Badge>
+<div class="example">
+  {{! BEGIN-SNIPPET badge-example-3 }}
+
+  <Bs::Badge @pill={{true}} @color="primary">Primary</Bs::Badge>
+  <Bs::Badge @pill={{true}} @color="secondary">Secondary</Bs::Badge>
+  <Bs::Badge @pill={{true}} @color="success">Success</Bs::Badge>
+  <Bs::Badge @pill={{true}} @color="danger">Danger</Bs::Badge>
+  <Bs::Badge
+    @pill={{true}}
+    @color="warning"
+    class="text-dark"
+  >Warning</Bs::Badge>
+  <Bs::Badge @pill={{true}} @color="info" class="text-dark">Info</Bs::Badge>
+  <Bs::Badge @pill={{true}} @color="light" class="text-dark">Light</Bs::Badge>
+  <Bs::Badge @pill={{true}} @color="dark">Dark</Bs::Badge>
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="badge-example-3" />

@@ -2,5 +2,13 @@
 
 <h1 class="title">Close button</h1>
 
-<Bs::CloseButton {{on "click" (fn (mut this.xyz))}} />
-<Bs::CloseButton @white={{true}} {{on "click" (fn (mut this.xyz))}} />
+<div class="example">
+  {{! BEGIN-SNIPPET close-button-example }}
+
+  <Bs::CloseButton {{on "click" (fn (mut this.xyz))}} />
+  <Bs::CloseButton @white={{true}} {{on "click" (fn (mut this.xyz))}} />
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="close-button-example" />

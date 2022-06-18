@@ -4,75 +4,75 @@
 
 <h2 class="subtitle">Example</h2>
 
-{{! BEGIN-SNIPPET example }}
+<div class="example">
+  {{! BEGIN-SNIPPET example }}
 
-<Bs::Accordion as |accordion|>
-  <accordion.item as |item|>
-    <item.button>Accordion Item #1</item.button>
-    <item.body>Accordion Body</item.body>
-  </accordion.item>
-  <accordion.item as |item|>
-    <item.button>Accordion Item #2</item.button>
-    <item.body>Accordion Body</item.body>
-  </accordion.item>
-  <accordion.item as |item|>
-    <item.button>Accordion Item #3</item.button>
-    <item.body>Accordion Body</item.body>
-  </accordion.item>
-</Bs::Accordion>
+  <Bs::Accordion as |accordion|>
+    <accordion.item as |item|>
+      <item.button>Accordion Item #1</item.button>
+      <item.body>Accordion Body</item.body>
+    </accordion.item>
+    <accordion.item as |item|>
+      <item.button>Accordion Item #2</item.button>
+      <item.body>Accordion Body</item.body>
+    </accordion.item>
+    <accordion.item as |item|>
+      <item.button>Accordion Item #3</item.button>
+      <item.body>Accordion Body</item.body>
+    </accordion.item>
+  </Bs::Accordion>
 
-{{! END-SNIPPET }}
+  {{! END-SNIPPET }}
+</div>
 
-{{#let (get-code-snippet "example.hbs") as |snippet|}}
-  <CodeBlock @code={{snippet.source}} @language={{snippet.language}} />
-{{/let}}
+<Snippet @name="example" />
 
 <h2 class="subtitle">Flush</h2>
 
-{{! BEGIN-SNIPPET flush }}
+<div class="example">
+  {{! BEGIN-SNIPPET flush }}
 
-<Bs::Accordion @flush={{true}} as |accordion|>
-  <accordion.item as |item|>
-    <item.button>Accordion Item #1</item.button>
-    <item.body>Accordion Body</item.body>
-  </accordion.item>
-  <accordion.item as |item|>
-    <item.button>Accordion Item #2</item.button>
-    <item.body>Accordion Body</item.body>
-  </accordion.item>
-  <accordion.item as |item|>
-    <item.button>Accordion Item #3</item.button>
-    <item.body>Accordion Body</item.body>
-  </accordion.item>
-</Bs::Accordion>
+  <Bs::Accordion @flush={{true}} as |accordion|>
+    <accordion.item as |item|>
+      <item.button>Accordion Item #1</item.button>
+      <item.body>Accordion Body</item.body>
+    </accordion.item>
+    <accordion.item as |item|>
+      <item.button>Accordion Item #2</item.button>
+      <item.body>Accordion Body</item.body>
+    </accordion.item>
+    <accordion.item as |item|>
+      <item.button>Accordion Item #3</item.button>
+      <item.body>Accordion Body</item.body>
+    </accordion.item>
+  </Bs::Accordion>
 
-{{! END-SNIPPET }}
+  {{! END-SNIPPET }}
+</div>
 
-{{#let (get-code-snippet "flush.hbs") as |snippet|}}
-  <CodeBlock @code={{snippet.source}} @language={{snippet.language}} />
-{{/let}}
+<Snippet @name="flush" />
 
 <h2 class="subtitle">Always open</h2>
 
-{{! BEGIN-SNIPPET always-open }}
+<div class="example">
+  {{! BEGIN-SNIPPET always-open }}
 
-<Bs::Accordion @alwaysOpen={{true}} as |accordion|>
-  <accordion.item as |item|>
-    <item.button>Accordion Item #1</item.button>
-    <item.body>Accordion Body</item.body>
-  </accordion.item>
-  <accordion.item as |item|>
-    <item.button>Accordion Item #2</item.button>
-    <item.body>Accordion Body</item.body>
-  </accordion.item>
-  <accordion.item as |item|>
-    <item.button>Accordion Item #3</item.button>
-    <item.body>Accordion Body</item.body>
-  </accordion.item>
-</Bs::Accordion>
+  <Bs::Accordion @alwaysOpen={{true}} as |accordion|>
+    <accordion.item as |item|>
+      <item.button>Accordion Item #1</item.button>
+      <item.body>Accordion Body</item.body>
+    </accordion.item>
+    <accordion.item as |item|>
+      <item.button>Accordion Item #2</item.button>
+      <item.body>Accordion Body</item.body>
+    </accordion.item>
+    <accordion.item as |item|>
+      <item.button>Accordion Item #3</item.button>
+      <item.body>Accordion Body</item.body>
+    </accordion.item>
+  </Bs::Accordion>
 
-{{! END-SNIPPET }}
+  {{! END-SNIPPET }}
+</div>
 
-{{#let (get-code-snippet "always-open.hbs") as |snippet|}}
-  <CodeBlock @code={{snippet.source}} @language={{snippet.language}} />
-{{/let}}
+<Snippet @name="always-open" />

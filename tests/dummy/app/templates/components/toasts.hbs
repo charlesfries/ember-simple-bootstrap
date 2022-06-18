@@ -2,20 +2,28 @@
 
 <h1 class="title">Toasts</h1>
 
-<Bs::Toast as |toast|>
-  <toast.header>
-    <svg
-      class="bd-placeholder-img rounded me-2"
-      width="20"
-      height="20"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-      preserveAspectRatio="xMidYMid slice"
-      focusable="false"
-    ><rect width="100%" height="100%" fill="#007aff"></rect></svg>
-    <strong class="me-auto">My Title</strong>
-    <small class="ms-2">Just Now</small>
-    <Bs::CloseButton data-bs-dismiss="toast" />
-  </toast.header>
-  <toast.body>My Body</toast.body>
-</Bs::Toast>
+<div class="example">
+  {{! BEGIN-SNIPPET toast-example }}
+
+  <Bs::Toast as |toast|>
+    <toast.header>
+      <svg
+        class="bd-placeholder-img rounded me-2"
+        width="20"
+        height="20"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        preserveAspectRatio="xMidYMid slice"
+        focusable="false"
+      ><rect width="100%" height="100%" fill="#007aff"></rect></svg>
+      <strong class="me-auto">My Title</strong>
+      <small class="ms-2">Just Now</small>
+      <Bs::CloseButton data-bs-dismiss="toast" />
+    </toast.header>
+    <toast.body>My Body</toast.body>
+  </Bs::Toast>
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="toast-example" />

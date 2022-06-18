@@ -2,23 +2,31 @@
 
 <h1 class="title">Modal</h1>
 
-<Bs::Button @onClick={{fn (mut this.showModal) true}}>Launch demo modal</Bs::Button>
+<div class="example">
+  {{! BEGIN-SNIPPET modal-example }}
 
-{{#if this.showModal}}
-  <Bs::Modal
-    @title="Modal title"
-    @onClose={{fn (mut this.showModal) false}}
-    as |modal|
-  >
-    <modal.body>
-      <p>Modal body text goes here.</p>
-    </modal.body>
-    <modal.footer>
-      <Bs::Button
-        @color="secondary"
-        @onClick={{fn (mut this.showModal) false}}
-      >Cancel</Bs::Button>
-      <Bs::Button @color="primary" @onClick={{this.close}}>Save changes</Bs::Button>
-    </modal.footer>
-  </Bs::Modal>
-{{/if}}
+  <Bs::Button @onClick={{fn (mut this.showModal) true}}>Launch demo modal</Bs::Button>
+
+  {{#if this.showModal}}
+    <Bs::Modal
+      @title="Modal title"
+      @onClose={{fn (mut this.showModal) false}}
+      as |modal|
+    >
+      <modal.body>
+        <p>Modal body text goes here.</p>
+      </modal.body>
+      <modal.footer>
+        <Bs::Button
+          @color="secondary"
+          @onClick={{fn (mut this.showModal) false}}
+        >Cancel</Bs::Button>
+        <Bs::Button @color="primary" @onClick={{this.close}}>Save changes</Bs::Button>
+      </modal.footer>
+    </Bs::Modal>
+  {{/if}}
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="modal-example" />

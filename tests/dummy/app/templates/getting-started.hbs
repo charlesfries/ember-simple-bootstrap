@@ -2,21 +2,35 @@
 
 <h1 class="title">Getting started</h1>
 
-<Bs::Card as |card|>
-  <card.body>
-    <pre class="mb-0"><code>ember install ember-simple-bootstrap</code></pre>
-  </card.body>
-</Bs::Card>
+<p>First, install the addon:</p>
 
-<Bs::Card as |card|>
-  <card.body>
-    <pre class="mb-0"><code>// app/app.js<br /><br />import 'bootstrap';</code></pre>
-  </card.body>
-</Bs::Card>
+<CodeBlock @code="ember install ember-simple-bootstrap" />
 
-<Bs::Card as |card|>
-  <card.body>
-    <pre class="mb-0"><code>// app/styles/app.scss<br /><br />@import
-        'node_modules/bootstrap/scss/bootstrap';</code></pre>
-  </card.body>
-</Bs::Card>
+<p>Import Bootstrap JavaScript:</p>
+
+<CodeBlock
+  @code="// app/app.js
+
+import 'bootstrap';"
+  @language="javascript"
+/>
+
+<p>Import Bootstrap Sass:</p>
+
+<CodeBlock
+  @code="// ember-cli-build.js
+
+let app = new EmberAddon(defaults, {
+  sassOptions: {
+    includePaths: ['node_modules/bootstrap/scss'],
+  },
+});"
+  @language="javascript"
+/>
+
+<CodeBlock
+  @code="// app/styles/app.scss
+
+import 'bootstrap';"
+  @language="scss"
+/>

@@ -4,19 +4,27 @@
 
 <h2 class="subtitle">Tabs</h2>
 
-<Bs::Nav @tabs={{true}} as |nav|>
-  <nav.link-to @route="components.navs-tabs" class="nav-link">Link 1</nav.link-to>
-  <nav.link-to
-    @route="components.navs-tabs"
-    @query={{hash filter=2}}
-    class="nav-link"
-  >Link 2</nav.link-to>
-  <nav.link-to
-    @route="components.navs-tabs"
-    @query={{hash filter=3}}
-    class="nav-link"
-  >Link 3</nav.link-to>
-</Bs::Nav>
+<div class="example">
+  {{! BEGIN-SNIPPET nav-example }}
+
+  <Bs::Nav @tabs={{true}} as |nav|>
+    <nav.link-to @route="components.navs-tabs" class="nav-link">Link 1</nav.link-to>
+    <nav.link-to
+      @route="components.navs-tabs"
+      @query={{hash filter=2}}
+      class="nav-link"
+    >Link 2</nav.link-to>
+    <nav.link-to
+      @route="components.navs-tabs"
+      @query={{hash filter=3}}
+      class="nav-link"
+    >Link 3</nav.link-to>
+  </Bs::Nav>
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="nav-example" />
 
 <h2 class="subtitle">Pills</h2>
 

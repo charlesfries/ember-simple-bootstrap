@@ -4,51 +4,67 @@
 
 <h2 class="subtitle">Example</h2>
 
-<Bs::Breadcrumb as |breadcrumb|>
-  <breadcrumb.item @current={{true}}>
-    Home
-  </breadcrumb.item>
-</Bs::Breadcrumb>
+<div class="example">
+  {{! BEGIN-SNIPPET breadcrumb-example }}
 
-<Bs::Breadcrumb as |breadcrumb|>
-  <breadcrumb.item>
-    <LinkTo @route="index">
+  <Bs::Breadcrumb as |breadcrumb|>
+    <breadcrumb.item @current={{true}}>
       Home
-    </LinkTo>
-  </breadcrumb.item>
-  <breadcrumb.item @current={{true}}>
-    Library
-  </breadcrumb.item>
-</Bs::Breadcrumb>
+    </breadcrumb.item>
+  </Bs::Breadcrumb>
 
-<Bs::Breadcrumb as |breadcrumb|>
-  <breadcrumb.item>
-    <LinkTo @route="index">
-      Home
-    </LinkTo>
-  </breadcrumb.item>
-  <breadcrumb.item>
-    <LinkTo @route="index">
+  <Bs::Breadcrumb as |breadcrumb|>
+    <breadcrumb.item>
+      <LinkTo @route="index">
+        Home
+      </LinkTo>
+    </breadcrumb.item>
+    <breadcrumb.item @current={{true}}>
       Library
-    </LinkTo>
-  </breadcrumb.item>
-  <breadcrumb.item @current={{true}}>
-    Data
-  </breadcrumb.item>
-</Bs::Breadcrumb>
+    </breadcrumb.item>
+  </Bs::Breadcrumb>
+
+  <Bs::Breadcrumb as |breadcrumb|>
+    <breadcrumb.item>
+      <LinkTo @route="index">
+        Home
+      </LinkTo>
+    </breadcrumb.item>
+    <breadcrumb.item>
+      <LinkTo @route="index">
+        Library
+      </LinkTo>
+    </breadcrumb.item>
+    <breadcrumb.item @current={{true}}>
+      Data
+    </breadcrumb.item>
+  </Bs::Breadcrumb>
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="breadcrumb-example" />
 
 <h2 class="subtitle">Dividers</h2>
 
-<Bs::Breadcrumb
-  style={{html-safe "--bs-breadcrumb-divider: '>';"}}
-  as |breadcrumb|
->
-  <breadcrumb.item>
-    <LinkTo @route="index">
-      Home
-    </LinkTo>
-  </breadcrumb.item>
-  <breadcrumb.item @current={{true}}>
-    Library
-  </breadcrumb.item>
-</Bs::Breadcrumb>
+<div class="example">
+  {{! BEGIN-SNIPPET breadcrumb-example-2 }}
+
+  <Bs::Breadcrumb
+    style={{html-safe "--bs-breadcrumb-divider: '>';"}}
+    as |breadcrumb|
+  >
+    <breadcrumb.item>
+      <LinkTo @route="index">
+        Home
+      </LinkTo>
+    </breadcrumb.item>
+    <breadcrumb.item @current={{true}}>
+      Library
+    </breadcrumb.item>
+  </Bs::Breadcrumb>
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="breadcrumb-example-2" />

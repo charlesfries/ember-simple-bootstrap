@@ -2,4 +2,23 @@
 
 <h1 class="title">Collapse</h1>
 
-<Bs::Collapse />
+<div class="example">
+  {{! BEGIN-SNIPPET collapse-example }}
+
+  <p>
+    <button class="btn btn-primary" type="button" {{collapse "example"}}>
+      Button with data-bs-target
+    </button>
+  </p>
+
+  <Bs::Collapse @id="example">
+    <div class="card card-body">
+      Some placeholder content for the collapse component. This panel is hidden
+      by default but revealed when the user activates the relevant trigger.
+    </div>
+  </Bs::Collapse>
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="collapse-example" />

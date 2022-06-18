@@ -4,103 +4,148 @@
 
 <h2 class="subtitle">Examples</h2>
 
-<Bs::Button @color="primary" @onClick={{fn (mut this.xyz)}}>Primary</Bs::Button>
-<Bs::Button
-  @color="secondary"
-  @onClick={{fn (mut this.xyz)}}
->Secondary</Bs::Button>
-<Bs::Button @color="success" @onClick={{fn (mut this.xyz)}}>Success</Bs::Button>
-<Bs::Button @color="danger" @onClick={{fn (mut this.xyz)}}>Danger</Bs::Button>
-<Bs::Button @color="warning" @onClick={{fn (mut this.xyz)}}>Warning</Bs::Button>
-<Bs::Button @color="info" @onClick={{fn (mut this.xyz)}}>Info</Bs::Button>
-<Bs::Button @color="light" @onClick={{fn (mut this.xyz)}}>Light</Bs::Button>
-<Bs::Button @color="dark" @onClick={{fn (mut this.xyz)}}>Dark</Bs::Button>
+<div class="example">
+  {{! BEGIN-SNIPPET button-example }}
+
+  <Bs::Button
+    @color="primary"
+    @onClick={{fn (mut this.xyz)}}
+  >Primary</Bs::Button>
+  <Bs::Button
+    @color="secondary"
+    @onClick={{fn (mut this.xyz)}}
+  >Secondary</Bs::Button>
+  <Bs::Button
+    @color="success"
+    @onClick={{fn (mut this.xyz)}}
+  >Success</Bs::Button>
+  <Bs::Button @color="danger" @onClick={{fn (mut this.xyz)}}>Danger</Bs::Button>
+  <Bs::Button
+    @color="warning"
+    @onClick={{fn (mut this.xyz)}}
+  >Warning</Bs::Button>
+  <Bs::Button @color="info" @onClick={{fn (mut this.xyz)}}>Info</Bs::Button>
+  <Bs::Button @color="light" @onClick={{fn (mut this.xyz)}}>Light</Bs::Button>
+  <Bs::Button @color="dark" @onClick={{fn (mut this.xyz)}}>Dark</Bs::Button>
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="button-example" />
 
 <h2 class="subtitle">Outline buttons</h2>
 
-<Bs::Button
-  @outline={{true}}
-  @color="primary"
-  @onClick={{fn (mut this.xyz)}}
->Primary</Bs::Button>
-<Bs::Button
-  @outline={{true}}
-  @color="secondary"
-  @onClick={{fn (mut this.xyz)}}
->Secondary</Bs::Button>
-<Bs::Button
-  @outline={{true}}
-  @color="success"
-  @onClick={{fn (mut this.xyz)}}
->Success</Bs::Button>
-<Bs::Button
-  @outline={{true}}
-  @color="danger"
-  @onClick={{fn (mut this.xyz)}}
->Danger</Bs::Button>
-<Bs::Button
-  @outline={{true}}
-  @color="warning"
-  @onClick={{fn (mut this.xyz)}}
->Warning</Bs::Button>
-<Bs::Button
-  @outline={{true}}
-  @color="info"
-  @onClick={{fn (mut this.xyz)}}
->Info</Bs::Button>
-<Bs::Button
-  @outline={{true}}
-  @color="light"
-  @onClick={{fn (mut this.xyz)}}
->Light</Bs::Button>
-<Bs::Button
-  @outline={{true}}
-  @color="dark"
-  @onClick={{fn (mut this.xyz)}}
->Dark</Bs::Button>
+<div class="example">
+  {{! BEGIN-SNIPPET button-example-2 }}
+
+  <Bs::Button
+    @outline={{true}}
+    @color="primary"
+    @onClick={{fn (mut this.xyz)}}
+  >Primary</Bs::Button>
+  <Bs::Button
+    @outline={{true}}
+    @color="secondary"
+    @onClick={{fn (mut this.xyz)}}
+  >Secondary</Bs::Button>
+  <Bs::Button
+    @outline={{true}}
+    @color="success"
+    @onClick={{fn (mut this.xyz)}}
+  >Success</Bs::Button>
+  <Bs::Button
+    @outline={{true}}
+    @color="danger"
+    @onClick={{fn (mut this.xyz)}}
+  >Danger</Bs::Button>
+  <Bs::Button
+    @outline={{true}}
+    @color="warning"
+    @onClick={{fn (mut this.xyz)}}
+  >Warning</Bs::Button>
+  <Bs::Button
+    @outline={{true}}
+    @color="info"
+    @onClick={{fn (mut this.xyz)}}
+  >Info</Bs::Button>
+  <Bs::Button
+    @outline={{true}}
+    @color="light"
+    @onClick={{fn (mut this.xyz)}}
+  >Light</Bs::Button>
+  <Bs::Button
+    @outline={{true}}
+    @color="dark"
+    @onClick={{fn (mut this.xyz)}}
+  >Dark</Bs::Button>
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="button-example-2" />
 
 <h2 class="subtitle">Sizes</h2>
 
-<Bs::Button @size="lg" @color="primary" @onClick={{fn (mut this.xyz)}}>
-  Large button
-</Bs::Button>
-<Bs::Button @size="lg" @color="secondary" @onClick={{fn (mut this.xyz)}}>
-  Large button
-</Bs::Button>
-<Bs::Button @size="sm" @color="primary" @onClick={{fn (mut this.xyz)}}>
-  Small button
-</Bs::Button>
-<Bs::Button @size="sm" @color="secondary" @onClick={{fn (mut this.xyz)}}>
-  Small button
-</Bs::Button>
+<div class="example">
+  {{! BEGIN-SNIPPET button-example-3 }}
+
+  <Bs::Button @size="lg" @color="primary" @onClick={{fn (mut this.xyz)}}>
+    Large button
+  </Bs::Button>
+  <Bs::Button @size="lg" @color="secondary" @onClick={{fn (mut this.xyz)}}>
+    Large button
+  </Bs::Button>
+  <Bs::Button @size="sm" @color="primary" @onClick={{fn (mut this.xyz)}}>
+    Small button
+  </Bs::Button>
+  <Bs::Button @size="sm" @color="secondary" @onClick={{fn (mut this.xyz)}}>
+    Small button
+  </Bs::Button>
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="button-example-3" />
 
 <h2 class="subtitle">Disabled state</h2>
 
-<Bs::Button @color="primary" @disabled={{true}} @onClick={{fn (mut this.xyz)}}>
-  Primary button
-</Bs::Button>
-<Bs::Button
-  @color="secondary"
-  @disabled={{true}}
-  @onClick={{fn (mut this.xyz)}}
->
-  Button
-</Bs::Button>
-<Bs::Button
-  @outline={{true}}
-  @color="primary"
-  @disabled={{true}}
-  @onClick={{fn (mut this.xyz)}}
->
-  Primary button
-</Bs::Button>
-<Bs::Button
-  @outline={{true}}
-  @color="secondary"
-  @disabled={{true}}
-  @onClick={{fn (mut this.xyz)}}
->
-  Button
-</Bs::Button>
+<div class="example">
+  {{! BEGIN-SNIPPET button-example-4 }}
+
+  <Bs::Button
+    @color="primary"
+    @disabled={{true}}
+    @onClick={{fn (mut this.xyz)}}
+  >
+    Primary button
+  </Bs::Button>
+  <Bs::Button
+    @color="secondary"
+    @disabled={{true}}
+    @onClick={{fn (mut this.xyz)}}
+  >
+    Button
+  </Bs::Button>
+  <Bs::Button
+    @outline={{true}}
+    @color="primary"
+    @disabled={{true}}
+    @onClick={{fn (mut this.xyz)}}
+  >
+    Primary button
+  </Bs::Button>
+  <Bs::Button
+    @outline={{true}}
+    @color="secondary"
+    @disabled={{true}}
+    @onClick={{fn (mut this.xyz)}}
+  >
+    Button
+  </Bs::Button>
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="button-example-4" />
 
 {{! TODO: loading }}

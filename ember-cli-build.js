@@ -12,7 +12,7 @@ module.exports = function (defaults) {
     },
     snippetSearchPaths: ['tests/dummy/app'],
     'ember-prism': {
-      components: ['markup-templating', 'handlebars'],
+      components: ['markup-templating', 'handlebars', 'scss'],
     },
   });
 

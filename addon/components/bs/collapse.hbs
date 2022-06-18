@@ -1,3 +1,7 @@
-<div class="collapse" ...attributes>
+<div
+  class="collapse {{if @horizontal 'collapse-horizontal'}}"
+  id={{@id}}
+  ...attributes
+>
   {{yield}}
 </div>

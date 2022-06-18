@@ -2,21 +2,44 @@
 
 <h1 class="title">List group</h1>
 
-<Bs::ListGroup as |listGroup|>
-  <listGroup.item>An item</listGroup.item>
-  <listGroup.item>A second item</listGroup.item>
-  <listGroup.item>A third item</listGroup.item>
-  <listGroup.item>A fourth item</listGroup.item>
-  <listGroup.item>And a fifth one</listGroup.item>
-</Bs::ListGroup>
-<Bs::ListGroup as |listGroup|>
-  <listGroup.item class="active">An active item</listGroup.item>
-  <listGroup.item>A second item</listGroup.item>
-</Bs::ListGroup>
-<Bs::ListGroup as |listGroup|>
-  <listGroup.item class="disabled">A disabled item</listGroup.item>
-  <listGroup.item>A second item</listGroup.item>
-</Bs::ListGroup>
-<Bs::ListGroup @flush={{true}} as |listGroup|>
-  <listGroup.item>An item</listGroup.item>
-</Bs::ListGroup>
+<h2 class="subtitle">Basic example</h2>
+
+<div class="example">
+  {{! BEGIN-SNIPPET list-group-example }}
+
+  <Bs::ListGroup as |listGroup|>
+    <listGroup.item>An item</listGroup.item>
+    <listGroup.item>A second item</listGroup.item>
+    <listGroup.item>A third item</listGroup.item>
+    <listGroup.item>A fourth item</listGroup.item>
+    <listGroup.item>And a fifth one</listGroup.item>
+  </Bs::ListGroup>
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="list-group-example" />
+
+<h2 class="subtitle">Examples</h2>
+
+<div class="example">
+  {{! BEGIN-SNIPPET list-group-example-2 }}
+
+  <Bs::ListGroup as |listGroup|>
+    <listGroup.item class="active">An active item</listGroup.item>
+    <listGroup.item>A second item</listGroup.item>
+  </Bs::ListGroup>
+
+  <Bs::ListGroup as |listGroup|>
+    <listGroup.item class="disabled">A disabled item</listGroup.item>
+    <listGroup.item>A second item</listGroup.item>
+  </Bs::ListGroup>
+
+  <Bs::ListGroup @flush={{true}} as |listGroup|>
+    <listGroup.item>An item</listGroup.item>
+  </Bs::ListGroup>
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="list-group-example-2" />

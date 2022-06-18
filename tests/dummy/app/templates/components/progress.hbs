@@ -2,20 +2,28 @@
 
 <h1 class="title">Progress</h1>
 
-<Bs::Progress as |progress|>
-  <progress.bar @value={{0}} />
-</Bs::Progress>
-<Bs::Progress as |progress|>
-  <progress.bar @value={{25}} />
-</Bs::Progress>
-<Bs::Progress as |progress|>
-  <progress.bar @value={{50}} @color="success" />
-</Bs::Progress>
-<Bs::Progress as |progress|>
-  <progress.bar @value={{25}} />
-  <progress.bar @value={{25}} @color="success" />
-  <progress.bar @value={{25}} @color="info" />
-</Bs::Progress>
-<Bs::Progress as |progress|>
-  <progress.bar @value={{50}} @striped={{true}} @animated={{true}} />
-</Bs::Progress>
+<div class="example">
+  {{! BEGIN-SNIPPET progress-example }}
+
+  <Bs::Progress as |progress|>
+    <progress.bar @value={{0}} />
+  </Bs::Progress>
+  <Bs::Progress as |progress|>
+    <progress.bar @value={{25}} />
+  </Bs::Progress>
+  <Bs::Progress as |progress|>
+    <progress.bar @value={{50}} @color="success" />
+  </Bs::Progress>
+  <Bs::Progress as |progress|>
+    <progress.bar @value={{25}} />
+    <progress.bar @value={{25}} @color="success" />
+    <progress.bar @value={{25}} @color="info" />
+  </Bs::Progress>
+  <Bs::Progress as |progress|>
+    <progress.bar @value={{50}} @striped={{true}} @animated={{true}} />
+  </Bs::Progress>
+
+  {{! END-SNIPPET }}
+</div>
+
+<Snippet @name="progress-example" />

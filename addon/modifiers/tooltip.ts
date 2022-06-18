@@ -9,12 +9,12 @@ interface Options extends Tooltip.Options {
 }
 
 export default modifier<Element, unknown[], Options>(
-  (element, positional, named) => {
+  function tooltip(element, positional, named) {
     const [title] = positional as [string];
-    const { onShow, onShown, onHide, onHidden, ...remaining } = named;
+    const { onShow, onShown, onHide, onHidden, ...options } = named;
 
     const tooltip = new Tooltip(element, {
-      ...remaining,
+      ...options,
       title,
     });
 
