@@ -12,6 +12,8 @@
   {{#if this.showOffcanvas}}
     <Bs::Offcanvas
       @placement="end"
+      @scroll={{true}}
+      @backdrop={{false}}
       @onClose={{fn (mut this.showOffcanvas) false}}
       as |offcanvas|
     >

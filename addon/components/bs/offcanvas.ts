@@ -2,7 +2,7 @@ import BsBaseComponent from './base';
 import { Offcanvas } from 'bootstrap';
 import { action } from '@ember/object';
 
-export interface BsOffcanvasComponentArgs {
+export interface BsOffcanvasComponentArgs extends Offcanvas.Options {
   placement?: 'start' | 'end' | 'bottom';
   onClose?: () => void;
 }
@@ -11,7 +11,7 @@ export default class BsOffcanvasComponent extends BsBaseComponent<BsOffcanvasCom
   offcanvas?: Offcanvas;
 
   @action didInsert(element: Element): void {
-    this.offcanvas = new Offcanvas(element, {});
+    this.offcanvas = new Offcanvas(element, this.args);
     this.offcanvas.show();
 
     const { onClose } = this.args;
