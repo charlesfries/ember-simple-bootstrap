@@ -4,7 +4,7 @@
     {{if @striped 'progress-bar-striped'}}
     {{if @animated 'progress-bar-animated'}}"
   role="progressbar"
-  style={{html-safe (concat "width:" @value "%")}}
+  style={{this.style}}
   ...attributes
 >
   {{#if @labeled}}

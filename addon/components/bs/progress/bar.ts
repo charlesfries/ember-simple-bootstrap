@@ -1,6 +1,9 @@
 import BsBaseComponent from '../base';
 import { assert } from '@ember/debug';
 import { typeOf } from '@ember/utils';
+import { htmlSafe } from '@ember/template';
+
+import type { SafeString } from '@ember/template/-private/handlebars';
 
 export interface BsProgressBarComponentArgs {
   value: number;
@@ -19,5 +22,9 @@ export default class BsProgressBarComponent<
       '<Bs::Progress::Bar />: Must pass a value number',
       typeOf(this.args.value) === 'number'
     );
+  }
+
+  get style(): SafeString {
+    return htmlSafe(`width: ${this.args.value}%;`);
   }
 }
