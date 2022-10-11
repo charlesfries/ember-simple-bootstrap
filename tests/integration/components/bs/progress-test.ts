@@ -17,6 +17,6 @@ module('Integration | Component | bs/progress', function (hooks) {
 
     assert.dom('.progress').exists();
     assert.dom('.progress-bar').exists({ count: 1 });
-    assert.dom('.progress-bar').hasAttribute('style', 'width:25%');
+    assert.dom('.progress-bar').hasAttribute('style', 'width: 25%;');
   });
 });

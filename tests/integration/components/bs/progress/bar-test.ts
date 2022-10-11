@@ -12,6 +12,6 @@ module('Integration | Component | bs/progress/bar', function (hooks) {
     await render(hbs`<Bs::Progress::Bar @value={{this.value}} />`);
 
     assert.dom('.progress-bar').exists();
-    assert.dom('.progress-bar').hasAttribute('style', 'width:25%');
+    assert.dom('.progress-bar').hasAttribute('style', 'width: 25%;');
   });
 });
