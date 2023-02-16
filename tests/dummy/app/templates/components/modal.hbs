@@ -23,7 +23,8 @@
           @color="secondary"
           @onClick={{fn (mut this.showModal) false}}
         >Cancel</Bs::Button>
-        <Bs::Button @color="primary" @onClick={{(optional)}}>Save changes</Bs::Button>
+        {{! @glint-ignore }}
+        <Bs::Button @color="primary" @onClick={{fn (mut this.xyz)}}>Save changes</Bs::Button>
       </modal.footer>
     </Bs::Modal>
   {{/if}}

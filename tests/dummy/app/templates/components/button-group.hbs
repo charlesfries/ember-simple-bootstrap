@@ -1,3 +1,5 @@
+{{! @glint-nocheck }}
+
 {{page-title "Button group"}}
 
 <h1 class="title">Button group</h1>
@@ -8,9 +10,9 @@
   {{! BEGIN-SNIPPET button-group-example }}
 
   <Bs::ButtonGroup as |group|>
-    <group.button @color="primary" @onClick={{(optional)}}>Left</group.button>
-    <group.button @color="primary" @onClick={{(optional)}}>Middle</group.button>
-    <group.button @color="primary" @onClick={{(optional)}}>Right</group.button>
+    <group.button @color="primary" @onClick={{this.go}}>Left</group.button>
+    <group.button @color="primary" @onClick={{this.go}}>Middle</group.button>
+    <group.button @color="primary" @onClick={{this.go}}>Right</group.button>
   </Bs::ButtonGroup>
 
   {{! END-SNIPPET }}
@@ -24,9 +26,9 @@
   {{! BEGIN-SNIPPET button-group-example-2 }}
 
   <Bs::ButtonGroup as |group|>
-    <group.button @color="danger" @onClick={{(optional)}}>Left</group.button>
-    <group.button @color="warning" @onClick={{(optional)}}>Middle</group.button>
-    <group.button @color="success" @onClick={{(optional)}}>Right</group.button>
+    <group.button @color="danger" @onClick={{this.go}}>Left</group.button>
+    <group.button @color="warning" @onClick={{this.go}}>Middle</group.button>
+    <group.button @color="success" @onClick={{this.go}}>Right</group.button>
   </Bs::ButtonGroup>
 
   {{! END-SNIPPET }}
@@ -43,17 +45,17 @@
     <group.button
       @outline={{true}}
       @color="primary"
-      @onClick={{(optional)}}
+      @onClick={{this.go}}
     >Left</group.button>
     <group.button
       @outline={{true}}
       @color="primary"
-      @onClick={{(optional)}}
+      @onClick={{this.go}}
     >Middle</group.button>
     <group.button
       @outline={{true}}
       @color="primary"
-      @onClick={{(optional)}}
+      @onClick={{this.go}}
     >Right</group.button>
   </Bs::ButtonGroup>
 
@@ -68,39 +70,21 @@
   {{! BEGIN-SNIPPET button-group-example-4 }}
 
   <Bs::ButtonGroup @size="lg" as |group|>
-    <group.button @color="secondary" @onClick={{(optional)}}>Left</group.button>
-    <group.button
-      @color="secondary"
-      @onClick={{(optional)}}
-    >Middle</group.button>
-    <group.button
-      @color="secondary"
-      @onClick={{(optional)}}
-    >Right</group.button>
+    <group.button @color="secondary" @onClick={{this.go}}>Left</group.button>
+    <group.button @color="secondary" @onClick={{this.go}}>Middle</group.button>
+    <group.button @color="secondary" @onClick={{this.go}}>Right</group.button>
   </Bs::ButtonGroup>
 
   <Bs::ButtonGroup as |group|>
-    <group.button @color="secondary" @onClick={{(optional)}}>Left</group.button>
-    <group.button
-      @color="secondary"
-      @onClick={{(optional)}}
-    >Middle</group.button>
-    <group.button
-      @color="secondary"
-      @onClick={{(optional)}}
-    >Right</group.button>
+    <group.button @color="secondary" @onClick={{this.go}}>Left</group.button>
+    <group.button @color="secondary" @onClick={{this.go}}>Middle</group.button>
+    <group.button @color="secondary" @onClick={{this.go}}>Right</group.button>
   </Bs::ButtonGroup>
 
   <Bs::ButtonGroup @size="sm" as |group|>
-    <group.button @color="secondary" @onClick={{(optional)}}>Left</group.button>
-    <group.button
-      @color="secondary"
-      @onClick={{(optional)}}
-    >Middle</group.button>
-    <group.button
-      @color="secondary"
-      @onClick={{(optional)}}
-    >Right</group.button>
+    <group.button @color="secondary" @onClick={{this.go}}>Left</group.button>
+    <group.button @color="secondary" @onClick={{this.go}}>Middle</group.button>
+    <group.button @color="secondary" @onClick={{this.go}}>Right</group.button>
   </Bs::ButtonGroup>
 
   {{! END-SNIPPET }}
@@ -115,18 +99,9 @@
 
   {{! TODO: }}
   <Bs::ButtonGroup @vertical={{true}} as |group|>
-    <group.button
-      @color="secondary"
-      @onClick={{(optional)}}
-    >Button</group.button>
-    <group.button
-      @color="secondary"
-      @onClick={{(optional)}}
-    >Button</group.button>
-    <group.button
-      @color="secondary"
-      @onClick={{(optional)}}
-    >Button</group.button>
+    <group.button @color="secondary" @onClick={{this.go}}>Button</group.button>
+    <group.button @color="secondary" @onClick={{this.go}}>Button</group.button>
+    <group.button @color="secondary" @onClick={{this.go}}>Button</group.button>
   </Bs::ButtonGroup>
 
   {{! END-SNIPPET }}

@@ -1,3 +1,5 @@
+{{! @glint-nocheck }}
+
 {{page-title "Buttons"}}
 
 <h1 class="title">Buttons</h1>
@@ -7,14 +9,14 @@
 <div class="example">
   {{! BEGIN-SNIPPET button-example }}
 
-  <Bs::Button @color="primary" @onClick={{(optional)}}>Primary</Bs::Button>
-  <Bs::Button @color="secondary" @onClick={{(optional)}}>Secondary</Bs::Button>
-  <Bs::Button @color="success" @onClick={{(optional)}}>Success</Bs::Button>
-  <Bs::Button @color="danger" @onClick={{(optional)}}>Danger</Bs::Button>
-  <Bs::Button @color="warning" @onClick={{(optional)}}>Warning</Bs::Button>
-  <Bs::Button @color="info" @onClick={{(optional)}}>Info</Bs::Button>
-  <Bs::Button @color="light" @onClick={{(optional)}}>Light</Bs::Button>
-  <Bs::Button @color="dark" @onClick={{(optional)}}>Dark</Bs::Button>
+  <Bs::Button @color="primary" @onClick={{this.go}}>Primary</Bs::Button>
+  <Bs::Button @color="secondary" @onClick={{this.go}}>Secondary</Bs::Button>
+  <Bs::Button @color="success" @onClick={{this.go}}>Success</Bs::Button>
+  <Bs::Button @color="danger" @onClick={{this.go}}>Danger</Bs::Button>
+  <Bs::Button @color="warning" @onClick={{this.go}}>Warning</Bs::Button>
+  <Bs::Button @color="info" @onClick={{this.go}}>Info</Bs::Button>
+  <Bs::Button @color="light" @onClick={{this.go}}>Light</Bs::Button>
+  <Bs::Button @color="dark" @onClick={{this.go}}>Dark</Bs::Button>
 
   {{! END-SNIPPET }}
 </div>
@@ -29,42 +31,42 @@
   <Bs::Button
     @outline={{true}}
     @color="primary"
-    @onClick={{(optional)}}
+    @onClick={{this.go}}
   >Primary</Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="secondary"
-    @onClick={{(optional)}}
+    @onClick={{this.go}}
   >Secondary</Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="success"
-    @onClick={{(optional)}}
+    @onClick={{this.go}}
   >Success</Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="danger"
-    @onClick={{(optional)}}
+    @onClick={{this.go}}
   >Danger</Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="warning"
-    @onClick={{(optional)}}
+    @onClick={{this.go}}
   >Warning</Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="info"
-    @onClick={{(optional)}}
+    @onClick={{this.go}}
   >Info</Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="light"
-    @onClick={{(optional)}}
+    @onClick={{this.go}}
   >Light</Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="dark"
-    @onClick={{(optional)}}
+    @onClick={{this.go}}
   >Dark</Bs::Button>
 
   {{! END-SNIPPET }}
@@ -77,16 +79,16 @@
 <div class="example">
   {{! BEGIN-SNIPPET button-example-3 }}
 
-  <Bs::Button @size="lg" @color="primary" @onClick={{(optional)}}>
+  <Bs::Button @size="lg" @color="primary" @onClick={{this.go}}>
     Large button
   </Bs::Button>
-  <Bs::Button @size="lg" @color="secondary" @onClick={{(optional)}}>
+  <Bs::Button @size="lg" @color="secondary" @onClick={{this.go}}>
     Large button
   </Bs::Button>
-  <Bs::Button @size="sm" @color="primary" @onClick={{(optional)}}>
+  <Bs::Button @size="sm" @color="primary" @onClick={{this.go}}>
     Small button
   </Bs::Button>
-  <Bs::Button @size="sm" @color="secondary" @onClick={{(optional)}}>
+  <Bs::Button @size="sm" @color="secondary" @onClick={{this.go}}>
     Small button
   </Bs::Button>
 
@@ -100,17 +102,17 @@
 <div class="example">
   {{! BEGIN-SNIPPET button-example-4 }}
 
-  <Bs::Button @color="primary" @disabled={{true}} @onClick={{(optional)}}>
+  <Bs::Button @color="primary" @disabled={{true}} @onClick={{this.go}}>
     Primary button
   </Bs::Button>
-  <Bs::Button @color="secondary" @disabled={{true}} @onClick={{(optional)}}>
+  <Bs::Button @color="secondary" @disabled={{true}} @onClick={{this.go}}>
     Button
   </Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="primary"
     @disabled={{true}}
-    @onClick={{(optional)}}
+    @onClick={{this.go}}
   >
     Primary button
   </Bs::Button>
@@ -118,7 +120,7 @@
     @outline={{true}}
     @color="secondary"
     @disabled={{true}}
-    @onClick={{(optional)}}
+    @onClick={{this.go}}
   >
     Button
   </Bs::Button>

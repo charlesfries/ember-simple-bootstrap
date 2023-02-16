@@ -10,7 +10,8 @@
     <dropdown.header>Dropdown header</dropdown.header>
     <dropdown.item @label="Action" />
     <dropdown.divider />
-    <dropdown.item @label="Another action" @onClick={{(optional)}} />
+    {{! @glint-ignore }}
+    <dropdown.item @label="Another action" @onClick={{fn (mut this.xyz)}} />
   </Bs::Dropdown>
 
   <Bs::Button {{dropdown autoClose=false}}>This one stays open</Bs::Button>
@@ -18,7 +19,8 @@
     <dropdown.header>Dropdown header</dropdown.header>
     <dropdown.item @label="Action" />
     <dropdown.divider />
-    <dropdown.item @label="Another action" @onClick={{(optional)}} />
+    {{! @glint-ignore }}
+    <dropdown.item @label="Another action" @onClick={{fn (mut this.xyz)}} />
   </Bs::Dropdown>
 
   {{! END-SNIPPET }}
