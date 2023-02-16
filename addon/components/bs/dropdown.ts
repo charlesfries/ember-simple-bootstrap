@@ -21,3 +21,9 @@ export interface BsDropdownComponentSignature {
 }
 
 export default class BsDropdownComponent extends BsBaseComponent<BsDropdownComponentSignature> {}
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    'Bs::Dropdown': typeof BsDropdownComponent;
+  }
+}

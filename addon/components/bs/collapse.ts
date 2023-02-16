@@ -12,3 +12,9 @@ export interface BsCollapseComponentSignature {
 }
 
 export default class BsCollapseComponent extends BsBaseComponent<BsCollapseComponentSignature> {}
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    'Bs::Collapse': typeof BsCollapseComponent;
+  }
+}

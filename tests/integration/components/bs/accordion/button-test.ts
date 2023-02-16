@@ -10,12 +10,14 @@ module('Integration | Component | bs/accordion/button', function (hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`<Bs::Accordion::Button />`);
+    await render(hbs`{{! @glint-ignore}}
+    <Bs::Accordion::Button />`);
 
     assert.dom(this.element as Element).hasText('');
 
     // Template block usage:
     await render(hbs`
+      {{! @glint-ignore}}
       <Bs::Accordion::Button>
         template block text
       </Bs::Accordion::Button>

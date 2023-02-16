@@ -52,3 +52,9 @@ export default class BsPaginationComponent extends BsBaseComponent<BsPaginationC
     return this.args.curPage < this.pages.length - 1;
   }
 }
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    'Bs::Pagination': typeof BsPaginationComponent;
+  }
+}

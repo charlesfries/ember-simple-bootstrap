@@ -45,3 +45,9 @@ export default class BsToastComponent extends BsBaseComponent<BsToastComponentSi
     }
   }
 }
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    'Bs::Toast': typeof BsToastComponent;
+  }
+}

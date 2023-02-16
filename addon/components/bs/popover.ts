@@ -33,3 +33,9 @@ export default class BsPopoverComponent extends BsBaseComponent<BsPopoverCompone
     }
   }
 }
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    'Bs::Popover': typeof BsPopoverComponent;
+  }
+}

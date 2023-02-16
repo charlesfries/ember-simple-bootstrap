@@ -8,3 +8,9 @@ export interface BsCloseButtonComponentSignature {
 }
 
 export default class BsCloseButtonComponent extends BsBaseComponent<BsCloseButtonComponentSignature> {}
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    'Bs::CloseButton': typeof BsCloseButtonComponent;
+  }
+}

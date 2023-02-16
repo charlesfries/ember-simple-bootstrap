@@ -1,3 +1,4 @@
+{{! @glint-ignore }}
 {{#let (get-code-snippet (concat @name ".hbs")) as |snippet|}}
   <CodeBlock @code={{snippet.source}} @language={{snippet.language}} />
 {{/let}}

@@ -1,6 +1,7 @@
 <button
   type="button"
   class="dropdown-item {{if @color (concat 'text-' @color)}}"
+  {{! @glint-ignore }}
   disabled={{@disabled}}
   {{on "click" (optional @onClick)}}
   ...attributes

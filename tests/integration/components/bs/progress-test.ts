@@ -10,6 +10,7 @@ module('Integration | Component | bs/progress', function (hooks) {
     this.set('value', 25);
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <Bs::Progress as |progress|>
         <progress.bar @value={{this.value}} />
       </Bs::Progress>

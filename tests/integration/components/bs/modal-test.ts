@@ -10,6 +10,7 @@ module('Integration | Component | bs/modal', function (hooks) {
     this.set('close', () => {}); // eslint-disable-line @typescript-eslint/no-empty-function
 
     await render(hbs`
+      {{! @glint-ignore }}
       <Bs::Modal @title="Title" @size="lg" @onClose={{this.close}} as |modal|>
         <modal.body>
           Body

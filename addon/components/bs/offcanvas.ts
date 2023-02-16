@@ -42,3 +42,9 @@ export default class BsOffcanvasComponent extends BsBaseComponent<BsOffcanvasCom
     }
   }
 }
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    'Bs::Offcanvas': typeof BsOffcanvasComponent;
+  }
+}

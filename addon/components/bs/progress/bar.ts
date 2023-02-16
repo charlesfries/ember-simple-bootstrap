@@ -29,3 +29,10 @@ export default class BsProgressBarComponent extends BsBaseComponent<BsProgressBa
     return htmlSafe(`width: ${this.args.value}%;`);
   }
 }
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    'Bs::Progress::Bar': typeof BsProgressBarComponent;
+    'bs/progress/bar': typeof BsProgressBarComponent;
+  }
+}

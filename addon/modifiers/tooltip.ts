@@ -8,7 +8,7 @@ interface Options extends Partial<Tooltip.Options> {
   onHidden?: () => void;
 }
 
-export default modifier<Element, [string], Options>(
+const tooltip = modifier<Element, [string], Options>(
   function tooltip(element, positional, named) {
     const [title] = positional;
     const { onShow, onShown, onHide, onHidden, ...options } = named;
@@ -50,3 +50,11 @@ export default modifier<Element, [string], Options>(
   },
   { eager: false }
 );
+
+export default tooltip;
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    tooltip: typeof tooltip;
+  }
+}

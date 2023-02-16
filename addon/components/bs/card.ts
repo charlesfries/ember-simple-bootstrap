@@ -18,3 +18,9 @@ export interface BsCardComponentSignature {
 }
 
 export default class BsCardComponent extends BsBaseComponent<BsCardComponentSignature> {}
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    'Bs::Card': typeof BsCardComponent;
+  }
+}

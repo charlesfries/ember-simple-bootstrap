@@ -14,3 +14,9 @@ export interface BsBreadcrumbComponentSignature {
 }
 
 export default class BsBreadcrumbComponent extends BsBaseComponent<BsBreadcrumbComponentSignature> {}
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    'Bs::Breadcrumb': typeof BsBreadcrumbComponent;
+  }
+}

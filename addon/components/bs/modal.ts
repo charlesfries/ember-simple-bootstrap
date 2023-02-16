@@ -63,3 +63,9 @@ export default class BsModalComponent extends BsBaseComponent<BsModalComponentSi
     }
   }
 }
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    'Bs::Modal': typeof BsModalComponent;
+  }
+}

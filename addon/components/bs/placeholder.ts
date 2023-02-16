@@ -5,3 +5,9 @@ export interface BsPlaceholderComponentSignature {
 }
 
 export default class BsPlaceholderComponent extends BsBaseComponent<BsPlaceholderComponentSignature> {}
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    'Bs::Placeholder': typeof BsPlaceholderComponent;
+  }
+}

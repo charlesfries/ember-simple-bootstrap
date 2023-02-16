@@ -12,3 +12,9 @@ export interface BsAlertComponentSignature {
 }
 
 export default class BsAlertComponent extends BsBaseComponent<BsAlertComponentSignature> {}
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    'Bs::Alert': typeof BsAlertComponent;
+  }
+}

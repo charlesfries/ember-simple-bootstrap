@@ -16,6 +16,7 @@ module('Integration | Component | bs/card/footer', function (hooks) {
 
     // Template block usage:
     await render(hbs`
+      {{! @glint-ignore }}
       <Bs::Card::Footer>
         template block text
       </Bs::Card::Footer>

@@ -9,7 +9,10 @@ module('Integration | Component | bs/progress/bar', function (hooks) {
   test('it renders', async function (assert) {
     this.set('value', 25);
 
-    await render(hbs`<Bs::Progress::Bar @value={{this.value}} />`);
+    await render(hbs`
+      {{! @glint-ignore }}
+      <Bs::Progress::Bar @value={{this.value}} />
+    `);
 
     assert.dom('.progress-bar').exists();
     assert.dom('.progress-bar').hasAttribute('style', 'width: 25%;');

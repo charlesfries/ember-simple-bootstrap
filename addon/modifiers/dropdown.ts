@@ -8,7 +8,7 @@ interface Options extends Partial<Dropdown.Options> {
   onHidden?: () => void;
 }
 
-export default modifier(
+const dropdown = modifier<Element>(
   function dropdown(element, _positional, named: Options) {
     const { onShow, onShown, onHide, onHidden, ...options } = named;
 
@@ -52,3 +52,11 @@ export default modifier(
   },
   { eager: false }
 );
+
+export default dropdown;
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    dropdown: typeof dropdown;
+  }
+}

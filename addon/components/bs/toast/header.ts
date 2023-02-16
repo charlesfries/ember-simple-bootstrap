@@ -8,3 +8,10 @@ export interface BsToastHeaderComponentSignature {
 }
 
 export default class BsToastHeaderComponent extends BsBaseComponent<BsToastHeaderComponentSignature> {}
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    'Bs::Toast::Header': typeof BsToastHeaderComponent;
+    'bs/toast/header': typeof BsToastHeaderComponent;
+  }
+}

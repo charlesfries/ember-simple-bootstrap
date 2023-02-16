@@ -25,6 +25,7 @@ module('Integration | Component | bs/pagination', function (hooks) {
     });
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <Bs::Pagination
         @curPage={{this.curPage}}
         @perPage={{this.perPage}}

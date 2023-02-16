@@ -3,6 +3,7 @@
   class="btn
     {{if @size (concat 'btn-' @size)}}
     btn-{{if @outline 'outline-' ''}}{{if @color @color 'secondary'}}"
+  {{! @glint-ignore }}
   disabled={{or @disabled @loading}}
   {{on "click" (optional @onClick)}}
   ...attributes

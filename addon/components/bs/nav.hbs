@@ -2,5 +2,6 @@
   class="nav {{if @tabs 'nav-tabs'}} {{if @pills 'nav-pills'}}"
   ...attributes
 >
+  {{! @glint-ignore }}
   {{yield (hash link-to=(component "link-to" class="nav-link"))}}
 </nav>

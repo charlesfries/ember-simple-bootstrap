@@ -14,3 +14,9 @@ export interface BsProgressComponentSignature {
 }
 
 export default class BsProgressComponent extends BsBaseComponent<BsProgressComponentSignature> {}
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    'Bs::Progress': typeof BsProgressComponent;
+  }
+}

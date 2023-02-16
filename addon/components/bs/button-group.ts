@@ -24,3 +24,10 @@ export interface BsButtonGroupComponentSignature {
 }
 
 export default class BsButtonGroupComponent extends BsBaseComponent<BsButtonGroupComponentSignature> {}
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    'Bs::ButtonGroup': typeof BsButtonGroupComponent;
+    'bs/button-group': typeof BsButtonGroupComponent;
+  }
+}

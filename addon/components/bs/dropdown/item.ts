@@ -14,3 +14,10 @@ export interface BsDropdownItemComponentSignature {
 }
 
 export default class BsDropdownItemComponent extends BsBaseComponent<BsDropdownItemComponentSignature> {}
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    'Bs::Dropdown::Item': typeof BsDropdownItemComponent;
+    'bs/dropdown/item': typeof BsDropdownItemComponent;
+  }
+}

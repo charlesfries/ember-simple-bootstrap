@@ -8,3 +8,10 @@ export interface BsCardFooterComponentSignature {
 }
 
 export default class BsCardFooterComponent extends BsBaseComponent<BsCardFooterComponentSignature> {}
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    'Bs::Card::Footer': typeof BsCardFooterComponent;
+    'bs/card/footer': typeof BsCardFooterComponent;
+  }
+}

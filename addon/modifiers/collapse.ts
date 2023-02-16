@@ -1,6 +1,6 @@
 import { modifier } from 'ember-modifier';
 
-export default modifier(
+const collapse = modifier(
   function collapse(element, positional) {
     const target = positional[0];
 
@@ -14,3 +14,11 @@ export default modifier(
   },
   { eager: false }
 );
+
+export default collapse;
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    collapse: typeof collapse;
+  }
+}

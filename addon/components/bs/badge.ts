@@ -12,3 +12,9 @@ export interface BsBadgeComponentSignature {
 }
 
 export default class BsBadgeComponent extends BsBaseComponent<BsBadgeComponentSignature> {}
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    'Bs::Badge': typeof BsBadgeComponent;
+  }
+}

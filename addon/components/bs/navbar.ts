@@ -12,3 +12,9 @@ export interface BsNavbarComponentSignature {
 }
 
 export default class BsNavbarComponent extends BsBaseComponent<BsNavbarComponentSignature> {}
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    'Bs::Navbar': typeof BsNavbarComponent;
+  }
+}
