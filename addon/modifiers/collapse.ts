@@ -1,7 +1,7 @@
 import { modifier } from 'ember-modifier';
 
 export default modifier(
-  function collapse(element, positional: any, _named) {
+  function collapse(element, positional) {
     const target = positional[0];
 
     element.setAttribute('data-bs-toggle', 'collapse');
