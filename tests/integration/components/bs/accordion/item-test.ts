@@ -23,8 +23,6 @@ module('Integration | Component | bs/accordion/item', function (hooks) {
       </Bs::Accordion::Item>
     `);
 
-    assert
-      .dom()
-      .hasText('template block text template block text');
+    assert.dom().hasText('template block text template block text');
   });
 });

@@ -13,8 +13,6 @@ module('Integration | Component | bs/popover', function (hooks) {
       </Bs::Popover>
     `);
 
-    assert
-      .dom()
-      .hasText('Click to toggle popover template block text');
+    assert.dom().hasText('Click to toggle popover template block text');
   });
 });
