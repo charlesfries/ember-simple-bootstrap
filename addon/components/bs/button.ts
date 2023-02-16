@@ -3,12 +3,12 @@ import BsBaseComponent from './base';
 export interface BsButtonComponentSignature {
   Element: HTMLButtonElement;
   Args: {
-    isSubmit?: boolean;
+    isSubmit?: true;
     size?: 'sm' | 'lg';
     outline?: boolean;
     color?: string;
-    disabled?: boolean;
-    loading?: boolean;
+    loading?: unknown;
+    disabled?: unknown;
     onClick?: () => void;
   };
   Blocks: {

@@ -9,7 +9,7 @@ export interface BsOffcanvasComponentSignature {
   Element: HTMLDivElement;
   Args: {
     placement?: 'start' | 'end' | 'bottom';
-    onClose?: () => void;
+    onClose?: (...args: never[]) => unknown;
   };
   Blocks: {
     default: [

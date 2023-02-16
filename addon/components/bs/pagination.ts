@@ -10,7 +10,7 @@ export interface BsPaginationComponentSignature {
     totalItems: number;
     onNext: () => void;
     onPrevious: () => void;
-    onSelect: () => void;
+    onSelect: (value: number) => void;
   };
 }
 

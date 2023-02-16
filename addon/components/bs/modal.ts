@@ -16,7 +16,7 @@ export interface BsModalComponentSignature {
     scroll?: boolean;
     fullscreen?: boolean;
     hideClose?: boolean;
-    onClose: () => void;
+    onClose: (...args: never[]) => unknown;
   };
   Blocks: {
     default: [
