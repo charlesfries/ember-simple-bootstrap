@@ -1,8 +1,10 @@
 import BsBaseComponent from './base';
 
-export interface BsAccordionComponentArgs {
-  flush?: boolean;
-  alwaysOpen?: boolean;
+export interface BsAccordionComponentSignature {
+  Args: {
+    flush?: boolean;
+    alwaysOpen?: boolean;
+  };
 }
 
-export default class BsAccordionComponent extends BsBaseComponent<BsAccordionComponentArgs> {}
+export default class BsAccordionComponent extends BsBaseComponent<BsAccordionComponentSignature> {}

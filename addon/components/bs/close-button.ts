@@ -1,7 +1,9 @@
 import BsBaseComponent from './base';
 
-export interface BsCloseButtonComponentArgs {
-  white?: boolean;
+export interface BsCloseButtonComponentSignature {
+  Args: {
+    white?: boolean;
+  };
 }
 
-export default class BsCloseButtonComponent extends BsBaseComponent<BsCloseButtonComponentArgs> {}
+export default class BsCloseButtonComponent extends BsBaseComponent<BsCloseButtonComponentSignature> {}

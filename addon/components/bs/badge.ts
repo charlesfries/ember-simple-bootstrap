@@ -1,8 +1,14 @@
 import BsBaseComponent from './base';
 
-export interface BsBadgeComponentArgs {
-  pill?: boolean;
-  color?: string;
+export interface BsBadgeComponentSignature {
+  Element: HTMLElement;
+  Args: {
+    color?: string;
+    pill?: boolean;
+  };
+  Blocks: {
+    default: [];
+  };
 }
 
-export default class BsBadgeComponent extends BsBaseComponent<BsBadgeComponentArgs> {}
+export default class BsBadgeComponent extends BsBaseComponent<BsBadgeComponentSignature> {}

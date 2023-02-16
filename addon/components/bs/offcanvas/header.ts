@@ -1,7 +1,9 @@
 import BsBaseComponent from '../base';
 
-export interface BsOffcanvasHeaderComponentArgs {
-  title: string;
+export interface BsOffcanvasHeaderComponentSignature {
+  Args: {
+    title: string;
+  };
 }
 
-export default class BsOffcanvasHeaderComponent extends BsBaseComponent<BsOffcanvasHeaderComponentArgs> {}
+export default class BsOffcanvasHeaderComponent extends BsBaseComponent<BsOffcanvasHeaderComponentSignature> {}

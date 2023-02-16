@@ -1,10 +1,12 @@
 import BsBaseComponent from './base';
 
-export interface BsListGroupComponentArgs {
-  flush?: boolean;
-  numbered?: boolean;
-  horizontal?: boolean;
-  color?: string;
+export interface BsListGroupComponentSignature {
+  Args: {
+    flush?: boolean;
+    numbered?: boolean;
+    horizontal?: boolean;
+    color?: string;
+  };
 }
 
-export default class BsListGroupComponent extends BsBaseComponent<BsListGroupComponentArgs> {}
+export default class BsListGroupComponent extends BsBaseComponent<BsListGroupComponentSignature> {}

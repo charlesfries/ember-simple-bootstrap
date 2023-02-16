@@ -1,8 +1,14 @@
 import BsBaseComponent from './base';
 
-export interface BsAlertComponentArgs {
-  color?: string;
-  icon?: string;
+export interface BsAlertComponentSignature {
+  Element: HTMLDivElement;
+  Args: {
+    color?: string;
+    icon?: string;
+  };
+  Blocks: {
+    default: [];
+  };
 }
 
-export default class BsAlertComponent extends BsBaseComponent<BsAlertComponentArgs> {}
+export default class BsAlertComponent extends BsBaseComponent<BsAlertComponentSignature> {}

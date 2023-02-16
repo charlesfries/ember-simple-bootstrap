@@ -2,17 +2,19 @@ import BsBaseComponent from './base';
 import { assert } from '@ember/debug';
 import { typeOf } from '@ember/utils';
 
-export interface BsPaginationComponentArgs {
-  curPage: number;
-  perPage: number;
-  totalItems: number;
-  onNext: () => void;
-  onPrevious: () => void;
-  onSelect: () => void;
+export interface BsPaginationComponentSignature {
+  Args: {
+    curPage: number;
+    perPage: number;
+    totalItems: number;
+    onNext: () => void;
+    onPrevious: () => void;
+    onSelect: () => void;
+  };
 }
 
-export default class BsPaginationComponent extends BsBaseComponent<BsPaginationComponentArgs> {
-  constructor(owner: unknown, args: BsPaginationComponentArgs) {
+export default class BsPaginationComponent extends BsBaseComponent<BsPaginationComponentSignature> {
+  constructor(owner: unknown, args: BsPaginationComponentSignature['Args']) {
     super(owner, args);
     assert(
       '<Bs::Pagination />: Must pass a curPage number',

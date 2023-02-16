@@ -2,11 +2,13 @@ import BsBaseComponent from './base';
 import { Toast } from 'bootstrap';
 import { action } from '@ember/object';
 
-export interface BsToastComponentArgs {
-  onClose?: () => void;
+export interface BsToastComponentSignature {
+  Args: {
+    onClose?: () => void;
+  };
 }
 
-export default class BsToastComponent extends BsBaseComponent<BsToastComponentArgs> {
+export default class BsToastComponent extends BsBaseComponent<BsToastComponentSignature> {
   toast?: Toast;
 
   @action didInsert(element: Element): void {

@@ -1,7 +1,9 @@
 import BsBaseComponent from './base';
 
-export interface BsDropdownComponentArgs {
-  align?: 'right';
+export interface BsDropdownComponentSignature {
+  Args: {
+    align?: 'right';
+  };
 }
 
-export default class BsDropdownComponent extends BsBaseComponent<BsDropdownComponentArgs> {}
+export default class BsDropdownComponent extends BsBaseComponent<BsDropdownComponentSignature> {}

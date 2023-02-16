@@ -2,19 +2,21 @@ import BsBaseComponent from './base';
 import { Modal } from 'bootstrap';
 import { action } from '@ember/object';
 
-export interface BsModalComponentArgs {
-  title?: string;
-  size?: 'sm' | 'lg' | 'xl';
-  static?: boolean;
-  keyboard?: boolean;
-  focus?: boolean;
-  scroll?: boolean;
-  fullscreen?: boolean;
-  hideClose?: boolean;
-  onClose: () => void;
+export interface BsModalComponentSignature {
+  Args: {
+    title?: string;
+    size?: 'sm' | 'lg' | 'xl';
+    static?: boolean;
+    keyboard?: boolean;
+    focus?: boolean;
+    scroll?: boolean;
+    fullscreen?: boolean;
+    hideClose?: boolean;
+    onClose: () => void;
+  };
 }
 
-export default class BsModalComponent extends BsBaseComponent<BsModalComponentArgs> {
+export default class BsModalComponent extends BsBaseComponent<BsModalComponentSignature> {
   modal?: Modal;
 
   @action didInsert(element: Element): void {

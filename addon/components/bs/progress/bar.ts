@@ -5,18 +5,18 @@ import { htmlSafe } from '@ember/template';
 
 import type { SafeString } from '@ember/template/-private/handlebars';
 
-export interface BsProgressBarComponentArgs {
-  value: number;
-  color?: string;
-  labeled?: boolean;
-  striped?: boolean;
-  animated?: boolean;
+export interface BsProgressBarComponentSignature {
+  Args: {
+    value: number;
+    color?: string;
+    labeled?: boolean;
+    striped?: boolean;
+    animated?: boolean;
+  };
 }
 
-export default class BsProgressBarComponent<
-  Args extends BsProgressBarComponentArgs = BsProgressBarComponentArgs
-> extends BsBaseComponent<Args> {
-  constructor(owner: unknown, args: Args) {
+export default class BsProgressBarComponent extends BsBaseComponent<BsProgressBarComponentSignature> {
+  constructor(owner: unknown, args: BsProgressBarComponentSignature['Args']) {
     super(owner, args);
     assert(
       '<Bs::Progress::Bar />: Must pass a value number',
