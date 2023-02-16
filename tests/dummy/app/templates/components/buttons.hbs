@@ -9,24 +9,24 @@
 
   <Bs::Button
     @color="primary"
-    @onClick={{fn (mut this.xyz)}}
+    @onClick={{(optional)}}
   >Primary</Bs::Button>
   <Bs::Button
     @color="secondary"
-    @onClick={{fn (mut this.xyz)}}
+    @onClick={{(optional)}}
   >Secondary</Bs::Button>
   <Bs::Button
     @color="success"
-    @onClick={{fn (mut this.xyz)}}
+    @onClick={{(optional)}}
   >Success</Bs::Button>
-  <Bs::Button @color="danger" @onClick={{fn (mut this.xyz)}}>Danger</Bs::Button>
+  <Bs::Button @color="danger" @onClick={{(optional)}}>Danger</Bs::Button>
   <Bs::Button
     @color="warning"
-    @onClick={{fn (mut this.xyz)}}
+    @onClick={{(optional)}}
   >Warning</Bs::Button>
-  <Bs::Button @color="info" @onClick={{fn (mut this.xyz)}}>Info</Bs::Button>
-  <Bs::Button @color="light" @onClick={{fn (mut this.xyz)}}>Light</Bs::Button>
-  <Bs::Button @color="dark" @onClick={{fn (mut this.xyz)}}>Dark</Bs::Button>
+  <Bs::Button @color="info" @onClick={{(optional)}}>Info</Bs::Button>
+  <Bs::Button @color="light" @onClick={{(optional)}}>Light</Bs::Button>
+  <Bs::Button @color="dark" @onClick={{(optional)}}>Dark</Bs::Button>
 
   {{! END-SNIPPET }}
 </div>
@@ -41,42 +41,42 @@
   <Bs::Button
     @outline={{true}}
     @color="primary"
-    @onClick={{fn (mut this.xyz)}}
+    @onClick={{(optional)}}
   >Primary</Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="secondary"
-    @onClick={{fn (mut this.xyz)}}
+    @onClick={{(optional)}}
   >Secondary</Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="success"
-    @onClick={{fn (mut this.xyz)}}
+    @onClick={{(optional)}}
   >Success</Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="danger"
-    @onClick={{fn (mut this.xyz)}}
+    @onClick={{(optional)}}
   >Danger</Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="warning"
-    @onClick={{fn (mut this.xyz)}}
+    @onClick={{(optional)}}
   >Warning</Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="info"
-    @onClick={{fn (mut this.xyz)}}
+    @onClick={{(optional)}}
   >Info</Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="light"
-    @onClick={{fn (mut this.xyz)}}
+    @onClick={{(optional)}}
   >Light</Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="dark"
-    @onClick={{fn (mut this.xyz)}}
+    @onClick={{(optional)}}
   >Dark</Bs::Button>
 
   {{! END-SNIPPET }}
@@ -89,16 +89,16 @@
 <div class="example">
   {{! BEGIN-SNIPPET button-example-3 }}
 
-  <Bs::Button @size="lg" @color="primary" @onClick={{fn (mut this.xyz)}}>
+  <Bs::Button @size="lg" @color="primary" @onClick={{(optional)}}>
     Large button
   </Bs::Button>
-  <Bs::Button @size="lg" @color="secondary" @onClick={{fn (mut this.xyz)}}>
+  <Bs::Button @size="lg" @color="secondary" @onClick={{(optional)}}>
     Large button
   </Bs::Button>
-  <Bs::Button @size="sm" @color="primary" @onClick={{fn (mut this.xyz)}}>
+  <Bs::Button @size="sm" @color="primary" @onClick={{(optional)}}>
     Small button
   </Bs::Button>
-  <Bs::Button @size="sm" @color="secondary" @onClick={{fn (mut this.xyz)}}>
+  <Bs::Button @size="sm" @color="secondary" @onClick={{(optional)}}>
     Small button
   </Bs::Button>
 
@@ -115,14 +115,14 @@
   <Bs::Button
     @color="primary"
     @disabled={{true}}
-    @onClick={{fn (mut this.xyz)}}
+    @onClick={{(optional)}}
   >
     Primary button
   </Bs::Button>
   <Bs::Button
     @color="secondary"
     @disabled={{true}}
-    @onClick={{fn (mut this.xyz)}}
+    @onClick={{(optional)}}
   >
     Button
   </Bs::Button>
@@ -130,7 +130,7 @@
     @outline={{true}}
     @color="primary"
     @disabled={{true}}
-    @onClick={{fn (mut this.xyz)}}
+    @onClick={{(optional)}}
   >
     Primary button
   </Bs::Button>
@@ -138,7 +138,7 @@
     @outline={{true}}
     @color="secondary"
     @disabled={{true}}
-    @onClick={{fn (mut this.xyz)}}
+    @onClick={{(optional)}}
   >
     Button
   </Bs::Button>

@@ -11,15 +11,15 @@ module('Integration | Component | bs/button-group', function (hooks) {
       <Bs::ButtonGroup as |group|>
         <group.button
           @color="primary"
-          @onClick={{fn (mut this.xyz)}}
+          @onClick={{(optional)}}
         >Left</group.button>
         <group.button
           @color="primary"
-          @onClick={{fn (mut this.xyz)}}
+          @onClick={{(optional)}}
         >Middle</group.button>
         <group.button
           @color="primary"
-          @onClick={{fn (mut this.xyz)}}
+          @onClick={{(optional)}}
         >Right</group.button>
       </Bs::ButtonGroup>
     `);
