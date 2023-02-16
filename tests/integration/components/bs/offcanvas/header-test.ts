@@ -12,6 +12,6 @@ module('Integration | Component | bs/offcanvas/header', function (hooks) {
 
     await render(hbs`<Bs::Offcanvas::Header @title="Title" />`);
 
-    assert.dom(this.element as Element).hasText('Title');
+    assert.dom().hasText('Title');
   });
 });

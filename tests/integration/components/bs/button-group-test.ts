@@ -24,6 +24,6 @@ module('Integration | Component | bs/button-group', function (hooks) {
       </Bs::ButtonGroup>
     `);
 
-    assert.dom(this.element as Element).hasText('Left Middle Right');
+    assert.dom().hasText('Left Middle Right');
   });
 });

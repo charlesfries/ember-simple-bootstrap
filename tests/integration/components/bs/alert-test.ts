@@ -13,7 +13,7 @@ module('Integration | Component | bs/alert', function (hooks) {
       </Bs::Alert>
     `);
 
-    assert.dom(this.element as Element).hasText('Test');
+    assert.dom().hasText('Test');
     assert.dom('.alert').hasClass('alert-success');
   });
 });

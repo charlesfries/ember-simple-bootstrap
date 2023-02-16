@@ -13,6 +13,6 @@ module('Integration | Component | bs/offcanvas', function (hooks) {
       </Bs::Offcanvas>
     `);
 
-    assert.dom(this.element as Element).hasText('Test');
+    assert.dom().hasText('Test');
   });
 });

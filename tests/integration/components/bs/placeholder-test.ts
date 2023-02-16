@@ -12,6 +12,6 @@ module('Integration | Component | bs/placeholder', function (hooks) {
 
     await render(hbs`<Bs::Placeholder />`);
 
-    assert.dom(this.element as Element).hasText('');
+    assert.dom().hasText('');
   });
 });

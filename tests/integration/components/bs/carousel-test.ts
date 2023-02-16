@@ -12,7 +12,7 @@ module('Integration | Component | bs/carousel', function (hooks) {
 
     await render(hbs`<Bs::Carousel />`);
 
-    assert.dom(this.element as Element).hasText('');
+    assert.dom().hasText('');
 
     // Template block usage:
     await render(hbs`
@@ -21,6 +21,6 @@ module('Integration | Component | bs/carousel', function (hooks) {
       </Bs::Carousel>
     `);
 
-    assert.dom(this.element as Element).hasText('template block text');
+    assert.dom().hasText('template block text');
   });
 });

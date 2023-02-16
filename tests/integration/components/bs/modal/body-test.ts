@@ -12,7 +12,7 @@ module('Integration | Component | bs/modal/body', function (hooks) {
 
     await render(hbs`<Bs::Modal::Body />`);
 
-    assert.dom(this.element as Element).hasText('');
+    assert.dom().hasText('');
 
     // Template block usage:
     await render(hbs`
@@ -21,6 +21,6 @@ module('Integration | Component | bs/modal/body', function (hooks) {
       </Bs::Modal::Body>
     `);
 
-    assert.dom(this.element as Element).hasText('template block text');
+    assert.dom().hasText('template block text');
   });
 });

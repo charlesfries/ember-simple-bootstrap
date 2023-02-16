@@ -13,6 +13,6 @@ module('Integration | Component | bs/badge', function (hooks) {
       </Bs::Badge>
     `);
 
-    assert.dom(this.element as Element).hasText('Test');
+    assert.dom().hasText('Test');
   });
 });

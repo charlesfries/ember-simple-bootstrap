@@ -9,7 +9,7 @@ module('Integration | Component | bs/close-button', function (hooks) {
   test('it renders', async function (assert) {
     await render(hbs`<Bs::CloseButton @white={{true}} />`);
 
-    assert.dom(this.element as Element).hasText('');
+    assert.dom().hasText('');
     assert.dom('.btn-close').hasClass('btn-close-white');
   });
 });

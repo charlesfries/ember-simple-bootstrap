@@ -39,7 +39,7 @@ module('Integration | Component | bs/pagination', function (hooks) {
     assert.dom('nav').exists();
     assert.dom('nav .pagination').exists();
     assert.dom('nav .pagination .page-item').exists({ count: 7 });
-    assert.dom(this.element as Element).hasText('Previous 1 2 3 4 5 Next');
+    assert.dom().hasText('Previous 1 2 3 4 5 Next');
     console.log(document.querySelector('[data-test-previous]'));
     assert.dom('.page-item:nth-child(1)').hasClass('disabled');
 

@@ -25,7 +25,7 @@ module('Integration | Component | bs/accordion', function (hooks) {
     `);
 
     assert
-      .dom(this.element as Element)
+      .dom()
       .hasText(
         'Accordion Item #1 First Accordion Item #2 Second Accordion Item #3 Third'
       );

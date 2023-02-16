@@ -14,7 +14,7 @@ module('Integration | Component | bs/popover', function (hooks) {
     `);
 
     assert
-      .dom(this.element as Element)
+      .dom()
       .hasText('Click to toggle popover template block text');
   });
 });

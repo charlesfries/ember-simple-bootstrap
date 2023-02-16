@@ -13,7 +13,7 @@ module('Integration | Component | bs/accordion/button', function (hooks) {
     await render(hbs`{{! @glint-ignore}}
     <Bs::Accordion::Button />`);
 
-    assert.dom(this.element as Element).hasText('');
+    assert.dom().hasText('');
 
     // Template block usage:
     await render(hbs`
@@ -23,6 +23,6 @@ module('Integration | Component | bs/accordion/button', function (hooks) {
       </Bs::Accordion::Button>
     `);
 
-    assert.dom(this.element as Element).hasText('template block text');
+    assert.dom().hasText('template block text');
   });
 });

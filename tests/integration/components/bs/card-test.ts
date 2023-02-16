@@ -18,7 +18,7 @@ module('Integration | Component | bs/card', function (hooks) {
       </Bs::Card>
     `);
 
-    assert.dom(this.element as Element).hasText('Header Body');
+    assert.dom().hasText('Header Body');
     assert.dom('.card .card-header').exists();
     assert.dom('.card .card-body').exists();
   });

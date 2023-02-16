@@ -12,7 +12,7 @@ module('Integration | Component | bs/card/footer', function (hooks) {
 
     await render(hbs`<Bs::Card::Footer />`);
 
-    assert.dom(this.element as Element).hasText('');
+    assert.dom().hasText('');
 
     // Template block usage:
     await render(hbs`
@@ -22,6 +22,6 @@ module('Integration | Component | bs/card/footer', function (hooks) {
       </Bs::Card::Footer>
     `);
 
-    assert.dom(this.element as Element).hasText('template block text');
+    assert.dom().hasText('template block text');
   });
 });

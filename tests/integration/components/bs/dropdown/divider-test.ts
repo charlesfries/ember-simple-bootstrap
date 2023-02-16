@@ -12,6 +12,6 @@ module('Integration | Component | bs/dropdown/divider', function (hooks) {
 
     await render(hbs`<Bs::Dropdown::Divider />`);
 
-    assert.dom(this.element as Element).hasText('');
+    assert.dom().hasText('');
   });
 });
