@@ -1,3 +1,10 @@
 import BsBaseComponent from '../base';
 
-export default class BsAccordionBodyComponent extends BsBaseComponent {}
+export interface BsAccordionBodyComponentSignature {
+  Element: HTMLElement;
+  Blocks: {
+    default: [];
+  };
+}
+
+export default class BsAccordionBodyComponent extends BsBaseComponent<BsAccordionBodyComponentSignature> {}

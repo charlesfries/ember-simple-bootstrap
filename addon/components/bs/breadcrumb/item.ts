@@ -1,3 +1,12 @@
 import BsBaseComponent from '../base';
 
-export default class BsBreadcrumbItemComponent extends BsBaseComponent {}
+export interface BsBreadcrumbItemComponentSignature {
+  Args: {
+    current?: boolean;
+  };
+  Blocks: {
+    default: [];
+  };
+}
+
+export default class BsBreadcrumbItemComponent extends BsBaseComponent<BsBreadcrumbItemComponentSignature> {}

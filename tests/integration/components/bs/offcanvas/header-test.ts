@@ -16,7 +16,7 @@ module('Integration | Component | bs/offcanvas/header', function (hooks) {
 
     // Template block usage:
     await render(hbs`
-      <Bs::Offcanvas::Header>
+      <Bs::Offcanvas::Header @title="Title">
         template block text
       </Bs::Offcanvas::Header>
     `);

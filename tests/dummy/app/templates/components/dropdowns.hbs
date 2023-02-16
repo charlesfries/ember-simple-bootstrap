@@ -10,7 +10,7 @@
     <dropdown.header>Dropdown header</dropdown.header>
     <dropdown.item @label="Action" />
     <dropdown.divider />
-    <dropdown.item @label="Another action" @onClick={{this.close}} />
+    <dropdown.item @label="Another action" @onClick={{(optional)}} />
   </Bs::Dropdown>
 
   <Bs::Button {{dropdown autoClose=false}}>This one stays open</Bs::Button>
@@ -18,7 +18,7 @@
     <dropdown.header>Dropdown header</dropdown.header>
     <dropdown.item @label="Action" />
     <dropdown.divider />
-    <dropdown.item @label="Another action" @onClick={{this.close}} />
+    <dropdown.item @label="Another action" @onClick={{(optional)}} />
   </Bs::Dropdown>
 
   {{! END-SNIPPET }}

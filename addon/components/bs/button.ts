@@ -10,6 +10,9 @@ export interface BsButtonComponentSignature {
     loading?: boolean;
     onClick?: () => void;
   };
+  Blocks: {
+    default: [];
+  };
 }
 
 export default class BsButtonComponent extends BsBaseComponent<BsButtonComponentSignature> {}

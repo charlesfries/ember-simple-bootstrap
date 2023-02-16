@@ -1,3 +1,10 @@
 import BsBaseComponent from '../base';
 
-export default class BsCardBodyComponent extends BsBaseComponent {}
+export interface BsCardBodyComponentSignature {
+  Element: HTMLElement;
+  Blocks: {
+    default: [];
+  };
+}
+
+export default class BsCardBodyComponent extends BsBaseComponent<BsCardBodyComponentSignature> {}
