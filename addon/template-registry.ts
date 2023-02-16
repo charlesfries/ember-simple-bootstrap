@@ -54,6 +54,10 @@ import type BsToastHeaderComponent from './components/bs/toast/header';
 
 import type BsToolbarComponent from './components/bs/toolbar';
 
+import type collapse from './modifiers/collapse';
+import type dropdown from './modifiers/dropdown';
+import type tooltip from './modifiers/tooltip';
+
 export default interface Registry {
   'Bs::Accordion': typeof BsAccordionComponent;
   'Bs::Accordion::Body': typeof BsAccordionBodyComponent;
@@ -110,4 +114,8 @@ export default interface Registry {
   'Bs::Toast::Header': typeof BsToastHeaderComponent;
 
   'Bs::Toolbar': typeof BsToolbarComponent;
+
+  collapse: typeof collapse;
+  dropdown: typeof dropdown;
+  tooltip: typeof tooltip;
 }
