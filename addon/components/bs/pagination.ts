@@ -3,6 +3,7 @@ import { assert } from '@ember/debug';
 import { typeOf } from '@ember/utils';
 
 export interface BsPaginationComponentSignature {
+  Element: HTMLElement;
   Args: {
     curPage: number;
     perPage: number;

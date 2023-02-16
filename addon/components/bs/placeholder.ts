@@ -1,3 +1,7 @@
 import BsBaseComponent from './base';
 
-export default class BsPlaceholderComponent extends BsBaseComponent {}
+export interface BsPlaceholderComponentSignature {
+  Element: HTMLElement;
+}
+
+export default class BsPlaceholderComponent extends BsBaseComponent<BsPlaceholderComponentSignature> {}

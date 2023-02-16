@@ -1,16 +1,16 @@
 import { modifier } from 'ember-modifier';
 import { Tooltip } from 'bootstrap';
 
-interface Options extends Tooltip.Options {
+interface Options extends Partial<Tooltip.Options> {
   onShow?: () => void;
   onShown?: () => void;
   onHide?: () => void;
   onHidden?: () => void;
 }
 
-export default modifier<Element, unknown[], Options>(
+export default modifier<Element, [string], Options>(
   function tooltip(element, positional, named) {
-    const [title] = positional as [string];
+    const [title] = positional;
     const { onShow, onShown, onHide, onHidden, ...options } = named;
 
     const tooltip = new Tooltip(element, {

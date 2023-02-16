@@ -7,7 +7,11 @@ export interface BsNavComponentSignature {
     pills?: boolean;
   };
   Blocks: {
-    default: [];
+    default: [
+      {
+        'link-to': any;
+      }
+    ];
   };
 }
 

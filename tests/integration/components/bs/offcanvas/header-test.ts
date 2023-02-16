@@ -10,17 +10,8 @@ module('Integration | Component | bs/offcanvas/header', function (hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`<Bs::Offcanvas::Header />`);
+    await render(hbs`<Bs::Offcanvas::Header @title="Title" />`);
 
-    assert.dom(this.element as Element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <Bs::Offcanvas::Header @title="Title">
-        template block text
-      </Bs::Offcanvas::Header>
-    `);
-
-    assert.dom(this.element as Element).hasText('');
+    assert.dom(this.element as Element).hasText('Title');
   });
 });

@@ -1,3 +1,7 @@
 import BsBaseComponent from '../base';
 
-export default class BsDropdownDividerComponent extends BsBaseComponent {}
+export interface BsDropdownDividerComponentSignature {
+  Element: HTMLHRElement;
+}
+
+export default class BsDropdownDividerComponent extends BsBaseComponent<BsDropdownDividerComponentSignature> {}

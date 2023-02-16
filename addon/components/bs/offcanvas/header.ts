@@ -1,12 +1,9 @@
 import BsBaseComponent from '../base';
 
 export interface BsOffcanvasHeaderComponentSignature {
-  Element: HTMLElement;
+  Element: HTMLDivElement;
   Args: {
     title: string;
-  };
-  Blocks: {
-    default: [];
   };
 }
 

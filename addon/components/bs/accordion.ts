@@ -3,6 +3,7 @@ import BsBaseComponent from './base';
 import type BsAccordionItemComponent from './accordion/item';
 
 export interface BsAccordionComponentSignature {
+  Element: HTMLDivElement;
   Args: {
     flush?: boolean;
     alwaysOpen?: boolean;

@@ -1,3 +1,10 @@
 import BsBaseComponent from '../base';
 
-export default class BsToastHeaderComponent extends BsBaseComponent {}
+export interface BsToastHeaderComponentSignature {
+  Element: HTMLDivElement;
+  Blocks: {
+    default: [];
+  };
+}
+
+export default class BsToastHeaderComponent extends BsBaseComponent<BsToastHeaderComponentSignature> {}

@@ -1,6 +1,7 @@
 import BsBaseComponent from './base';
 
 export interface BsSpinnerComponentSignature {
+  Element: HTMLDivElement;
   Args: {
     centered?: boolean;
     large?: boolean;

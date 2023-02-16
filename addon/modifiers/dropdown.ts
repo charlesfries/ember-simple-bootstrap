@@ -1,7 +1,7 @@
 import { modifier } from 'ember-modifier';
 import { Dropdown } from 'bootstrap';
 
-interface Options extends Dropdown.Options {
+interface Options extends Partial<Dropdown.Options> {
   onShow?: () => void;
   onShown?: () => void;
   onHide?: () => void;

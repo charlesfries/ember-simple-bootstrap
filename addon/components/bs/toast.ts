@@ -2,9 +2,21 @@ import BsBaseComponent from './base';
 import { Toast } from 'bootstrap';
 import { action } from '@ember/object';
 
+import type BsToastHeaderComponent from './toast/header';
+import type BsToastBodyComponent from './toast/body';
+
 export interface BsToastComponentSignature {
+  Element: HTMLElement;
   Args: {
     onClose?: () => void;
+  };
+  Blocks: {
+    default: [
+      {
+        header: typeof BsToastHeaderComponent;
+        body: typeof BsToastBodyComponent;
+      }
+    ];
   };
 }
 

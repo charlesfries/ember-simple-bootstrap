@@ -1,3 +1,14 @@
 import BsBaseComponent from './base';
 
-export default class BsCollapseComponent extends BsBaseComponent {}
+export interface BsCollapseComponentSignature {
+  Element: HTMLDivElement;
+  Args: {
+    id?: string;
+    horizontal?: boolean;
+  };
+  Blocks: {
+    default: [];
+  };
+}
+
+export default class BsCollapseComponent extends BsBaseComponent<BsCollapseComponentSignature> {}

@@ -1,6 +1,7 @@
 import BsBaseComponent from './base';
 
 export interface BsButtonComponentSignature {
+  Element: HTMLButtonElement;
   Args: {
     isSubmit?: boolean;
     size?: 'sm' | 'lg';

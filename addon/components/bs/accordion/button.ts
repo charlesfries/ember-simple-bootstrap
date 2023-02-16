@@ -1,11 +1,11 @@
 import BsBaseComponent from '../base';
 
-// import type BsAccordionItemComponent from './item';
+import type BsAccordionItemComponent from './item';
 
 export interface BsAccordionButtonComponentSignature {
   Element: HTMLElement;
   Args: {
-    // item: BsAccordionItemComponent;
+    item: BsAccordionItemComponent;
     show?: boolean;
   };
   Blocks: {

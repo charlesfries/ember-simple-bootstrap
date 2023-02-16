@@ -2,7 +2,11 @@ import BsBaseComponent from './base';
 import { Modal } from 'bootstrap';
 import { action } from '@ember/object';
 
+import type BsModalBodyComponent from './modal/body';
+import type BsModalFooterComponent from './modal/footer';
+
 export interface BsModalComponentSignature {
+  Element: HTMLDivElement;
   Args: {
     title?: string;
     size?: 'sm' | 'lg' | 'xl';
@@ -13,6 +17,14 @@ export interface BsModalComponentSignature {
     fullscreen?: boolean;
     hideClose?: boolean;
     onClose: () => void;
+  };
+  Blocks: {
+    default: [
+      {
+        body: typeof BsModalBodyComponent;
+        footer: typeof BsModalFooterComponent;
+      }
+    ];
   };
 }
 

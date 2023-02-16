@@ -1,3 +1,10 @@
 import BsBaseComponent from '../base';
 
-export default class BsDropdownHeaderComponent extends BsBaseComponent {}
+export interface BsDropdownHeaderComponentSignature {
+  Element: HTMLHeadingElement;
+  Blocks: {
+    default: [];
+  };
+}
+
+export default class BsDropdownHeaderComponent extends BsBaseComponent<BsDropdownHeaderComponentSignature> {}

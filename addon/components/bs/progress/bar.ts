@@ -6,6 +6,7 @@ import { htmlSafe } from '@ember/template';
 import type { SafeString } from '@ember/template/-private/handlebars';
 
 export interface BsProgressBarComponentSignature {
+  Element: HTMLDivElement;
   Args: {
     value: number;
     color?: string;

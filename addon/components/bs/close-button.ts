@@ -1,6 +1,7 @@
 import BsBaseComponent from './base';
 
 export interface BsCloseButtonComponentSignature {
+  Element: HTMLButtonElement;
   Args: {
     white?: boolean;
   };

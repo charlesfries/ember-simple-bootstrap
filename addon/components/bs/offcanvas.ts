@@ -2,10 +2,22 @@ import BsBaseComponent from './base';
 import { Offcanvas } from 'bootstrap';
 import { action } from '@ember/object';
 
+import type BsOffcanvasHeaderComponent from './offcanvas/header';
+import type BsOffcanvasBodyComponent from './offcanvas/body';
+
 export interface BsOffcanvasComponentSignature {
+  Element: HTMLDivElement;
   Args: {
     placement?: 'start' | 'end' | 'bottom';
     onClose?: () => void;
+  };
+  Blocks: {
+    default: [
+      {
+        header: typeof BsOffcanvasHeaderComponent;
+        body: typeof BsOffcanvasBodyComponent;
+      }
+    ];
   };
 }
 

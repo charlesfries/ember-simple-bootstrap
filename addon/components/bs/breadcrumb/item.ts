@@ -1,6 +1,7 @@
 import BsBaseComponent from '../base';
 
 export interface BsBreadcrumbItemComponentSignature {
+  Element: HTMLElement;
   Args: {
     current?: boolean;
   };
