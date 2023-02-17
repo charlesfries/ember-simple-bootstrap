@@ -71,19 +71,28 @@
 
   <Bs::ButtonGroup @size="lg" as |group|>
     <group.button @color="secondary" {{on "click" this.go}}>Left</group.button>
-    <group.button @color="secondary" {{on "click" this.go}}>Middle</group.button>
+    <group.button
+      @color="secondary"
+      {{on "click" this.go}}
+    >Middle</group.button>
     <group.button @color="secondary" {{on "click" this.go}}>Right</group.button>
   </Bs::ButtonGroup>
 
   <Bs::ButtonGroup as |group|>
     <group.button @color="secondary" {{on "click" this.go}}>Left</group.button>
-    <group.button @color="secondary" {{on "click" this.go}}>Middle</group.button>
+    <group.button
+      @color="secondary"
+      {{on "click" this.go}}
+    >Middle</group.button>
     <group.button @color="secondary" {{on "click" this.go}}>Right</group.button>
   </Bs::ButtonGroup>
 
   <Bs::ButtonGroup @size="sm" as |group|>
     <group.button @color="secondary" {{on "click" this.go}}>Left</group.button>
-    <group.button @color="secondary" {{on "click" this.go}}>Middle</group.button>
+    <group.button
+      @color="secondary"
+      {{on "click" this.go}}
+    >Middle</group.button>
     <group.button @color="secondary" {{on "click" this.go}}>Right</group.button>
   </Bs::ButtonGroup>
 
@@ -99,9 +108,18 @@
 
   {{! TODO: }}
   <Bs::ButtonGroup @vertical={{true}} as |group|>
-    <group.button @color="secondary" {{on "click" this.go}}>Button</group.button>
-    <group.button @color="secondary" {{on "click" this.go}}>Button</group.button>
-    <group.button @color="secondary" {{on "click" this.go}}>Button</group.button>
+    <group.button
+      @color="secondary"
+      {{on "click" this.go}}
+    >Button</group.button>
+    <group.button
+      @color="secondary"
+      {{on "click" this.go}}
+    >Button</group.button>
+    <group.button
+      @color="secondary"
+      {{on "click" this.go}}
+    >Button</group.button>
   </Bs::ButtonGroup>
 
   {{! END-SNIPPET }}
