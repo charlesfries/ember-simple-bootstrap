@@ -10,12 +10,11 @@ module.exports = {
       legacyDecorators: true,
     },
   },
-  plugins: ['ember', '@typescript-eslint'],
+  plugins: ['ember'],
   extends: [
     'eslint:recommended',
     'plugin:ember/recommended',
     'plugin:prettier/recommended',
-    'plugin:@typescript-eslint/recommended',
   ],
   env: {
     browser: true,
@@ -42,16 +41,18 @@ module.exports = {
         browser: false,
         node: true,
       },
-      plugins: ['node'],
-      extends: ['plugin:node/recommended'],
-      rules: {
-        '@typescript-eslint/no-var-requires': 'off',
-      },
+      extends: ['plugin:n/recommended'],
     },
     {
       // test files
       files: ['tests/**/*-test.{js,ts}'],
       extends: ['plugin:qunit/recommended'],
+    },
+    {
+      // typescript files
+      files: ['**/*.ts'],
+      plugins: ['@typescript-eslint'],
+      extends: ['plugin:@typescript-eslint/recommended'],
     },
   ],
 };

@@ -14,9 +14,9 @@ This addon is only compatible with Boostrap 5+.
 
 ## Compatibility
 
-* Ember.js v3.24 or above
-* Ember CLI v3.24 or above
-* Node.js v12 or above
+* Ember.js v3.28 or above
+* Ember CLI v3.28 or above
+* Node.js v14 or above
 
 
 ## Installation
@@ -40,7 +40,7 @@ Import Bootstrap Sass:
 ```js
 // ember-cli-build.js
 
-let app = new EmberAddon(defaults, {
+const app = new EmberAddon(defaults, {
   sassOptions: {
     includePaths: ['node_modules/bootstrap/scss'],
   },
