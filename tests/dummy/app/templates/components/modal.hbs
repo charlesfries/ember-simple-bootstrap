@@ -7,7 +7,7 @@
 <div class="example">
   {{! BEGIN-SNIPPET modal-example }}
 
-  <Bs::Button @onClick={{fn (mut this.showModal) true}}>Launch demo modal</Bs::Button>
+  <Bs::Button {{on "click" (fn (mut this.showModal) true)}}>Launch demo modal</Bs::Button>
 
   {{#if this.showModal}}
     <Bs::Modal
@@ -21,10 +21,11 @@
       <modal.footer>
         <Bs::Button
           @color="secondary"
-          @onClick={{fn (mut this.showModal) false}}
+          {{on "click" (fn (mut this.showModal) false)}}
         >Cancel</Bs::Button>
         {{! @glint-ignore }}
-        <Bs::Button @color="primary" @onClick={{fn (mut this.xyz)}}>Save changes</Bs::Button>
+        <Bs::Button @color="primary" {{on "click" (fn (mut this.xyz))}}>Save
+          changes</Bs::Button>
       </modal.footer>
     </Bs::Modal>
   {{/if}}

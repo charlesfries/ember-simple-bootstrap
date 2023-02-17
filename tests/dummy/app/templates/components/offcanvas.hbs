@@ -7,7 +7,7 @@
 <div class="example">
   {{! BEGIN-SNIPPET offcanvas-example }}
 
-  <Bs::Button @onClick={{fn (mut this.showOffcanvas) true}}>
+  <Bs::Button {{on "click" (fn (mut this.showOffcanvas) true)}}>
     Launch demo offcanvas
   </Bs::Button>
 

@@ -9,14 +9,14 @@
 <div class="example">
   {{! BEGIN-SNIPPET button-example }}
 
-  <Bs::Button @color="primary" @onClick={{this.go}}>Primary</Bs::Button>
-  <Bs::Button @color="secondary" @onClick={{this.go}}>Secondary</Bs::Button>
-  <Bs::Button @color="success" @onClick={{this.go}}>Success</Bs::Button>
-  <Bs::Button @color="danger" @onClick={{this.go}}>Danger</Bs::Button>
-  <Bs::Button @color="warning" @onClick={{this.go}}>Warning</Bs::Button>
-  <Bs::Button @color="info" @onClick={{this.go}}>Info</Bs::Button>
-  <Bs::Button @color="light" @onClick={{this.go}}>Light</Bs::Button>
-  <Bs::Button @color="dark" @onClick={{this.go}}>Dark</Bs::Button>
+  <Bs::Button @color="primary" {{on "click" this.go}}>Primary</Bs::Button>
+  <Bs::Button @color="secondary" {{on "click" this.go}}>Secondary</Bs::Button>
+  <Bs::Button @color="success" {{on "click" this.go}}>Success</Bs::Button>
+  <Bs::Button @color="danger" {{on "click" this.go}}>Danger</Bs::Button>
+  <Bs::Button @color="warning" {{on "click" this.go}}>Warning</Bs::Button>
+  <Bs::Button @color="info" {{on "click" this.go}}>Info</Bs::Button>
+  <Bs::Button @color="light" {{on "click" this.go}}>Light</Bs::Button>
+  <Bs::Button @color="dark" {{on "click" this.go}}>Dark</Bs::Button>
 
   {{! END-SNIPPET }}
 </div>
@@ -31,42 +31,42 @@
   <Bs::Button
     @outline={{true}}
     @color="primary"
-    @onClick={{this.go}}
+    {{on "click" this.go}}
   >Primary</Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="secondary"
-    @onClick={{this.go}}
+    {{on "click" this.go}}
   >Secondary</Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="success"
-    @onClick={{this.go}}
+    {{on "click" this.go}}
   >Success</Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="danger"
-    @onClick={{this.go}}
+    {{on "click" this.go}}
   >Danger</Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="warning"
-    @onClick={{this.go}}
+    {{on "click" this.go}}
   >Warning</Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="info"
-    @onClick={{this.go}}
+    {{on "click" this.go}}
   >Info</Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="light"
-    @onClick={{this.go}}
+    {{on "click" this.go}}
   >Light</Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="dark"
-    @onClick={{this.go}}
+    {{on "click" this.go}}
   >Dark</Bs::Button>
 
   {{! END-SNIPPET }}
@@ -79,16 +79,16 @@
 <div class="example">
   {{! BEGIN-SNIPPET button-example-3 }}
 
-  <Bs::Button @size="lg" @color="primary" @onClick={{this.go}}>
+  <Bs::Button @size="lg" @color="primary" {{on "click" this.go}}>
     Large button
   </Bs::Button>
-  <Bs::Button @size="lg" @color="secondary" @onClick={{this.go}}>
+  <Bs::Button @size="lg" @color="secondary" {{on "click" this.go}}>
     Large button
   </Bs::Button>
-  <Bs::Button @size="sm" @color="primary" @onClick={{this.go}}>
+  <Bs::Button @size="sm" @color="primary" {{on "click" this.go}}>
     Small button
   </Bs::Button>
-  <Bs::Button @size="sm" @color="secondary" @onClick={{this.go}}>
+  <Bs::Button @size="sm" @color="secondary" {{on "click" this.go}}>
     Small button
   </Bs::Button>
 
@@ -102,17 +102,17 @@
 <div class="example">
   {{! BEGIN-SNIPPET button-example-4 }}
 
-  <Bs::Button @color="primary" @disabled={{true}} @onClick={{this.go}}>
+  <Bs::Button @color="primary" @disabled={{true}} {{on "click" this.go}}>
     Primary button
   </Bs::Button>
-  <Bs::Button @color="secondary" @disabled={{true}} @onClick={{this.go}}>
+  <Bs::Button @color="secondary" @disabled={{true}} {{on "click" this.go}}>
     Button
   </Bs::Button>
   <Bs::Button
     @outline={{true}}
     @color="primary"
     @disabled={{true}}
-    @onClick={{this.go}}
+    {{on "click" this.go}}
   >
     Primary button
   </Bs::Button>
@@ -120,7 +120,7 @@
     @outline={{true}}
     @color="secondary"
     @disabled={{true}}
-    @onClick={{this.go}}
+    {{on "click" this.go}}
   >
     Button
   </Bs::Button>

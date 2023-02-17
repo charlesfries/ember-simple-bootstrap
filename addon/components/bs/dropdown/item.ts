@@ -5,8 +5,6 @@ export interface BsDropdownItemComponentSignature {
   Args: {
     label?: string;
     color?: string;
-    disabled?: unknown;
-    onClick?: () => void;
   };
   Blocks: {
     default: [];

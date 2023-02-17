@@ -10,9 +10,9 @@
   {{! BEGIN-SNIPPET button-group-example }}
 
   <Bs::ButtonGroup as |group|>
-    <group.button @color="primary" @onClick={{this.go}}>Left</group.button>
-    <group.button @color="primary" @onClick={{this.go}}>Middle</group.button>
-    <group.button @color="primary" @onClick={{this.go}}>Right</group.button>
+    <group.button @color="primary" {{on "click" this.go}}>Left</group.button>
+    <group.button @color="primary" {{on "click" this.go}}>Middle</group.button>
+    <group.button @color="primary" {{on "click" this.go}}>Right</group.button>
   </Bs::ButtonGroup>
 
   {{! END-SNIPPET }}
@@ -26,9 +26,9 @@
   {{! BEGIN-SNIPPET button-group-example-2 }}
 
   <Bs::ButtonGroup as |group|>
-    <group.button @color="danger" @onClick={{this.go}}>Left</group.button>
-    <group.button @color="warning" @onClick={{this.go}}>Middle</group.button>
-    <group.button @color="success" @onClick={{this.go}}>Right</group.button>
+    <group.button @color="danger" {{on "click" this.go}}>Left</group.button>
+    <group.button @color="warning" {{on "click" this.go}}>Middle</group.button>
+    <group.button @color="success" {{on "click" this.go}}>Right</group.button>
   </Bs::ButtonGroup>
 
   {{! END-SNIPPET }}
@@ -45,17 +45,17 @@
     <group.button
       @outline={{true}}
       @color="primary"
-      @onClick={{this.go}}
+      {{on "click" this.go}}
     >Left</group.button>
     <group.button
       @outline={{true}}
       @color="primary"
-      @onClick={{this.go}}
+      {{on "click" this.go}}
     >Middle</group.button>
     <group.button
       @outline={{true}}
       @color="primary"
-      @onClick={{this.go}}
+      {{on "click" this.go}}
     >Right</group.button>
   </Bs::ButtonGroup>
 
@@ -70,21 +70,21 @@
   {{! BEGIN-SNIPPET button-group-example-4 }}
 
   <Bs::ButtonGroup @size="lg" as |group|>
-    <group.button @color="secondary" @onClick={{this.go}}>Left</group.button>
-    <group.button @color="secondary" @onClick={{this.go}}>Middle</group.button>
-    <group.button @color="secondary" @onClick={{this.go}}>Right</group.button>
+    <group.button @color="secondary" {{on "click" this.go}}>Left</group.button>
+    <group.button @color="secondary" {{on "click" this.go}}>Middle</group.button>
+    <group.button @color="secondary" {{on "click" this.go}}>Right</group.button>
   </Bs::ButtonGroup>
 
   <Bs::ButtonGroup as |group|>
-    <group.button @color="secondary" @onClick={{this.go}}>Left</group.button>
-    <group.button @color="secondary" @onClick={{this.go}}>Middle</group.button>
-    <group.button @color="secondary" @onClick={{this.go}}>Right</group.button>
+    <group.button @color="secondary" {{on "click" this.go}}>Left</group.button>
+    <group.button @color="secondary" {{on "click" this.go}}>Middle</group.button>
+    <group.button @color="secondary" {{on "click" this.go}}>Right</group.button>
   </Bs::ButtonGroup>
 
   <Bs::ButtonGroup @size="sm" as |group|>
-    <group.button @color="secondary" @onClick={{this.go}}>Left</group.button>
-    <group.button @color="secondary" @onClick={{this.go}}>Middle</group.button>
-    <group.button @color="secondary" @onClick={{this.go}}>Right</group.button>
+    <group.button @color="secondary" {{on "click" this.go}}>Left</group.button>
+    <group.button @color="secondary" {{on "click" this.go}}>Middle</group.button>
+    <group.button @color="secondary" {{on "click" this.go}}>Right</group.button>
   </Bs::ButtonGroup>
 
   {{! END-SNIPPET }}
@@ -99,9 +99,9 @@
 
   {{! TODO: }}
   <Bs::ButtonGroup @vertical={{true}} as |group|>
-    <group.button @color="secondary" @onClick={{this.go}}>Button</group.button>
-    <group.button @color="secondary" @onClick={{this.go}}>Button</group.button>
-    <group.button @color="secondary" @onClick={{this.go}}>Button</group.button>
+    <group.button @color="secondary" {{on "click" this.go}}>Button</group.button>
+    <group.button @color="secondary" {{on "click" this.go}}>Button</group.button>
+    <group.button @color="secondary" {{on "click" this.go}}>Button</group.button>
   </Bs::ButtonGroup>
 
   {{! END-SNIPPET }}
