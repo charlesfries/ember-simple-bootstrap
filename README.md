@@ -40,7 +40,7 @@ Import Bootstrap Sass:
 ```js
 // ember-cli-build.js
 
-let app = new EmberAddon(defaults, {
+const app = new EmberApp(defaults, {
   sassOptions: {
     includePaths: ['node_modules/bootstrap/scss'],
   },
