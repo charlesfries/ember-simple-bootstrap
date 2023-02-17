@@ -32,13 +32,7 @@ module('Integration | Component | bs/button', function (hooks) {
   });
 
   test('button disables', async function (assert) {
-    await render(hbs`<Bs::Button @disabled={{true}}>Test</Bs::Button>`);
-
-    assert.dom('button').isDisabled();
-  });
-
-  test('button loads', async function (assert) {
-    await render(hbs`<Bs::Button @loading={{true}}>Test</Bs::Button>`);
+    await render(hbs`<Bs::Button disabled={{true}}>Test</Bs::Button>`);
 
     assert.dom('button').isDisabled();
   });

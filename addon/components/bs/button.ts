@@ -7,9 +7,6 @@ export interface BsButtonComponentSignature {
     size?: 'sm' | 'lg';
     outline?: boolean;
     color?: string;
-    loading?: unknown;
-    disabled?: unknown;
-    onClick?: () => void;
   };
   Blocks: {
     default: [];
