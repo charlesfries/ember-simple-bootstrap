@@ -1,6 +1,6 @@
 import BsBaseComponent from './base';
 
-import type { ComponentLike } from '@glint/template';
+import type { LinkToKeyword } from '@glint/environment-ember-loose/-private/intrinsics/link-to';
 
 export interface BsNavComponentSignature {
   Element: HTMLElement;
@@ -11,17 +11,7 @@ export interface BsNavComponentSignature {
   Blocks: {
     default: [
       {
-        'link-to': ComponentLike<{
-          Element: HTMLAnchorElement;
-          Args: {
-            route: string;
-            model?: unknown;
-            query?: unknown;
-          };
-          Blocks: {
-            default: [];
-          };
-        }>;
+        'link-to': LinkToKeyword;
       }
     ];
   };
