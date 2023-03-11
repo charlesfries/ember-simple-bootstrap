@@ -8,19 +8,23 @@
   <Bs::Button {{dropdown}}>Open dropdown</Bs::Button>
   <Bs::Dropdown @align="right" as |dropdown|>
     <dropdown.header>Dropdown header</dropdown.header>
-    <dropdown.item @label="Action" />
+    <dropdown.item>Action</dropdown.item>
     <dropdown.divider />
     {{! @glint-ignore }}
-    <dropdown.item @label="Another action" {{on "click" (fn (mut this.xyz))}} />
+    <dropdown.item {{on "click" (fn (mut this.xyz))}}>
+      Another action
+    </dropdown.item>
   </Bs::Dropdown>
 
   <Bs::Button {{dropdown autoClose=false}}>This one stays open</Bs::Button>
   <Bs::Dropdown as |dropdown|>
     <dropdown.header>Dropdown header</dropdown.header>
-    <dropdown.item @label="Action" />
+    <dropdown.item>Action</dropdown.item>
     <dropdown.divider />
     {{! @glint-ignore }}
-    <dropdown.item @label="Another action" {{on "click" (fn (mut this.xyz))}} />
+    <dropdown.item {{on "click" (fn (mut this.xyz))}}>
+      Another action
+    </dropdown.item>
   </Bs::Dropdown>
 
   {{! END-SNIPPET }}
