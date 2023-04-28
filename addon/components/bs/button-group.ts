@@ -1,6 +1,7 @@
 import BsBaseComponent from './base';
 
 import type BsButtonComponent from './button';
+import type { WithBoundArgs } from '@glint/template';
 
 export interface BsButtonGroupComponentSignature {
   Element: HTMLElement;
@@ -11,7 +12,7 @@ export interface BsButtonGroupComponentSignature {
   Blocks: {
     default: [
       {
-        button: typeof BsButtonComponent;
+        button: WithBoundArgs<typeof BsButtonComponent, never>;
       }
     ];
   };

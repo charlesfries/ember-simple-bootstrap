@@ -1,13 +1,14 @@
 import BsBaseComponent from './base';
 
 import type BsProgressBarComponent from './progress/bar';
+import type { WithBoundArgs } from '@glint/template';
 
 export interface BsProgressComponentSignature {
   Element: HTMLElement;
   Blocks: {
     default: [
       {
-        bar: typeof BsProgressBarComponent;
+        bar: WithBoundArgs<typeof BsProgressBarComponent, never>;
       }
     ];
   };

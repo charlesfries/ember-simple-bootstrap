@@ -18,7 +18,7 @@ export interface BsAccordionItemComponentSignature {
           typeof BsAccordionButtonComponent,
           'item' | 'show'
         >;
-        body?: typeof BsAccordionBodyComponent;
+        body?: WithBoundArgs<typeof BsAccordionBodyComponent, never>;
       }
     ];
   };

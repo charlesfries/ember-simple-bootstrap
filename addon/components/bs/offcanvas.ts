@@ -4,6 +4,7 @@ import { action } from '@ember/object';
 
 import type BsOffcanvasHeaderComponent from './offcanvas/header';
 import type BsOffcanvasBodyComponent from './offcanvas/body';
+import type { WithBoundArgs } from '@glint/template';
 
 export interface BsOffcanvasComponentSignature {
   Element: HTMLDivElement;
@@ -14,8 +15,8 @@ export interface BsOffcanvasComponentSignature {
   Blocks: {
     default: [
       {
-        header: typeof BsOffcanvasHeaderComponent;
-        body: typeof BsOffcanvasBodyComponent;
+        header: WithBoundArgs<typeof BsOffcanvasHeaderComponent, never>;
+        body: WithBoundArgs<typeof BsOffcanvasBodyComponent, never>;
       }
     ];
   };
