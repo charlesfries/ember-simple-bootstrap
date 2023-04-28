@@ -4,6 +4,7 @@ import { action } from '@ember/object';
 
 import type BsModalBodyComponent from './modal/body';
 import type BsModalFooterComponent from './modal/footer';
+import type { WithBoundArgs } from '@glint/template';
 
 export interface BsModalComponentSignature {
   Element: HTMLDivElement;
@@ -21,8 +22,8 @@ export interface BsModalComponentSignature {
   Blocks: {
     default: [
       {
-        body: typeof BsModalBodyComponent;
-        footer: typeof BsModalFooterComponent;
+        body: WithBoundArgs<typeof BsModalBodyComponent, never>;
+        footer: WithBoundArgs<typeof BsModalFooterComponent, never>;
       }
     ];
   };

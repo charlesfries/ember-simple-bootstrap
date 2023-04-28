@@ -3,15 +3,16 @@ import BsBaseComponent from './base';
 import type BsCardBodyComponent from './card/body';
 import type BsCardFooterComponent from './card/footer';
 import type BsCardHeaderComponent from './card/header';
+import type { WithBoundArgs } from '@glint/template';
 
 export interface BsCardComponentSignature {
   Element: HTMLDivElement;
   Blocks: {
     default: [
       {
-        header: typeof BsCardHeaderComponent;
-        body: typeof BsCardBodyComponent;
-        footer: typeof BsCardFooterComponent;
+        header: WithBoundArgs<typeof BsCardHeaderComponent, never>;
+        body: WithBoundArgs<typeof BsCardBodyComponent, never>;
+        footer: WithBoundArgs<typeof BsCardFooterComponent, never>;
       }
     ];
   };

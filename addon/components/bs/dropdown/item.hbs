@@ -3,9 +3,5 @@
   class="dropdown-item {{if @color (concat 'text-' @color)}}"
   ...attributes
 >
-  {{#if (has-block)}}
-    {{yield}}
-  {{else}}
-    {{@label}}
-  {{/if}}
+  {{yield}}
 </button>

@@ -3,6 +3,7 @@ import BsBaseComponent from './base';
 import type BsDropdownDividerComponent from './dropdown/divider';
 import type BsDropdownHeaderComponent from './dropdown/header';
 import type BsDropdownItemComponent from './dropdown/item';
+import type { WithBoundArgs } from '@glint/template';
 
 export interface BsDropdownComponentSignature {
   Element: HTMLDivElement;
@@ -12,9 +13,9 @@ export interface BsDropdownComponentSignature {
   Blocks: {
     default: [
       {
-        divider: typeof BsDropdownDividerComponent;
-        header: typeof BsDropdownHeaderComponent;
-        item: typeof BsDropdownItemComponent;
+        divider: WithBoundArgs<typeof BsDropdownDividerComponent, never>;
+        header: WithBoundArgs<typeof BsDropdownHeaderComponent, never>;
+        item: WithBoundArgs<typeof BsDropdownItemComponent, never>;
       }
     ];
   };

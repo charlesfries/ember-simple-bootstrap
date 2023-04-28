@@ -1,13 +1,14 @@
 import BsBaseComponent from './base';
 
 import type BsBreadcrumbItemComponent from './breadcrumb/item';
+import type { WithBoundArgs } from '@glint/template';
 
 export interface BsBreadcrumbComponentSignature {
   Element: HTMLElement;
   Blocks: {
     default: [
       {
-        item: typeof BsBreadcrumbItemComponent;
+        item: WithBoundArgs<typeof BsBreadcrumbItemComponent, never>;
       }
     ];
   };

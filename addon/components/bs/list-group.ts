@@ -1,7 +1,7 @@
 import BsBaseComponent from './base';
 
 import type BsListGroupItemComponent from './list-group/item';
-import type { ComponentLike } from '@glint/template';
+import type { ComponentLike, WithBoundArgs } from '@glint/template';
 
 export interface BsListGroupComponentSignature {
   Element: HTMLUListElement;
@@ -14,7 +14,7 @@ export interface BsListGroupComponentSignature {
   Blocks: {
     default: [
       {
-        item: typeof BsListGroupItemComponent;
+        item: WithBoundArgs<typeof BsListGroupItemComponent, never>;
         'link-to': ComponentLike<{
           Element: HTMLAnchorElement;
           Args: {

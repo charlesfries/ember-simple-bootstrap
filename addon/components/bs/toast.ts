@@ -4,6 +4,7 @@ import { action } from '@ember/object';
 
 import type BsToastHeaderComponent from './toast/header';
 import type BsToastBodyComponent from './toast/body';
+import type { WithBoundArgs } from '@glint/template';
 
 export interface BsToastComponentSignature {
   Element: HTMLElement;
@@ -13,8 +14,8 @@ export interface BsToastComponentSignature {
   Blocks: {
     default: [
       {
-        header: typeof BsToastHeaderComponent;
-        body: typeof BsToastBodyComponent;
+        header: WithBoundArgs<typeof BsToastHeaderComponent, never>;
+        body: WithBoundArgs<typeof BsToastBodyComponent, never>;
       }
     ];
   };

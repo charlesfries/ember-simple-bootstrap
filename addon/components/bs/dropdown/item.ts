@@ -3,7 +3,6 @@ import BsBaseComponent from '../base';
 export interface BsDropdownItemComponentSignature {
   Element: HTMLButtonElement;
   Args: {
-    label?: string;
     color?: string;
   };
   Blocks: {
