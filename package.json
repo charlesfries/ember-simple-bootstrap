@@ -33,7 +33,6 @@
   },
   "dependencies": {
     "@ember/render-modifiers": "^2.0.4",
-    "bootstrap": "^5.2.2",
     "ember-auto-import": "^2.4.2",
     "ember-cli-babel": "^7.26.11",
     "ember-cli-htmlbars": "^6.2.0",
@@ -81,6 +80,7 @@
     "@types/rsvp": "^4.0.4",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
+    "bootstrap": "^5.2.2",
     "broccoli-asset-rev": "^3.0.0",
     "concurrently": "^8.0.1",
     "ember-cli": "~4.12.1",
