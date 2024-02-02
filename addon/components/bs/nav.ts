@@ -1,7 +1,5 @@
 import BsBaseComponent from './base';
 
-import type { LinkToKeyword } from '@glint/environment-ember-loose/-private/intrinsics/link-to';
-
 export interface BsNavComponentSignature {
   Element: HTMLElement;
   Args: {
@@ -9,11 +7,7 @@ export interface BsNavComponentSignature {
     pills?: boolean;
   };
   Blocks: {
-    default: [
-      {
-        'link-to': LinkToKeyword;
-      }
-    ];
+    default: [];
   };
 }
 

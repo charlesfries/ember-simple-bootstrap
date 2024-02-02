@@ -7,18 +7,18 @@
 <div class="example">
   {{! BEGIN-SNIPPET nav-example }}
 
-  <Bs::Nav @tabs={{true}} as |nav|>
-    <nav.link-to @route="components.navs-tabs" class="nav-link">Link 1</nav.link-to>
-    <nav.link-to
+  <Bs::Nav @tabs={{true}}>
+    <LinkTo @route="components.navs-tabs" class="nav-link">Link 1</LinkTo>
+    <LinkTo
       @route="components.navs-tabs"
       @query={{hash filter=2}}
       class="nav-link"
-    >Link 2</nav.link-to>
-    <nav.link-to
+    >Link 2</LinkTo>
+    <LinkTo
       @route="components.navs-tabs"
       @query={{hash filter=3}}
       class="nav-link"
-    >Link 3</nav.link-to>
+    >Link 3</LinkTo>
   </Bs::Nav>
 
   {{! END-SNIPPET }}
@@ -28,18 +28,18 @@
 
 <h2 class="subtitle">Pills</h2>
 
-<Bs::Nav @pills={{true}} as |nav|>
-  <nav.link-to @route="components.navs-tabs" class="nav-link">Link 1</nav.link-to>
-  <nav.link-to
+<Bs::Nav @pills={{true}}>
+  <LinkTo @route="components.navs-tabs" class="nav-link">Link 1</LinkTo>
+  <LinkTo
     @route="components.navs-tabs"
     @query={{hash filter=2}}
     class="nav-link"
-  >Link 2</nav.link-to>
-  <nav.link-to
+  >Link 2</LinkTo>
+  <LinkTo
     @route="components.navs-tabs"
     @query={{hash filter=3}}
     class="nav-link"
-  >Link 3</nav.link-to>
+  >Link 3</LinkTo>
 </Bs::Nav>
 
 <h2 class="subtitle">JavaScript behavior</h2>
